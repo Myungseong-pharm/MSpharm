@@ -320,7 +320,7 @@ function render() {
     const d = p[lang];
     const card = document.createElement('div');
     card.className = 'product-card';
-    card.innerHTML = `<div class="product-img">${getProductImg(d.name, p.emoji)}</div>
+    card.innerHTML = `<div class="product-img">${getProductImg(p.ko.name, p.emoji)}</div>
       <div class="product-info">
         <div class="product-cat">${d.cat}</div>
         <div class="product-name">${d.name}</div>
@@ -334,7 +334,7 @@ function render() {
 function openModal(p) {
   const d = p[lang];
   const t = T[lang];
-  document.getElementById('m-img').innerHTML = getModalImg(d.name, p.emoji);
+  document.getElementById('m-img').innerHTML = getModalImg(p.ko.name, p.emoji);
   document.getElementById('m-cat').textContent = d.cat;
   document.getElementById('m-name').textContent = d.name;
   document.getElementById('m-mfr').textContent = d.mfr;
