@@ -3,468 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>明星药局 | 明城药局</title>
+    <title>明星药局 | Myeongseong Pharmacy</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f4f8; min-height: 100vh; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f0f4f8; min-height: 100vh; }
 
-        /* Header */
-        .header { background: linear-gradient(135deg, #1565C0, #1e88e5); color: white; padding: 18px 16px 14px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-        .header-back { display: flex; align-items: center; margin-bottom: 4px; }
-        .back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 6px 14px; border-radius: 20px; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 5px; }
-        .back-btn:active { background: rgba(255,255,255,0.35); }
-        .header h1 { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; }
-        .header p { font-size: 12px; opacity: 0.85; margin-top: 2px; }
+        /* Header & Language Switcher */
+        .header { background: linear-gradient(135deg, #1565C0, #1e88e5); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        .lang-switcher { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 10px; }
+        .lang-btn { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 4px 10px; border-radius: 15px; font-size: 12px; cursor: pointer; }
+        .lang-btn.active { background: white; color: #1565C0; font-weight: bold; }
 
-        /* Pages */
-        .page { display: none; }
+        /* Layout */
+        .page { display: none; padding-bottom: 40px; }
         .page.active { display: block; }
+        .container { padding: 16px; max-width: 600px; margin: 0 auto; }
 
-        /* Home Page */
-        .home-banner { background: linear-gradient(135deg, #1565C0, #42a5f5); color: white; padding: 24px 20px; text-align: center; }
-        .home-banner .pharmacy-name { font-size: 26px; font-weight: 800; }
-        .home-banner .pharmacy-name-kr { font-size: 14px; opacity: 0.85; margin-top: 4px; }
-        .home-banner .address { font-size: 12px; opacity: 0.75; margin-top: 6px; }
-        .home-banner .welcome { font-size: 15px; margin-top: 14px; background: rgba(255,255,255,0.15); border-radius: 10px; padding: 10px; }
+        /* Category Grid */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px; }
+        .card { background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); cursor: pointer; }
+        .card .icon { font-size: 32px; margin-bottom: 8px; }
+        .card .title { font-weight: bold; color: #333; font-size: 15px; }
 
-        .section-label { font-size: 13px; color: #888; font-weight: 600; padding: 16px 16px 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        /* Item List */
+        .item-card { background: white; border-radius: 12px; padding: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 15px; }
+        .item-img { width: 80px; height: 80px; background: #eee; border-radius: 8px; flex-shrink: 0; }
+        .item-info h3 { font-size: 16px; margin-bottom: 4px; }
+        .item-info p { font-size: 13px; color: #666; }
 
-        .category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 16px 24px; }
-        .category-card { background: white; border-radius: 16px; padding: 20px 14px; text-align: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.07); transition: transform 0.15s, box-shadow 0.15s; border: 2px solid transparent; }
-        .category-card:active { transform: scale(0.96); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
-        .category-card .icon { font-size: 36px; margin-bottom: 10px; }
-        .category-card .name-cn { font-size: 15px; font-weight: 700; color: #1a1a2e; }
-        .category-card .name-kr { font-size: 11px; color: #aaa; margin-top: 3px; }
-        .category-card .count { font-size: 11px; color: #1e88e5; background: #e3f2fd; padding: 2px 8px; border-radius: 10px; margin-top: 8px; display: inline-block; }
-
-        /* Category colors */
-        .cat-skin { border-color: #fce4ec; }
-        .cat-skin .icon-bg { background: #fce4ec; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
-        .cat-cold { border-color: #e3f2fd; }
-        .cat-pain { border-color: #fff3e0; }
-        .cat-stomach { border-color: #e8f5e9; }
-        .cat-kids { border-color: #f3e5f5; }
-        .cat-muscle { border-color: #fbe9e7; }
-        .cat-vitamin { border-color: #e0f7fa; }
-        .cat-eye { border-color: #f1f8e9; }
-
-        /* Product List Page */
-        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px; }
-        .product-card { background: white; border-radius: 14px; overflow: hidden; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.07); transition: transform 0.15s; }
-        .product-card:active { transform: scale(0.97); }
-        .product-card .product-img { width: 100%; height: 130px; object-fit: contain; background: #f8f8f8; padding: 10px; }
-        .product-card .product-img-placeholder { width: 100%; height: 130px; background: linear-gradient(135deg, #f5f5f5, #ececec); display: flex; align-items: center; justify-content: center; font-size: 40px; }
-        .product-card .product-info { padding: 10px 12px 12px; }
-        .product-card .product-name-cn { font-size: 13px; font-weight: 700; color: #1a1a2e; line-height: 1.3; }
-        .product-card .product-name-kr { font-size: 11px; color: #999; margin-top: 2px; }
-        .product-card .product-tag { display: inline-block; font-size: 10px; color: #1e88e5; background: #e3f2fd; padding: 2px 7px; border-radius: 8px; margin-top: 5px; }
-
-        /* Detail Page */
-        .detail-hero { background: white; padding: 20px; text-align: center; }
-        .detail-hero .detail-img-placeholder { width: 140px; height: 140px; background: linear-gradient(135deg, #f5f5f5, #ececec); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 60px; margin: 0 auto 14px; }
-        .detail-hero .detail-name-cn { font-size: 20px; font-weight: 800; color: #1a1a2e; }
-        .detail-hero .detail-name-kr { font-size: 14px; color: #888; margin-top: 4px; }
-
-        .detail-body { padding: 12px 16px 32px; }
-        .detail-section { background: white; border-radius: 14px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-        .detail-section-title { font-size: 13px; font-weight: 700; color: #1e88e5; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
-        .detail-section-content { font-size: 14px; color: #333; line-height: 1.7; }
-        .detail-section-content .item { padding: 4px 0; border-bottom: 1px solid #f5f5f5; }
-        .detail-section-content .item:last-child { border-bottom: none; }
-        .detail-section-content .item-label { font-size: 11px; color: #aaa; }
-
-        .warning-box { background: #fff8e1; border-left: 4px solid #ffa000; border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; font-size: 13px; color: #e65100; line-height: 1.6; }
-
-        /* Back button floating */
-        .bottom-back { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1e88e5; color: white; border: none; padding: 13px 40px; border-radius: 30px; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 14px rgba(30,136,229,0.4); z-index: 200; }
-        .bottom-back:active { background: #1565C0; }
-        .bottom-spacer { height: 80px; }
+        .back-btn { background: none; border: none; color: white; cursor: pointer; font-size: 16px; float: left; }
     </style>
 </head>
 <body>
 
-<!-- ===================== HOME PAGE ===================== -->
+<div class="header">
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLanguage('zh')">中文</button>
+        <button class="lang-btn" onclick="setLanguage('en')">English</button>
+    </div>
+    <h1 id="main-title">明星药局</h1>
+    <p id="main-sub">전문 약사의 1:1 맞춤 상담</p>
+</div>
+
 <div id="page-home" class="page active">
-    <div class="home-banner">
-        <div class="pharmacy-name">明城药局</div>
-        <div class="pharmacy-name-kr">명성약국</div>
-        <div class="address">📍 仁川 永宗岛 旧邑渡口</div>
-        <div class="welcome">🌟 欢迎光临！请选择您需要的药品类别<br><span style="font-size:12px;opacity:0.85;">환영합니다! 필요한 카테고리를 선택하세요</span></div>
-    </div>
-
-    <div class="section-label">选择类别 · 카테고리 선택</div>
-
-    <div class="category-grid">
-        <div class="category-card cat-skin" onclick="goToCategory('skin')">
-            <div class="icon">🧴</div>
-            <div class="name-cn">皮肤护理</div>
-            <div class="name-kr">피부/재생 연고</div>
-            <div class="count">5가지 상품</div>
-        </div>
-        <div class="category-card cat-cold" onclick="goToCategory('cold')">
-            <div class="icon">🤧</div>
-            <div class="name-cn">感冒/咽喉/鼻炎</div>
-            <div class="name-kr">감기/인후/코</div>
-            <div class="count">준비 중</div>
-        </div>
-        <div class="category-card cat-pain" onclick="goToCategory('pain')">
-            <div class="icon">🌡️</div>
-            <div class="name-cn">止痛/退热</div>
-            <div class="name-kr">진통/해열</div>
-            <div class="count">준비 중</div>
-        </div>
-        <div class="category-card cat-stomach" onclick="goToCategory('stomach')">
-            <div class="icon">🫃</div>
-            <div class="name-cn">消化/肠胃</div>
-            <div class="name-kr">소화/위장</div>
-            <div class="count">준비 중</div>
-        </div>
-        <div class="category-card cat-kids" onclick="goToCategory('kids')">
-            <div class="icon">👶</div>
-            <div class="name-cn">儿童用药</div>
-            <div class="name-kr">어린이 (감기/영양제)</div>
-            <div class="count">준비 중</div>
-        </div>
-        <div class="category-card cat-muscle" onclick="goToCategory('muscle')">
-            <div class="icon">🩹</div>
-            <div class="name-cn">止痛贴/肌肉关节</div>
-            <div class="name-kr">파스/근육관절</div>
-            <div class="count">준비 중</div>
-        </div>
-        <div class="category-card cat-vitamin" onclick="goToCategory('vitamin')">
-            <div class="icon">💊</div>
-            <div class="name-cn">营养品/维生素</div>
-            <div class="name-kr">영양제/비타민</div>
-            <div class="count">준비 중</div>
-        </div>
-        <div class="category-card cat-eye" onclick="goToCategory('eye')">
-            <div class="icon">👁️</div>
-            <div class="name-cn">眼科/耳鼻喉</div>
-            <div class="name-kr">안과/이비인후과</div>
-            <div class="count">준비 중</div>
+    <div class="container">
+        <div class="grid">
+            <div class="card" onclick="goToCategory('skin')">
+                <div class="icon">✨</div>
+                <div class="title" data-zh="皮肤管理" data-en="Skin Care">皮肤管理</div>
+            </div>
+            <div class="card" onclick="goToCategory('cold')">
+                <div class="icon">🤒</div>
+                <div class="title" data-zh="感冒/热" data-en="Cold / Fever">感冒/热</div>
+            </div>
+            <div class="card" onclick="goToCategory('stomach')">
+                <div class="icon">消化</div>
+                <div class="title" data-zh="消化不良" data-en="Digestive">消化不良</div>
+            </div>
+            <div class="card" onclick="goToCategory('pain')">
+                <div class="icon">💊</div>
+                <div class="title" data-zh="止痛药" data-en="Pain Relief">止痛药</div>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- ===================== CATEGORY: SKIN ===================== -->
 <div id="page-cat-skin" class="page">
-    <div class="header">
-        <div class="header-back">
-            <button class="back-btn" onclick="goBack('home')">← 返回 / 뒤로</button>
+    <div class="container">
+        <button class="back-btn" onclick="goBack()">←</button>
+        <h2 style="text-align:center; margin-bottom:20px;" data-zh="皮肤管理" data-en="Skin Care">皮肤管理</h2>
+        
+        <div class="item-card">
+            <div class="item-img"></div>
+            <div class="item-info">
+                <h3 data-zh="Noscarna (노스카나)" data-en="Noscarna Gel">Noscarna (노스카나)</h3>
+                <p data-zh="祛疤膏 / 每天多次涂抹" data-en="Scar treatment / Apply several times a day">祛疤膏 / 每天多次涂抹</p>
+            </div>
         </div>
-        <h1>🧴 皮肤护理</h1>
-        <p>피부/재생 연고</p>
-    </div>
 
-    <div class="product-grid">
-        <div class="product-card" onclick="goToDetail('noscarna')">
-            <div class="product-img-placeholder">🧴</div>
-            <div class="product-info">
-                <div class="product-name-cn">诺斯卡娜 祛疤凝胶</div>
-                <div class="product-name-kr">노스카나 겔</div>
-                <div class="product-tag">祛疤 흉터제거</div>
-            </div>
-        </div>
-        <div class="product-card" onclick="goToDetail('acnon')">
-            <div class="product-img-placeholder">🫧</div>
-            <div class="product-info">
-                <div class="product-name-cn">艾克农 祛痘膏</div>
-                <div class="product-name-kr">애크논 크림</div>
-                <div class="product-tag">祛痘 여드름</div>
-            </div>
-        </div>
-        <div class="product-card" onclick="goToDetail('melatoning')">
-            <div class="product-img-placeholder">✨</div>
-            <div class="product-info">
-                <div class="product-name-cn">Melatoning 祛斑霜</div>
-                <div class="product-name-kr">멜라토닝 크림</div>
-                <div class="product-tag">祛斑 기미/색소</div>
-            </div>
-        </div>
-        <div class="product-card" onclick="goToDetail('azelia')">
-            <div class="product-img-placeholder">💎</div>
-            <div class="product-info">
-                <div class="product-name-cn">阿泽丽雅 壬二酸膏</div>
-                <div class="product-name-kr">아젤리아 크림</div>
-                <div class="product-tag">闭口/黑头 좁쌀여드름</div>
-            </div>
-        </div>
-        <div class="product-card" onclick="goToDetail('rejunic')">
-            <div class="product-img-placeholder">🐟</div>
-            <div class="product-info">
-                <div class="product-name-cn">丽珠兰 PDRN 修复霜</div>
-                <div class="product-name-kr">리쥬닉 PDRN</div>
-                <div class="product-tag">修复再生 피부재생</div>
+        <div class="item-card">
+            <div class="item-img"></div>
+            <div class="item-info">
+                <h3 data-zh="Acnon (애크논)" data-en="Acnon Cream">Acnon (애크논)</h3>
+                <p data-zh="抗痘膏 / 洁面 후 涂抹" data-en="Acne treatment / Apply after washing face">抗痘膏 / 洁면 후 涂抹</p>
             </div>
         </div>
     </div>
-    <div class="bottom-spacer"></div>
-</div>
-
-<!-- ===================== DETAIL: NOSCARNA ===================== -->
-<div id="page-detail-noscarna" class="page">
-    <div class="header">
-        <div class="header-back">
-            <button class="back-btn" onclick="goBack('cat-skin')">← 返回 / 뒤로</button>
-        </div>
-        <h1>诺斯卡娜 祛疤凝胶</h1>
-        <p>노스카나 겔 (Noscarna Gel)</p>
-    </div>
-    <div class="detail-hero">
-        <div class="detail-img-placeholder">🧴</div>
-        <div class="detail-name-cn">诺斯卡娜 祛疤凝胶</div>
-        <div class="detail-name-kr">노스카나 겔 (Noscarna Gel)</div>
-    </div>
-    <div class="detail-body">
-        <div class="detail-section">
-            <div class="detail-section-title">💊 核心成分 (핵심성분)</div>
-            <div class="detail-section-content">
-                <div class="item">肝素钠 (Heparin Sodium) — 헤파린나트륨</div>
-                <div class="item">尿囊素 (Allantoin) — 알란토인</div>
-                <div class="item">泛醇 (Dexpanthenol) — 덱스판테놀</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">✨ 功效 (효능)</div>
-            <div class="detail-section-content">
-                <div class="item">淡化痘印、手术疤痕（红印 / 黑印）</div>
-                <div class="item" style="color:#888;font-size:13px;">여드름 흉터, 수술 흉터, 색소 침착 완화</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">💡 用法 (사용법)</div>
-            <div class="detail-section-content">
-                <div class="item">每天数次涂抹于疤痕处。</div>
-                <div class="item">洁面后、基础护肤前使用效果更佳。</div>
-                <div class="item" style="color:#888;font-size:13px;">세안 후 기초 화장 전, 하루 여러 번 흉터 부위에 바릅니다.</div>
-            </div>
-        </div>
-        <div class="warning-box">
-            ⚠️ 注意 (주의사항)<br>
-            伤口未愈合前请勿使用。<br>
-            <span style="font-size:12px;color:#bf360c;">상처가 아물기 전에는 사용하지 마세요.</span>
-        </div>
-    </div>
-    <button class="bottom-back" onclick="goBack('cat-skin')">← 목록으로 돌아가기 / 返回列表</button>
-    <div class="bottom-spacer"></div>
-</div>
-
-<!-- ===================== DETAIL: ACNON ===================== -->
-<div id="page-detail-acnon" class="page">
-    <div class="header">
-        <div class="header-back">
-            <button class="back-btn" onclick="goBack('cat-skin')">← 返回 / 뒤로</button>
-        </div>
-        <h1>艾克农 祛痘膏</h1>
-        <p>애크논 크림 (Acnon Cream)</p>
-    </div>
-    <div class="detail-hero">
-        <div class="detail-img-placeholder">🫧</div>
-        <div class="detail-name-cn">艾克农 祛痘膏</div>
-        <div class="detail-name-kr">애크논 크림 (Acnon Cream)</div>
-    </div>
-    <div class="detail-body">
-        <div class="detail-section">
-            <div class="detail-section-title">💊 核心成分 (핵심성분)</div>
-            <div class="detail-section-content">
-                <div class="item">布洛芬吡啶甲醇 (Ibuprofen Piconol) — 이부프로펜피코놀</div>
-                <div class="item">异丙基甲基酚 (IPMP) — 이소프로필메틸페놀</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">✨ 功效 (효능)</div>
-            <div class="detail-section-content">
-                <div class="item">消炎镇痛，治疗红肿痘痘、化脓性痘痘</div>
-                <div class="item" style="color:#888;font-size:13px;">붉고 부어오른 화농성 여드름, 뾰루지 진정</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">💡 用法 (사용법)</div>
-            <div class="detail-section-content">
-                <div class="item">洁面后，局部少量涂抹于痘痘处。</div>
-                <div class="item" style="color:#888;font-size:13px;">세안 후 여드름 부위에만 소량 톡톡 바릅니다.</div>
-            </div>
-        </div>
-    </div>
-    <button class="bottom-back" onclick="goBack('cat-skin')">← 목록으로 돌아가기 / 返回列表</button>
-    <div class="bottom-spacer"></div>
-</div>
-
-<!-- ===================== DETAIL: MELATONING ===================== -->
-<div id="page-detail-melatoning" class="page">
-    <div class="header">
-        <div class="header-back">
-            <button class="back-btn" onclick="goBack('cat-skin')">← 返回 / 뒤로</button>
-        </div>
-        <h1>Melatoning 祛斑美白霜</h1>
-        <p>멜라토닝 크림 (Melatoning Cream)</p>
-    </div>
-    <div class="detail-hero">
-        <div class="detail-img-placeholder">✨</div>
-        <div class="detail-name-cn">Melatoning 祛斑美白霜</div>
-        <div class="detail-name-kr">멜라토닝 크림 (Melatoning Cream)</div>
-    </div>
-    <div class="detail-body">
-        <div class="detail-section">
-            <div class="detail-section-title">💊 核心成分 (핵심성분)</div>
-            <div class="detail-section-content">
-                <div class="item">氢醌 / 对苯二酚 2% (Hydroquinone) — 히드로퀴논 2%</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">✨ 功效 (효능)</div>
-            <div class="detail-section-content">
-                <div class="item">淡化色斑、雀斑、黑色素沉淀</div>
-                <div class="item" style="color:#888;font-size:13px;">기미, 주근깨, 색소 침착 치료</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">💡 用法 (사용법)</div>
-            <div class="detail-section-content">
-                <div class="item">每天1~2次涂抹于患处。建议夜间使用。</div>
-                <div class="item" style="color:#888;font-size:13px;">하루 1~2회 환부에 바릅니다. 취침 전 사용 권장.</div>
-            </div>
-        </div>
-        <div class="warning-box">
-            ⚠️ 注意 (주의사항)<br>
-            白天使用时，请务必涂抹防晒霜（SPF50+）。<br>
-            <span style="font-size:12px;color:#bf360c;">낮에 사용 시 반드시 자외선 차단제(선크림)를 바르세요.</span>
-        </div>
-    </div>
-    <button class="bottom-back" onclick="goBack('cat-skin')">← 목록으로 돌아가기 / 返回列表</button>
-    <div class="bottom-spacer"></div>
-</div>
-
-<!-- ===================== DETAIL: AZELIA ===================== -->
-<div id="page-detail-azelia" class="page">
-    <div class="header">
-        <div class="header-back">
-            <button class="back-btn" onclick="goBack('cat-skin')">← 返回 / 뒤로</button>
-        </div>
-        <h1>阿泽丽雅 壬二酸乳膏</h1>
-        <p>아젤리아 크림 (Azelia Cream)</p>
-    </div>
-    <div class="detail-hero">
-        <div class="detail-img-placeholder">💎</div>
-        <div class="detail-name-cn">阿泽丽雅 壬二酸乳膏</div>
-        <div class="detail-name-kr">아젤리아 크림 (Azelia Cream)</div>
-    </div>
-    <div class="detail-body">
-        <div class="detail-section">
-            <div class="detail-section-title">💊 核心成分 (핵심성분)</div>
-            <div class="detail-section-content">
-                <div class="item">壬二酸 20% (Azelaic Acid) — 아젤라산 20%</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">✨ 功效 (효능)</div>
-            <div class="detail-section-content">
-                <div class="item">治疗闭口粉刺、黑头、改善色素沉淀</div>
-                <div class="item" style="color:#888;font-size:13px;">좁쌀 여드름, 블랙헤드, 색소 침착 개선</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">💡 用法 (사용법)</div>
-            <div class="detail-section-content">
-                <div class="item">每天早晚2次，洁面后薄涂于患处。</div>
-                <div class="item" style="color:#888;font-size:13px;">아침, 저녁 세안 후 환부에 얇게 펴 바릅니다.</div>
-            </div>
-        </div>
-    </div>
-    <button class="bottom-back" onclick="goBack('cat-skin')">← 목록으로 돌아가기 / 返回列表</button>
-    <div class="bottom-spacer"></div>
-</div>
-
-<!-- ===================== DETAIL: REJUNIC ===================== -->
-<div id="page-detail-rejunic" class="page">
-    <div class="header">
-        <div class="header-back">
-            <button class="back-btn" onclick="goBack('cat-skin')">← 返回 / 뒤로</button>
-        </div>
-        <h1>丽珠兰 PDRN 修复霜</h1>
-        <p>리쥬닉 PDRN (Rejunic PDRN)</p>
-    </div>
-    <div class="detail-hero">
-        <div class="detail-img-placeholder">🐟</div>
-        <div class="detail-name-cn">丽珠兰 PDRN 皮肤再生修复霜</div>
-        <div class="detail-name-kr">리쥬닉 PDRN (Rejunic PDRN)</div>
-    </div>
-    <div class="detail-body">
-        <div class="detail-section">
-            <div class="detail-section-title">💊 核心成分 (핵심성분)</div>
-            <div class="detail-section-content">
-                <div class="item">PDRN — 多聚脱氧核糖核苷酸（提取自三文鱼DNA）</div>
-                <div class="item" style="color:#888;font-size:13px;">폴리데옥시리보뉴클레오티드 (연어 DNA 추출물)</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">✨ 功效 (효능)</div>
-            <div class="detail-section-content">
-                <div class="item">促进皮肤再生、修复受损皮肤屏障</div>
-                <div class="item" style="color:#888;font-size:13px;">피부 재생, 손상된 피부 장벽 복구</div>
-            </div>
-        </div>
-        <div class="detail-section">
-            <div class="detail-section-title">💡 用法 (사용법)</div>
-            <div class="detail-section-content">
-                <div class="item">每天1~2次，涂抹于需要修复的部位。</div>
-                <div class="item" style="color:#888;font-size:13px;">하루 1~2회 필요한 부위에 바릅니다.</div>
-            </div>
-        </div>
-    </div>
-    <button class="bottom-back" onclick="goBack('cat-skin')">← 목록으로 돌아가기 / 返回列表</button>
-    <div class="bottom-spacer"></div>
-</div>
-
-<!-- ===================== COMING SOON ===================== -->
-<div id="page-coming-soon" class="page">
-    <div class="header">
-        <div class="header-back">
-            <button class="back-btn" onclick="goBack('home')">← 返回 / 뒤로</button>
-        </div>
-        <h1>🚧 准备中</h1>
-        <p>준비 중입니다</p>
-    </div>
-    <div style="text-align:center;padding:60px 20px;">
-        <div style="font-size:60px;margin-bottom:20px;">🚧</div>
-        <div style="font-size:18px;font-weight:700;color:#333;">准备中 / 준비 중</div>
-        <div style="font-size:14px;color:#888;margin-top:10px;">即将上线，敬请期待！<br>곧 업데이트될 예정입니다!</div>
-    </div>
-    <button class="bottom-back" onclick="goBack('home')">← 처음으로 / 返回首页</button>
 </div>
 
 <script>
+    let currentLang = 'zh';
     const history = ['home'];
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        
+        // 버튼 활성화 스타일 변경
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if(btn.innerText.toLowerCase().includes(lang === 'zh' ? '中文' : 'english')) {
+                btn.classList.add('active');
+            }
+        });
+
+        // 타이틀 변경
+        const title = document.getElementById('main-title');
+        const sub = document.getElementById('main-sub');
+        if(lang === 'zh') {
+            title.innerText = "明星药局";
+            sub.innerText = "专业药师 1:1 咨询";
+        } else {
+            title.innerText = "Myeongseong Pharmacy";
+            sub.innerText = "Professional Pharmacist Consultation";
+        }
+
+        // 모든 데이터 속성 변경
+        document.querySelectorAll('[data-zh]').forEach(el => {
+            el.innerText = el.getAttribute('data-' + lang);
+        });
+    }
 
     function showPage(id) {
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        const target = document.getElementById('page-' + id);
-        if (target) {
-            target.classList.add('active');
-            window.scrollTo(0, 0);
-        }
+        document.getElementById('page-' + id).classList.add('active');
+        window.scrollTo(0,0);
     }
 
     function goToCategory(cat) {
-        const available = ['skin'];
-        if (available.includes(cat)) {
-            history.push('cat-' + cat);
-            showPage('cat-' + cat);
-        } else {
-            history.push('coming-soon');
-            showPage('coming-soon');
+        history.push('cat-' + cat);
+        showPage('cat-' + cat);
+    }
+
+    function goBack() {
+        if(history.length > 1) {
+            history.pop();
+            showPage(history[history.length - 1]);
         }
     }
-
-    function goToDetail(product) {
-        history.push('detail-' + product);
-        showPage('detail-' + product);
-    }
-
-    function goBack(target) {
-        history.pop();
-        showPage(target);
-    }
 </script>
+
 </body>
 </html>
