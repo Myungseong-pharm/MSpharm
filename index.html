@@ -1,143 +1,254 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>明星药局 | Myeongseong Pharmacy</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f7f9; min-height: 100vh; color: #333; }
-
-        /* Header */
-        .header { background: linear-gradient(135deg, #004ea2, #007bff); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .lang-switcher { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 10px; }
-        .lang-btn { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 5px 12px; border-radius: 20px; font-size: 13px; cursor: pointer; }
-        .lang-btn.active { background: white; color: #004ea2; font-weight: bold; }
-
-        /* Navigation */
-        .page { display: none; padding: 20px 16px; max-width: 600px; margin: 0 auto; }
-        .page.active { display: block; }
-
-        /* Grid Home */
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .card { background: white; padding: 25px 15px; border-radius: 18px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); cursor: pointer; }
-        .card .icon { font-size: 35px; margin-bottom: 10px; }
-        .card .title { font-weight: bold; font-size: 16px; color: #004ea2; }
-
-        /* Item List */
-        .item-card { background: white; border-radius: 15px; padding: 12px; margin-bottom: 12px; display: flex; align-items: center; gap: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); cursor: pointer; }
-        .item-thumb { width: 80px; height: 80px; background: #eee; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .item-thumb img { width: 100%; height: 100%; object-fit: cover; }
-        .item-info h3 { font-size: 16px; margin-bottom: 4px; }
-        .item-info p { font-size: 13px; color: #666; }
-
-        /* Detail View */
-        .product-img-large { width: 100%; height: 250px; background: #eee; border-radius: 20px; margin-bottom: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .product-img-large img { width: 100%; height: 100%; object-fit: contain; background: white; }
-        .detail-box { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .info-label { font-weight: bold; color: #004ea2; margin-bottom: 5px; font-size: 15px; }
-        .info-content { font-size: 15px; line-height: 1.6; color: #444; background: #f9f9f9; padding: 12px; border-radius: 10px; margin-bottom: 15px; }
-
-        .back-nav { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #004ea2; font-weight: bold; cursor: pointer; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>영종진명성약국 | Yeongjong Pharmacy | 永宗珍明星药局</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f7; }
+.app { max-width: 480px; margin: 0 auto; background: #f5f5f7; min-height: 100vh; }
+.header { background: #fff; border-bottom: 1px solid #e8e8e8; padding: 14px 16px 10px; position: sticky; top: 0; z-index: 10; }
+.header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.pharmacy-name { font-size: 15px; font-weight: 600; color: #111; }
+.pharmacy-sub { font-size: 11px; color: #888; margin-top: 2px; }
+.lang-btns { display: flex; gap: 4px; }
+.lang-btn { font-size: 11px; padding: 5px 9px; border-radius: 8px; border: 1px solid #ddd; background: transparent; cursor: pointer; color: #666; font-family: inherit; transition: all 0.15s; }
+.lang-btn.active { background: #1D9E75; border-color: #1D9E75; color: #fff; font-weight: 500; }
+.cats { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+.cats::-webkit-scrollbar { display: none; }
+.cat-btn { font-size: 12px; padding: 6px 13px; border-radius: 20px; border: 1px solid #e0e0e0; background: transparent; cursor: pointer; color: #888; white-space: nowrap; font-family: inherit; transition: all 0.15s; }
+.cat-btn.active { background: #f0f0f0; color: #111; border-color: #ccc; font-weight: 500; }
+.info-bar { background: #e8f7f2; padding: 8px 16px; font-size: 11px; color: #0F6E56; }
+.products { padding: 12px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.product-card { background: #fff; border-radius: 14px; border: 1px solid #ececec; overflow: hidden; cursor: pointer; transition: transform 0.12s, box-shadow 0.12s; }
+.product-card:active { transform: scale(0.97); }
+.product-img { width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; background: #f8f8f8; font-size: 38px; }
+.product-info { padding: 10px; }
+.product-cat { font-size: 10px; color: #1D9E75; font-weight: 600; margin-bottom: 3px; }
+.product-name { font-size: 12px; font-weight: 500; color: #111; line-height: 1.35; margin-bottom: 3px; min-height: 32px; }
+.product-mfr { font-size: 10px; color: #aaa; }
+.modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 100; align-items: flex-end; justify-content: center; }
+.modal-bg.open { display: flex; }
+.modal { background: #fff; border-radius: 20px 20px 0 0; width: 100%; max-width: 480px; max-height: 88vh; overflow-y: auto; padding: 20px 18px 36px; position: relative; }
+.modal-handle { width: 38px; height: 4px; background: #ddd; border-radius: 2px; margin: 0 auto 18px; }
+.modal-img { width: 100%; aspect-ratio: 1.8; display: flex; align-items: center; justify-content: center; background: #f8f8f8; border-radius: 14px; font-size: 60px; margin-bottom: 16px; }
+.modal-cat { font-size: 11px; color: #1D9E75; font-weight: 600; margin-bottom: 4px; }
+.modal-name { font-size: 20px; font-weight: 600; color: #111; margin-bottom: 4px; line-height: 1.3; }
+.modal-mfr { font-size: 12px; color: #aaa; margin-bottom: 14px; }
+.modal-divider { border: none; border-top: 1px solid #f0f0f0; margin: 14px 0; }
+.modal-section-title { font-size: 11px; color: #aaa; font-weight: 600; margin-bottom: 7px; text-transform: uppercase; letter-spacing: 0.6px; }
+.modal-detail { font-size: 13px; color: #333; line-height: 1.7; }
+.ingredient-box { background: #f4faf8; border-radius: 10px; padding: 10px 13px; margin-top: 4px; font-size: 12px; color: #2a7a5e; line-height: 1.6; border: 1px solid #d6efe7; }
+.close-btn { position: absolute; top: 18px; right: 18px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid #e8e8e8; background: #f5f5f5; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #666; line-height: 1; }
+</style>
 </head>
 <body>
-
-<div class="header">
-    <div class="lang-switcher">
-        <button id="btn-zh" class="lang-btn active" onclick="setLanguage('zh')">中文</button>
-        <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">English</button>
+<div class="app">
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <div class="pharmacy-name" id="h-name">영종진명성약국</div>
+        <div class="pharmacy-sub" id="h-sub">인천 구읍뱃터점</div>
+      </div>
+      <div class="lang-btns">
+        <button class="lang-btn active" onclick="setLang('ko')">한국어</button>
+        <button class="lang-btn" onclick="setLang('zh')">中文</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
     </div>
-    <h1 id="main-title">明星药局</h1>
-    <p id="main-sub">专业药师 1:1 咨询</p>
+    <div class="cats" id="cats"></div>
+  </div>
+  <div class="info-bar" id="info-bar"></div>
+  <div class="products" id="products"></div>
 </div>
 
-<div id="page-home" class="page active">
-    <div class="grid">
-        <div class="card" onclick="showPage('cat-skin')">
-            <div class="icon">✨</div>
-            <div class="title" data-zh="皮肤管理" data-en="Skin Care">皮肤管理</div>
-        </div>
-        <div class="card" onclick="alert('Update Soon!')">
-            <div class="icon">🤒</div>
-            <div class="title" data-zh="感冒/热" data-en="Cold / Fever">感冒/热</div>
-        </div>
-    </div>
-</div>
-
-<div id="page-cat-skin" class="page">
-    <div class="back-nav" onclick="showPage('home')">← <span data-zh="返回" data-en="Back">返回</span></div>
-    <h2 style="margin-bottom:20px;" data-zh="皮肤管理" data-en="Skin Care">皮肤管理</h2>
-    
-    <div class="item-card" onclick="showDetail('noscarna')">
-        <div class="item-thumb">
-            <img src="https://via.placeholder.com/150?text=NOSCARNA" alt="Noscarna">
-        </div>
-        <div class="item-info">
-            <h3>Noscarna (노스카나)</h3>
-            <p data-zh="祛疤膏 / 针对新生疤痕" data-en="Scar gel / For new scars">祛疤膏 / 针对新生疤痕</p>
-        </div>
-    </div>
-
-    <div class="item-card" onclick="showDetail('acnon')">
-        <div class="item-thumb">
-            <img src="https://via.placeholder.com/150?text=ACNON" alt="Acnon">
-        </div>
-        <div class="item-info">
-            <h3>Acnon (애크논)</h3>
-            <p data-zh="抗痘膏 / 针对红肿痘痘" data-en="Acne cream / For inflamed acne">抗痘膏 / 针对红肿痘痘</p>
-        </div>
-    </div>
-</div>
-
-<div id="page-detail-noscarna" class="page">
-    <div class="back-nav" onclick="showPage('cat-skin')">← <span data-zh="返回" data-en="Back">返回</span></div>
-    <div class="product-img-large">
-        <img src="https://via.placeholder.com/400x300?text=NOSCARNA+IMAGE" alt="Noscarna Large">
-    </div>
-    <div class="detail-box">
-        <div class="detail-title" style="font-size:22px; font-weight:bold; margin-bottom:15px;">Noscarna Gel</div>
-        <div class="info-label">💡 <span data-zh="功效" data-en="Effect">功效</span></div>
-        <div class="info-content" data-zh="治疗受损皮肤组织、去疤痕。" data-en="Treatment of damaged skin tissue and scars."></div>
-        <div class="info-label">🕒 <span data-zh="用法" data-en="How to use">用法</span></div>
-        <div class="info-content" data-zh="每日数次涂抹于患处。" data-en="Apply several times a day to the affected area."></div>
-    </div>
-</div>
-
-<div id="page-detail-acnon" class="page">
-    <div class="back-nav" onclick="showPage('cat-skin')">← <span data-zh="返回" data-en="Back">返回</span></div>
-    <div class="product-img-large">
-        <img src="https://via.placeholder.com/400x300?text=ACNON+IMAGE" alt="Acnon Large">
-    </div>
-    <div class="detail-box">
-        <div class="detail-title" style="font-size:22px; font-weight:bold; margin-bottom:15px;">Acnon Cream</div>
-        <div class="info-label">💡 <span data-zh="功效" data-en="Effect">功效</span></div>
-        <div class="info-content" data-zh="治疗粉刺、红肿化脓性痘痘。" data-en="Treatment of pimples and inflamed acne."></div>
-        <div class="info-label">🕒 <span data-zh="用法" data-en="How to use">用法</span></div>
-        <div class="info-content" data-zh="洁面后，每日数次涂抹。" data-en="After washing, apply several times a day."></div>
-    </div>
+<div class="modal-bg" id="modal-bg" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <button class="close-btn" onclick="closeModalBtn()">✕</button>
+    <div class="modal-img" id="m-img"></div>
+    <div class="modal-cat" id="m-cat"></div>
+    <div class="modal-name" id="m-name"></div>
+    <div class="modal-mfr" id="m-mfr"></div>
+    <hr class="modal-divider">
+    <div class="modal-section-title" id="m-label-ing"></div>
+    <div class="ingredient-box" id="m-ing"></div>
+    <hr class="modal-divider">
+    <div class="modal-section-title" id="m-label-desc"></div>
+    <div class="modal-detail" id="m-desc"></div>
+    <hr class="modal-divider">
+    <div class="modal-section-title" id="m-label-use"></div>
+    <div class="modal-detail" id="m-use"></div>
+  </div>
 </div>
 
 <script>
-    function setLanguage(lang) {
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById('btn-' + lang).classList.add('active');
-        const title = document.getElementById('main-title');
-        if(lang === 'zh') { title.innerText = "明星药局"; } 
-        else { title.innerText = "Myeongseong Pharmacy"; }
-        document.querySelectorAll('[data-zh]').forEach(el => {
-            el.innerText = el.getAttribute('data-' + lang);
-        });
-    }
+const T = {
+  ko: {
+    name: '영종진명성약국', sub: '인천 구읍뱃터점',
+    location: '인천 구읍뱃터 인근',
+    cats: ['전체','해열·진통','소화·위장','감기·기침','피부·외용','비타민·건강','한약·생약'],
+    labelIng: '주요 성분', labelDesc: '제품 설명', labelUse: '복용 방법 및 주의사항'
+  },
+  zh: {
+    name: '永宗珍明星药局', sub: '仁川旧邑渡口店',
+    location: '仁川旧邑渡口附近',
+    cats: ['全部','退烧·镇痛','消化·肠胃','感冒·咳嗽','皮肤·外用','维生素·健康','中药·生药'],
+    labelIng: '主要成分', labelDesc: '产品说明', labelUse: '服用方法及注意事项'
+  },
+  en: {
+    name: 'Yeongjong Jinmyeongseong Pharmacy', sub: 'Incheon Gueup Ferry Terminal',
+    location: 'Near Incheon Gueup Ferry Terminal',
+    cats: ['All','Fever·Pain','Digestion','Cold·Cough','Skin·Topical','Vitamins','Herbal'],
+    labelIng: 'Key Ingredients', labelDesc: 'Product Info', labelUse: 'Dosage & Precautions'
+  }
+};
 
-    function showPage(id) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.getElementById('page-' + id).classList.add('active');
-        window.scrollTo(0,0);
-    }
+const products = [
+  {
+    emoji: '🌿', cat: [0,6],
+    ko: { cat:'한약·생약', name:'한약(생약)제제 700', mfr:'생약제제', ing:'황기, 당귀, 숙지황, 백출, 복령 등 복합 생약 성분', desc:'전통 한약 성분의 생약 복합제제. 체력 보강 및 건강 유지에 사용합니다.', use:'용법·용량에 따라 복용. 반드시 약사에게 문의하세요.' },
+    zh: { cat:'中药·生药', name:'韩药(生药)制剂 700', mfr:'生药制剂', ing:'黄芪、当归、熟地黄、白术、茯苓等复合生药成分', desc:'传统韩药成分的生药复合制剂。用于增强体力和维持健康。', use:'按用法用量服用。请务必咨询药师。' },
+    en: { cat:'Herbal', name:'Herbal Medicine 700', mfr:'Herbal Formula', ing:'Astragalus, Angelica, Rehmannia, Atractylodes, Poria and other herbal compounds', desc:'Traditional herbal compound formula used to reinforce vitality and maintain health.', use:'Take as directed. Please consult a pharmacist.' }
+  },
+  {
+    emoji: '💊', cat: [0,1],
+    ko: { cat:'해열·진통', name:'타이레놀정 500mg', mfr:'한국얀센', ing:'아세트아미노펜 500mg', desc:'아세트아미노펜 성분의 대표 해열진통제. 두통·치통·발열에 효과적이며 위장 자극이 적습니다.', use:'성인: 1회 1~2정, 1일 3~4회 복용. 식후 복용 권장. 1일 최대 4,000mg 초과 금지.' },
+    zh: { cat:'退烧·镇痛', name:'泰诺 500mg', mfr:'韩国杨森', ing:'对乙酰氨基酚 500mg', desc:'含对乙酰氨基酚的经典退烧镇痛药。对头痛、牙痛和发烧有效，对胃肠刺激小。', use:'成人：每次1~2片，每日3~4次。建议饭后服用。每日不超过4,000mg。' },
+    en: { cat:'Fever·Pain', name:'Tylenol 500mg', mfr:'Janssen Korea', ing:'Acetaminophen 500mg', desc:'Classic acetaminophen-based fever and pain reliever. Effective for headache, toothache and fever with minimal stomach irritation.', use:'Adults: 1~2 tablets, 3~4 times daily. Recommended after meals. Do not exceed 4,000mg daily.' }
+  },
+  {
+    emoji: '🫁', cat: [0,2],
+    ko: { cat:'소화·위장', name:'속청케어액', mfr:'종근당', ing:'트리메부틴말레산염, 시메티콘', desc:'위장 운동을 도와 소화를 촉진하는 위장약. 더부룩함·식후 불편감에 효과적입니다.', use:'1일 3회, 식전 15~30분에 복용.' },
+    zh: { cat:'消化·肠胃', name:'Speed Care液', mfr:'钟根堂', ing:'三甲布丁马来酸盐、西甲硅油', desc:'帮助肠胃运动、促进消化的胃肠药。对腹胀和饭后不适有效。', use:'每日3次，饭前15~30分钟服用。' },
+    en: { cat:'Digestion', name:'Sokcheong Care Liquid', mfr:'Chong Kun Dang', ing:'Trimebutine maleate, Simethicone', desc:'Gastrointestinal medicine that aids digestion and relieves bloating and post-meal discomfort.', use:'3 times daily, 15~30 min before meals.' }
+  },
+  {
+    emoji: '🌸', cat: [0,2],
+    ko: { cat:'소화·위장', name:'플로리진 연질캡슐', mfr:'동화약품', ing:'락토바실러스 아시도필루스, 비피도박테리움 롱검 등 복합 유산균', desc:'장내 유익균을 보충하는 프로바이오틱스 제품. 장 건강 개선에 도움을 줍니다.', use:'1일 1~2회, 1회 1캡슐 복용. 식전 또는 식후 상관없이 복용 가능.' },
+    zh: { cat:'消化·肠胃', name:'Florezin软胶囊', mfr:'东和药品', ing:'嗜酸乳杆菌、长双歧杆菌等复合益生菌', desc:'补充肠道益生菌的益生菌产品。有助于改善肠道健康。', use:'每日1~2次，每次1粒。饭前或饭后均可服用。' },
+    en: { cat:'Digestion', name:'Florezin Soft Capsule', mfr:'Dong-Wha Pharm', ing:'Lactobacillus acidophilus, Bifidobacterium longum and other probiotic strains', desc:'Probiotic supplement that replenishes beneficial intestinal bacteria for gut health.', use:'1 capsule 1~2 times daily. Can be taken before or after meals.' }
+  },
+  {
+    emoji: '💧', cat: [0,2],
+    ko: { cat:'소화·위장', name:'까스활명수큐액', mfr:'동화약품', ing:'계피·정향·육두구·회향·아선약 추출물, 탄산수소나트륨', desc:'소화불량·속쓰림에 오랫동안 사랑받아온 국민 소화제. 1회용 편리한 포장.', use:'1회 1병(75mL), 1일 3회 식후 복용.' },
+    zh: { cat:'消化·肠胃', name:'活命水Q液', mfr:'东和药品', ing:'肉桂·丁香·肉豆蔻·茴香·儿茶提取物，碳酸氢钠', desc:'长期受到喜爱的经典消化药，适用于消化不良和胃灼热。便携一次性包装。', use:'每次1瓶(75mL)，每日3次，饭后服用。' },
+    en: { cat:'Digestion', name:'Gashualmyeongsu Q', mfr:'Dong-Wha Pharm', ing:'Cinnamon, Clove, Nutmeg, Fennel, Catechu extract, Sodium bicarbonate', desc:'Long-beloved classic digestive aid for indigestion and heartburn. Convenient single-use bottle.', use:'1 bottle (75mL), 3 times daily after meals.' }
+  },
+  {
+    emoji: '🤧', cat: [0,3],
+    ko: { cat:'감기·기침', name:'소렉신캡슐', mfr:'경방신약', ing:'클로르페니라민말레산염, 슈도에페드린염산염, 덱스트로메토르판브롬화수소산염', desc:'감기 복합 증상(콧물·코막힘·기침·인후통)을 한 번에 완화하는 복합 감기약.', use:'성인: 1회 2캡슐, 1일 3회, 식후 복용. 졸음 유발 가능.' },
+    zh: { cat:'感冒·咳嗽', name:'Sorexin胶囊', mfr:'京方新药', ing:'马来酸氯苯那敏、盐酸伪麻黄碱、氢溴酸右美沙芬', desc:'一次缓解感冒复合症状（流鼻涕、鼻塞、咳嗽、喉咙痛）的复合感冒药。', use:'成人：每次2粒，每日3次，饭后服用。可能引起嗜睡。' },
+    en: { cat:'Cold·Cough', name:'Sorexin Capsule', mfr:'Kyungbang Pharm', ing:'Chlorpheniramine maleate, Pseudoephedrine HCl, Dextromethorphan HBr', desc:'Multi-symptom cold medicine that relieves runny nose, congestion, cough and sore throat.', use:'Adults: 2 capsules, 3 times daily after meals. May cause drowsiness.' }
+  },
+  {
+    emoji: '⚡', cat: [0,5],
+    ko: { cat:'비타민·건강', name:'박카스D', mfr:'동아제약', ing:'타우린 2,000mg, 카페인 30mg, 비타민 B₁·B₂·B₆, 니코틴산아미드', desc:'타우린 함유 피로회복 드링크. 과로·피로 회복에 도움을 줍니다.', use:'1일 1~2병 음용. 냉장 보관 후 차갑게 마시면 더욱 좋습니다. 어린이·임산부 주의.' },
+    zh: { cat:'维生素·健康', name:'百氏達D', mfr:'东亚制药', ing:'牛磺酸 2,000mg，咖啡因 30mg，维生素B₁·B₂·B₆，烟酰胺', desc:'含牛磺酸的疲劳恢复饮料。有助于缓解过劳和疲劳。', use:'每日饮用1~2瓶。冷藏后冰凉饮用效果更佳。儿童及孕妇请注意。' },
+    en: { cat:'Vitamins', name:'Bacchus-D', mfr:'Dong-A Pharm', ing:'Taurine 2,000mg, Caffeine 30mg, Vitamins B₁·B₂·B₆, Nicotinamide', desc:'Taurine-based energy drink for fatigue recovery. Helps relieve exhaustion and tiredness.', use:'1~2 bottles per day. Best served chilled. Caution for children and pregnant women.' }
+  },
+  {
+    emoji: '🧴', cat: [0,4],
+    ko: { cat:'피부·외용', name:'노스카나겔 20g', mfr:'동아제약', ing:'헤파린나트륨, 알란토인, 덱스판테놀', desc:'흉터 예방 및 치료에 도움을 주는 겔 타입 외용제. 수술·상처 후 흉터 관리에 사용합니다.', use:'하루 2~3회, 환부에 소량 도포 후 마사지. 3~6개월 지속 사용 권장.' },
+    zh: { cat:'皮肤·外用', name:'诺斯卡纳凝胶 20g', mfr:'东亚制药', ing:'肝素钠、尿囊素、右泛醇', desc:'有助于预防和治疗疤痕的凝胶型外用药。用于手术或伤口后的疤痕管理。', use:'每日2~3次，在患处涂抹少量并按摩。建议持续使用3~6个月。' },
+    en: { cat:'Skin·Topical', name:'Noscana Gel 20g', mfr:'Dong-A Pharm', ing:'Heparin sodium, Allantoin, Dexpanthenol', desc:'Gel-type topical for scar prevention and treatment. Used for managing scars after surgery or wounds.', use:'Apply small amount and massage 2~3 times daily. Recommended for 3~6 months of use.' }
+  },
+  {
+    emoji: '🏃', cat: [0,3],
+    ko: { cat:'감기·기침', name:'엑스콜디 (정제)', mfr:'한풍제약', ing:'아세트아미노펜, 클로르페니라민말레산염, 슈도에페드린염산염', desc:'감기로 인한 발열·두통·근육통·콧물 등의 증상을 완화하는 복합 감기약.', use:'성인: 1회 2정, 1일 3회, 식후 30분 복용. 졸음 유발 가능.' },
+    zh: { cat:'感冒·咳嗽', name:'Xcold-D (片剂)', mfr:'汉风制药', ing:'对乙酰氨基酚、马来酸氯苯那敏、盐酸伪麻黄碱', desc:'缓解感冒引起的发烧、头痛、肌肉痛、流鼻涕等症状的复合感冒药。', use:'成人：每次2片，每日3次，饭后30分钟服用。可能引起嗜睡。' },
+    en: { cat:'Cold·Cough', name:'Xcold-D Tablet', mfr:'Hanpoong Pharm', ing:'Acetaminophen, Chlorpheniramine maleate, Pseudoephedrine HCl', desc:'Multi-symptom cold medicine for fever, headache, muscle pain and runny nose.', use:'Adults: 2 tablets, 3 times daily, 30 min after meals. May cause drowsiness.' }
+  },
+  {
+    emoji: '🌰', cat: [0,1],
+    ko: { cat:'해열·진통', name:'아르펜정', mfr:'경남제약', ing:'이부프로펜 200mg', desc:'이부프로펜 성분의 소염진통제. 두통·치통·근육통·생리통에 효과적입니다.', use:'성인: 1회 1정, 1일 3~4회 복용. 공복 복용 금지. 위장 출혈 위험 주의.' },
+    zh: { cat:'退烧·镇痛', name:'Arfen片', mfr:'庆南制药', ing:'布洛芬 200mg', desc:'含布洛芬的消炎镇痛药。对头痛、牙痛、肌肉痛和痛经有效。', use:'成人：每次1片，每日3~4次。禁止空腹服用。注意胃肠出血风险。' },
+    en: { cat:'Fever·Pain', name:'Arfen Tablet', mfr:'Gyeongnam Pharm', ing:'Ibuprofen 200mg', desc:'Ibuprofen-based anti-inflammatory pain reliever. Effective for headache, toothache, muscle pain and menstrual cramps.', use:'Adults: 1 tablet, 3~4 times daily. Do not take on empty stomach. Watch for GI bleeding risk.' }
+  },
+  {
+    emoji: '🌾', cat: [0,6],
+    ko: { cat:'한약·생약', name:'광동원탕', mfr:'광동제약', ing:'홍삼, 황기, 당귀, 오미자, 산수유 등 복합 한방 성분', desc:'전통 한방 처방의 원탕 음료. 체력 보충과 피로 회복에 도움을 줍니다.', use:'1일 1병 음용. 냉장 보관.' },
+    zh: { cat:'中药·生药', name:'广东原汤', mfr:'广东制药', ing:'红参、黄芪、当归、五味子、山茱萸等复合韩方成分', desc:'传统韩方原汤饮料。有助于补充体力和恢复疲劳。', use:'每日饮用1瓶。冷藏保存。' },
+    en: { cat:'Herbal', name:'Gwangdong Wongtang', mfr:'Kwangdong Pharm', ing:'Red ginseng, Astragalus, Angelica, Schisandra, Cornus fruit and other herbal compounds', desc:'Traditional herbal tonic drink. Helps replenish energy and relieve fatigue.', use:'1 bottle daily. Keep refrigerated.' }
+  },
+  {
+    emoji: '🩹', cat: [0,4],
+    ko: { cat:'피부·외용', name:'애크논크림', mfr:'동아제약', ing:'레조르시놀, 살리실산, 유황', desc:'여드름 치료에 효과적인 피부 외용 크림. 살균 작용으로 여드름균을 억제합니다.', use:'하루 1~3회 환부에 소량 바릅니다. 눈 주위 사용 금지. 자외선 차단제 병용 권장.' },
+    zh: { cat:'皮肤·外用', name:'Acnon霜', mfr:'东亚制药', ing:'间苯二酚、水杨酸、硫磺', desc:'治疗痤疮的皮肤外用霜。通过杀菌作用抑制痤疮菌。', use:'每日1~3次，在患处涂抹少量。禁止用于眼部周围。建议同时使用防晒霜。' },
+    en: { cat:'Skin·Topical', name:'Acnon Cream', mfr:'Dong-A Pharm', ing:'Resorcinol, Salicylic acid, Sulfur', desc:'Topical cream effective for acne treatment. Inhibits acne bacteria through antibacterial action.', use:'Apply small amount 1~3 times daily. Avoid eye area. Recommend use of sunscreen.' }
+  }
+];
 
-    function showDetail(name) { showPage('detail-' + name); }
+let lang = 'ko';
+let activeCat = 0;
+
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('.lang-btn').forEach((b,i) => {
+    b.classList.toggle('active', ['ko','zh','en'][i] === l);
+  });
+  render();
+}
+
+function render() {
+  const t = T[lang];
+  document.getElementById('h-name').textContent = t.name;
+  document.getElementById('h-sub').textContent = t.sub;
+  document.getElementById('info-bar').textContent = '📍 ' + t.location;
+  const catsEl = document.getElementById('cats');
+  catsEl.innerHTML = '';
+  t.cats.forEach((c,i) => {
+    const btn = document.createElement('button');
+    btn.className = 'cat-btn' + (activeCat === i ? ' active' : '');
+    btn.textContent = c;
+    btn.onclick = () => { activeCat = i; render(); };
+    catsEl.appendChild(btn);
+  });
+  const filtered = activeCat === 0 ? products : products.filter(p => p.cat.includes(activeCat));
+  const prod = document.getElementById('products');
+  prod.innerHTML = '';
+  filtered.forEach(p => {
+    const d = p[lang];
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `<div class="product-img">${p.emoji}</div>
+      <div class="product-info">
+        <div class="product-cat">${d.cat}</div>
+        <div class="product-name">${d.name}</div>
+        <div class="product-mfr">${d.mfr}</div>
+      </div>`;
+    card.onclick = () => openModal(p);
+    prod.appendChild(card);
+  });
+}
+
+function openModal(p) {
+  const d = p[lang];
+  const t = T[lang];
+  document.getElementById('m-img').textContent = p.emoji;
+  document.getElementById('m-cat').textContent = d.cat;
+  document.getElementById('m-name').textContent = d.name;
+  document.getElementById('m-mfr').textContent = d.mfr;
+  document.getElementById('m-label-ing').textContent = t.labelIng;
+  document.getElementById('m-ing').textContent = d.ing;
+  document.getElementById('m-label-desc').textContent = t.labelDesc;
+  document.getElementById('m-desc').textContent = d.desc;
+  document.getElementById('m-label-use').textContent = t.labelUse;
+  document.getElementById('m-use').textContent = d.use;
+  document.getElementById('modal-bg').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-bg')) {
+    document.getElementById('modal-bg').classList.remove('open');
+  }
+}
+function closeModalBtn() {
+  document.getElementById('modal-bg').classList.remove('open');
+}
+
+render();
 </script>
-
 </body>
 </html>
