@@ -6,118 +6,125 @@
     <title>明星药局 | Myeongseong Pharmacy</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f0f4f8; min-height: 100vh; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f7f9; min-height: 100vh; color: #333; }
 
-        /* Header & Language Switcher */
-        .header { background: linear-gradient(135deg, #1565C0, #1e88e5); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-        .lang-switcher { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 10px; }
-        .lang-btn { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 4px 10px; border-radius: 15px; font-size: 12px; cursor: pointer; }
-        .lang-btn.active { background: white; color: #1565C0; font-weight: bold; }
+        /* Header */
+        .header { background: linear-gradient(135deg, #004ea2, #007bff); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .lang-switcher { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 10px; }
+        .lang-btn { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 5px 12px; border-radius: 20px; font-size: 13px; cursor: pointer; }
+        .lang-btn.active { background: white; color: #004ea2; font-weight: bold; }
 
-        /* Layout */
-        .page { display: none; padding-bottom: 40px; }
+        /* Navigation */
+        .page { display: none; padding: 20px 16px; max-width: 600px; margin: 0 auto; }
         .page.active { display: block; }
-        .container { padding: 16px; max-width: 600px; margin: 0 auto; }
 
-        /* Category Grid */
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px; }
-        .card { background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); cursor: pointer; }
-        .card .icon { font-size: 32px; margin-bottom: 8px; }
-        .card .title { font-weight: bold; color: #333; font-size: 15px; }
+        /* Grid Home */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .card { background: white; padding: 25px 15px; border-radius: 18px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); cursor: pointer; }
+        .card .icon { font-size: 35px; margin-bottom: 10px; }
+        .card .title { font-weight: bold; font-size: 16px; color: #004ea2; }
 
         /* Item List */
-        .item-card { background: white; border-radius: 12px; padding: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 15px; }
-        .item-img { width: 80px; height: 80px; background: #eee; border-radius: 8px; flex-shrink: 0; }
+        .item-card { background: white; border-radius: 15px; padding: 12px; margin-bottom: 12px; display: flex; align-items: center; gap: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); cursor: pointer; }
+        .item-thumb { width: 80px; height: 80px; background: #eee; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .item-thumb img { width: 100%; height: 100%; object-fit: cover; }
         .item-info h3 { font-size: 16px; margin-bottom: 4px; }
         .item-info p { font-size: 13px; color: #666; }
 
-        .back-btn { background: none; border: none; color: white; cursor: pointer; font-size: 16px; float: left; }
+        /* Detail View */
+        .product-img-large { width: 100%; height: 250px; background: #eee; border-radius: 20px; margin-bottom: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .product-img-large img { width: 100%; height: 100%; object-fit: contain; background: white; }
+        .detail-box { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .info-label { font-weight: bold; color: #004ea2; margin-bottom: 5px; font-size: 15px; }
+        .info-content { font-size: 15px; line-height: 1.6; color: #444; background: #f9f9f9; padding: 12px; border-radius: 10px; margin-bottom: 15px; }
+
+        .back-nav { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #004ea2; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
 
 <div class="header">
     <div class="lang-switcher">
-        <button class="lang-btn active" onclick="setLanguage('zh')">中文</button>
-        <button class="lang-btn" onclick="setLanguage('en')">English</button>
+        <button id="btn-zh" class="lang-btn active" onclick="setLanguage('zh')">中文</button>
+        <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">English</button>
     </div>
     <h1 id="main-title">明星药局</h1>
-    <p id="main-sub">전문 약사의 1:1 맞춤 상담</p>
+    <p id="main-sub">专业药师 1:1 咨询</p>
 </div>
 
 <div id="page-home" class="page active">
-    <div class="container">
-        <div class="grid">
-            <div class="card" onclick="goToCategory('skin')">
-                <div class="icon">✨</div>
-                <div class="title" data-zh="皮肤管理" data-en="Skin Care">皮肤管理</div>
-            </div>
-            <div class="card" onclick="goToCategory('cold')">
-                <div class="icon">🤒</div>
-                <div class="title" data-zh="感冒/热" data-en="Cold / Fever">感冒/热</div>
-            </div>
-            <div class="card" onclick="goToCategory('stomach')">
-                <div class="icon">消化</div>
-                <div class="title" data-zh="消化不良" data-en="Digestive">消化不良</div>
-            </div>
-            <div class="card" onclick="goToCategory('pain')">
-                <div class="icon">💊</div>
-                <div class="title" data-zh="止痛药" data-en="Pain Relief">止痛药</div>
-            </div>
+    <div class="grid">
+        <div class="card" onclick="showPage('cat-skin')">
+            <div class="icon">✨</div>
+            <div class="title" data-zh="皮肤管理" data-en="Skin Care">皮肤管理</div>
+        </div>
+        <div class="card" onclick="alert('Update Soon!')">
+            <div class="icon">🤒</div>
+            <div class="title" data-zh="感冒/热" data-en="Cold / Fever">感冒/热</div>
         </div>
     </div>
 </div>
 
 <div id="page-cat-skin" class="page">
-    <div class="container">
-        <button class="back-btn" onclick="goBack()">←</button>
-        <h2 style="text-align:center; margin-bottom:20px;" data-zh="皮肤管理" data-en="Skin Care">皮肤管理</h2>
-        
-        <div class="item-card">
-            <div class="item-img"></div>
-            <div class="item-info">
-                <h3 data-zh="Noscarna (노스카나)" data-en="Noscarna Gel">Noscarna (노스카나)</h3>
-                <p data-zh="祛疤膏 / 每天多次涂抹" data-en="Scar treatment / Apply several times a day">祛疤膏 / 每天多次涂抹</p>
-            </div>
+    <div class="back-nav" onclick="showPage('home')">← <span data-zh="返回" data-en="Back">返回</span></div>
+    <h2 style="margin-bottom:20px;" data-zh="皮肤管理" data-en="Skin Care">皮肤管理</h2>
+    
+    <div class="item-card" onclick="showDetail('noscarna')">
+        <div class="item-thumb">
+            <img src="https://via.placeholder.com/150?text=NOSCARNA" alt="Noscarna">
         </div>
+        <div class="item-info">
+            <h3>Noscarna (노스카나)</h3>
+            <p data-zh="祛疤膏 / 针对新生疤痕" data-en="Scar gel / For new scars">祛疤膏 / 针对新生疤痕</p>
+        </div>
+    </div>
 
-        <div class="item-card">
-            <div class="item-img"></div>
-            <div class="item-info">
-                <h3 data-zh="Acnon (애크논)" data-en="Acnon Cream">Acnon (애크논)</h3>
-                <p data-zh="抗痘膏 / 洁面 후 涂抹" data-en="Acne treatment / Apply after washing face">抗痘膏 / 洁면 후 涂抹</p>
-            </div>
+    <div class="item-card" onclick="showDetail('acnon')">
+        <div class="item-thumb">
+            <img src="https://via.placeholder.com/150?text=ACNON" alt="Acnon">
+        </div>
+        <div class="item-info">
+            <h3>Acnon (애크논)</h3>
+            <p data-zh="抗痘膏 / 针对红肿痘痘" data-en="Acne cream / For inflamed acne">抗痘膏 / 针对红肿痘痘</p>
         </div>
     </div>
 </div>
 
+<div id="page-detail-noscarna" class="page">
+    <div class="back-nav" onclick="showPage('cat-skin')">← <span data-zh="返回" data-en="Back">返回</span></div>
+    <div class="product-img-large">
+        <img src="https://via.placeholder.com/400x300?text=NOSCARNA+IMAGE" alt="Noscarna Large">
+    </div>
+    <div class="detail-box">
+        <div class="detail-title" style="font-size:22px; font-weight:bold; margin-bottom:15px;">Noscarna Gel</div>
+        <div class="info-label">💡 <span data-zh="功效" data-en="Effect">功效</span></div>
+        <div class="info-content" data-zh="治疗受损皮肤组织、去疤痕。" data-en="Treatment of damaged skin tissue and scars."></div>
+        <div class="info-label">🕒 <span data-zh="用法" data-en="How to use">用法</span></div>
+        <div class="info-content" data-zh="每日数次涂抹于患处。" data-en="Apply several times a day to the affected area."></div>
+    </div>
+</div>
+
+<div id="page-detail-acnon" class="page">
+    <div class="back-nav" onclick="showPage('cat-skin')">← <span data-zh="返回" data-en="Back">返回</span></div>
+    <div class="product-img-large">
+        <img src="https://via.placeholder.com/400x300?text=ACNON+IMAGE" alt="Acnon Large">
+    </div>
+    <div class="detail-box">
+        <div class="detail-title" style="font-size:22px; font-weight:bold; margin-bottom:15px;">Acnon Cream</div>
+        <div class="info-label">💡 <span data-zh="功效" data-en="Effect">功效</span></div>
+        <div class="info-content" data-zh="治疗粉刺、红肿化脓性痘痘。" data-en="Treatment of pimples and inflamed acne."></div>
+        <div class="info-label">🕒 <span data-zh="用法" data-en="How to use">用法</span></div>
+        <div class="info-content" data-zh="洁面后，每日数次涂抹。" data-en="After washing, apply several times a day."></div>
+    </div>
+</div>
+
 <script>
-    let currentLang = 'zh';
-    const history = ['home'];
-
     function setLanguage(lang) {
-        currentLang = lang;
-        
-        // 버튼 활성화 스타일 변경
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-            if(btn.innerText.toLowerCase().includes(lang === 'zh' ? '中文' : 'english')) {
-                btn.classList.add('active');
-            }
-        });
-
-        // 타이틀 변경
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('btn-' + lang).classList.add('active');
         const title = document.getElementById('main-title');
-        const sub = document.getElementById('main-sub');
-        if(lang === 'zh') {
-            title.innerText = "明星药局";
-            sub.innerText = "专业药师 1:1 咨询";
-        } else {
-            title.innerText = "Myeongseong Pharmacy";
-            sub.innerText = "Professional Pharmacist Consultation";
-        }
-
-        // 모든 데이터 속성 변경
+        if(lang === 'zh') { title.innerText = "明星药局"; } 
+        else { title.innerText = "Myeongseong Pharmacy"; }
         document.querySelectorAll('[data-zh]').forEach(el => {
             el.innerText = el.getAttribute('data-' + lang);
         });
@@ -129,17 +136,7 @@
         window.scrollTo(0,0);
     }
 
-    function goToCategory(cat) {
-        history.push('cat-' + cat);
-        showPage('cat-' + cat);
-    }
-
-    function goBack() {
-        if(history.length > 1) {
-            history.pop();
-            showPage(history[history.length - 1]);
-        }
-    }
+    function showDetail(name) { showPage('detail-' + name); }
 </script>
 
 </body>
