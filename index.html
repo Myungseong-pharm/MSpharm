@@ -48,7 +48,7 @@
 <div id="app" class="max-w-md mx-auto bg-white min-h-screen shadow-xl relative">
     <!-- Header -->
     <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-gray-100 px-4 py-3">
-        <div class="flex justify-between items-center mb-3">
+        <div class="flex justify-between items-center">
             <div>
                 <h1 id="h-name" class="text-lg font-bold text-emerald-600 leading-tight">명성약국</h1>
                 <p id="h-sub" class="text-[10px] text-gray-400 font-medium tracking-tighter">Myung_Seong Pharmacy</p>
@@ -59,25 +59,12 @@
                 <button onclick="setLang('en')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="en">EN</button>
             </div>
         </div>
-
-        <!-- Search Bar -->
-        <div class="relative">
-            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
-            <input type="text" id="search-input" oninput="handleSearch()" placeholder="제품명을 검색하세요..." 
-                   class="w-full bg-gray-100 border-none rounded-xl py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-emerald-500 transition-all outline-none">
-        </div>
     </header>
-
-    <!-- Location Bar -->
-    <div class="bg-emerald-50 px-4 py-2 flex items-center gap-2">
-        <i class="fa-solid fa-location-dot text-emerald-500 text-xs"></i>
-        <span id="info-bar" class="text-[11px] text-emerald-700 font-medium">인천 구읍뱃터 인근</span>
-    </div>
 
     <!-- Main Content -->
     <div class="flex">
         <!-- Categories (Sidebar) -->
-        <aside class="w-20 sticky top-[108px] h-[calc(100vh-108px)] bg-gray-50 border-r border-gray-100 overflow-y-auto hide-scrollbar py-4 flex flex-col gap-2 items-center">
+        <aside class="w-20 sticky top-[57px] h-[calc(100vh-57px)] bg-gray-50 border-r border-gray-100 overflow-y-auto hide-scrollbar py-4 flex flex-col gap-2 items-center">
             <div id="cats-container" class="w-full flex flex-col gap-2 px-1">
                 <!-- Categories will be injected here -->
             </div>
@@ -143,22 +130,19 @@
 <script>
 const T = {
   ko: {
-    name: '명성약국', sub: 'Myung_Seong Pharmacy', location: '인천 구읍뱃터 인근',
-    searchPlaceholder: '제품명을 검색하세요...',
+    name: '명성약국', sub: 'Myung_Seong Pharmacy',
     emptyState: '검색 결과가 없습니다.',
     cats: ['전체', '피부케어', '약국 영양제', '건강기능식품', '해열·진통·소염', '감기·기침·목', '알러지·코감기', '소화·위장', '눈·코 외용', '피부·구강 외용', '파스류', '어린이 해열·감기', '어린이영양제', '근육이완제', '벌레·모기', '드링크', '기타'],
     labelIng: '주요 성분', labelDesc: '효능 및 설명', labelUse: '용법용량 및 주의사항'
   },
   zh: {
-    name: '明星药局', sub: 'Myung_Seong Pharmacy', location: '仁川旧邑渡口附近',
-    searchPlaceholder: '搜索产品名称...',
+    name: '明星药局', sub: 'Myung_Seong Pharmacy',
     emptyState: '没有搜索结果。',
     cats: ['全部', '皮肤护理', '药店营养剂', '健康功能食品', '退烧·镇痛·消炎', '感冒·咳嗽·喉咙', '过敏·鼻感冒', '消化·肠胃', '眼·鼻外用', '皮肤·口腔外用', '贴剂', '儿童退烧·感冒', '儿童营养剂', '肌肉松弛剂', '防蚊·驱虫', '饮品', '其他'],
     labelIng: '主要成分', labelDesc: '功效与说明', labelUse: '用法用量及注意事项'
   },
   en: {
-    name: 'Myung_Seong Pharmacy', sub: 'Pharmacy', location: 'Near Gueup Ferry Terminal',
-    searchPlaceholder: 'Search product...',
+    name: 'Myung_Seong Pharmacy', sub: 'Pharmacy',
     emptyState: 'No results found.',
     cats: ['All', 'Skin Care', 'Pharmacy Supplements', 'Health Functional Foods', 'Fever/Pain', 'Cold/Cough', 'Allergy/Nasal', 'Digestion', 'Eye/Nose', 'Skin/Oral', 'Patches', 'Kids Cold', 'Kids Vitamins', 'Muscle Relaxants', 'Bug/Mosquito', 'Drinks', 'Other'],
     labelIng: 'Key Ingredients', labelDesc: 'Description & Efficacy', labelUse: 'Dosage & Warnings'
@@ -300,8 +284,7 @@ const products = [
 
 let state = {
     lang: 'ko',
-    activeCat: 0,
-    searchQuery: ''
+    activeCat: 0
 };
 
 function setLang(l) {
@@ -314,8 +297,6 @@ function updateLanguageUI() {
     const t = T[state.lang];
     document.getElementById('h-name').textContent = t.name;
     document.getElementById('h-sub').textContent = t.sub;
-    document.getElementById('info-bar').textContent = '📍 ' + t.location;
-    document.getElementById('search-input').placeholder = t.searchPlaceholder;
     
     document.querySelectorAll('.lang-btn').forEach(btn => {
         const isSelected = btn.getAttribute('onclick').includes(state.lang);
@@ -323,11 +304,6 @@ function updateLanguageUI() {
         btn.classList.toggle('text-white', isSelected);
         btn.classList.toggle('border-emerald-600', isSelected);
     });
-}
-
-function handleSearch() {
-    state.searchQuery = document.getElementById('search-input').value.toLowerCase();
-    render();
 }
 
 function setActiveCat(index) {
@@ -373,13 +349,7 @@ function render() {
         </button>
     `).join('');
 
-    const filtered = products.filter(p => {
-        const matchesCat = state.activeCat === 0 || p.cat.includes(state.activeCat);
-        const matchesSearch = p[state.lang].name.toLowerCase().includes(state.searchQuery) || 
-                              p[state.lang].mfr.toLowerCase().includes(state.searchQuery) ||
-                              p[state.lang].desc.toLowerCase().includes(state.searchQuery);
-        return matchesCat && matchesSearch;
-    });
+    const filtered = products.filter(p => state.activeCat === 0 || p.cat.includes(state.activeCat));
 
     const productsContainer = document.getElementById('products-container');
     const emptyState = document.getElementById('empty-state');
