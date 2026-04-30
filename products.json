@@ -162,5 +162,181 @@
   { "img":"b-037.jpg", "emoji":"🧴", "cat":[0,2], "ko":{"name":"Rogaine", "mfr":"한국존슨앤드존슨", "ing":"미녹시딜 4.75g (로게인5%폼에어로졸)", "desc":"피부혈류 증가 및 모낭 자극으로 발모 촉진 (탈모증 치료)", "use":"1일 2회(아침, 저녁) 두피 환부에 바름. 건조 시 드라이어 금지"}, "zh":{"name":"落健", "mfr":"韩国强生", "ing":"米诺地尔 5%泡沫", "desc":"增加皮肤血流并刺激毛囊促进生发（治疗脱发）。", "use":"每日2次（早晚）涂抹于头皮患处。干燥时禁止使用吹风机。"}, "en":{"name":"Rogaine", "mfr":"J&J Korea", "ing":"Minoxidil 5% Foam", "desc":"Promotes hair growth by increasing blood flow and stimulating hair follicles.", "use":"Apply to the scalp twice daily (morning & night). Do not use a hair dryer to dry."} },
   { "img":"b-038.jpg", "emoji":"💇", "cat":[0,2], "ko":{"name":"모바렌캡슐", "mfr":"대웅제약", "ing":"약용효모 100mg, 케라틴 20mg, L-시스틴 20mg 등", "desc":"모발, 손톱의 발육부전 보조 치료제", "use":"성인 1일 3회 1회 1캡슐 식후 복용. 12세 미만 금기"}, "zh":{"name":"Mobaren胶囊", "mfr":"大熊制药", "ing":"药用酵母、角蛋白、L-胱氨酸等", "desc":"头发、指甲发育不良的辅助治疗剂。", "use":"成人每日3次，每次1粒饭后服用。12岁以下禁用。"}, "en":{"name":"Mobaren Capsule", "mfr":"Daewoong Pharm", "ing":"Medicinal yeast, Keratin, L-Cystine, etc.", "desc":"Adjunctive treatment for poor hair and nail development.", "use":"Adults: 1 capsule, 3 times daily after meals. Contraindicated for under 12."} },
   { "img":"b-039.jpg", "emoji":"🦴", "cat":[0,2], "ko":{"name":"맥스콘트로이틴1200", "mfr":"동아제약", "ing":"콘드로이틴설페이트나트륨 15.0g (1포당 1,200mg)", "desc":"경증~중등도 골(뼈)관절염(퇴행성관절염) 증상 완화", "use":"성인 1일 1회 1,200mg(1포)를 식사와 함께 복용"}, "zh":{"name":"Max Chondroitin 1200", "mfr":"东亚制药", "ing":"硫酸软骨素钠 1200mg", "desc":"缓解轻度至中度骨关节炎（退行性关节炎）症状。", "use":"成人每日1次，每次1包随餐服用。"}, "en":{"name":"Max Chondroitin 1200", "mfr":"Dong-A Pharm", "ing":"Chondroitin sulfate sodium 1,200mg", "desc":"Relieves symptoms of mild to moderate osteoarthritis.", "use":"Adults: Take 1,200mg (1 pack) once daily with meals."} },
-  { "img":"b-040.jpg", "emoji":"🦴", "cat":[0,2], "ko":{"name":"조인탑600", "mfr":"일양약품", "ing":"콘드로이틴설페이트나트륨 600mg, 활성비타민 등", "desc":"콘드로이틴 및 비타민 공급 (연골, 관절 영양제)", "use":"만 8세 이상 1일 1회, 1회 1정 복용"}, "zh":{"name":"Join Top 600", "mfr":"一洋药品", "ing":"硫酸软骨素钠 600mg、活性维生素等", "desc":"补充软骨素及维生素（软骨、关节营养剂）。", "use":"8岁以上：每日1次，每次1片。"}, "en":{"name":"Join Top 600", "mfr":"Ilyang Pharm", "ing":"Chondroitin sulfate sodium 600mg, Active vitamins, etc.", "desc":"Provides chondroitin and vitamins (cartilage and joint supplement).", "use":"Adults & kids 8+: 1 tablet once daily."} }
+  { "img":"b-040.jpg", "emoji":"🦴", "cat":[0,2], "ko":{"name":"조인탑600", "mfr":"일양약품", "ing":"콘드로이틴설페이트나트륨 600mg, 활성비타민 등", "desc":"콘드로이틴 및 비타민 공급 (연골, 관절 영양제)", "use":"만 8세 이상 1일 1회, 1회 1정 복용"}, "zh":{"name":"Join Top 600", "mfr":"一洋药品", "ing":"硫酸软骨素钠 600mg、活性维生素等", "desc":"补充软骨素及维生素（软骨、关节营养剂）。", "use":"8岁以上：每日1次，每次1片。"}, "en":{"name":"Join Top 600", "mfr":"Ilyang Pharm", "ing":"Chondroitin sulfate sodium 600mg, Active vitamins, etc.", "desc":"Provides chondroitin and vitamins (cartilage and joint supplement).", "use":"Adults & kids 8+: 1 tablet once daily."} },
+  {
+    "img": "o-001.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "글루비타파워", "mfr": "대웅생명과학", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "格鲁维他动力", "mfr": "大熊生命科学", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Gluvita Power", "mfr": "Daewoong Life Science", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-002.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "일동쏘팔메토코사놀 프리미엄", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "日东锯棕榈八氢番茄红素高级版", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Ildong Saw Palmetto Octacosanol Premium", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-003.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "폴리코맥스", "mfr": "제로이팜", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "Polico Max", "mfr": "Zeroe Pharm", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Polico Max", "mfr": "Zeroe Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-004.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "당다운골드", "mfr": "나이스팜", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "糖下金", "mfr": "Nice Pharm", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Dang Down Gold", "mfr": "Nice Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-005.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "더리버진", "mfr": "비타랩스", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "The Liverjin", "mfr": "Vita Labs", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "The Liverjin", "mfr": "Vita Labs", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-006.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "일동그린프로폴리스", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "日东绿蜂胶", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Ildong Green Propolis", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-007.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "100프로 식물성 철분엽산", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "100%植物性铁叶酸", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "100% Plant-based Iron & Folic Acid", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-008.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "콘드로이친&엠에스엠 1500", "mfr": "원광제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "软骨素&MSM 1500", "mfr": "圆光制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Chondroitin & MSM 1500", "mfr": "Wonkwang Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-009.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "하이락토 더블액션", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "Hi-Lacto 双效", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Hi-Lacto Double Action", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-010.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "프로캄 진 프로바이오틱스 플러스 30", "mfr": "한미약품", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "Procalm Jin 益生菌 Plus 30", "mfr": "韩美药品", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Procalm Jin Probiotics Plus 30", "mfr": "Hanmi Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-011.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "일동 베베 플러스 유산균", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "日东 Bebe Plus 益生菌", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Ildong Bebe Plus Probiotics", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-012.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "일동 키즈 플러스 유산균", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "日东 Kids Plus 益生菌", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Ildong Kids Plus Probiotics", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-013.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "프로탁스", "mfr": "부광약품", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "Protax", "mfr": "富光药品", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Protax", "mfr": "Bukwang Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-014.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "프롬팜", "mfr": "동아제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "From Pharm", "mfr": "东亚制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "From Pharm", "mfr": "Dong-A Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-015.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "경남 아쿠아셀 오메가3", "mfr": "경남제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "庆南 Aqua Cell Omega 3", "mfr": "庆南制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Gyeongnam Aqua Cell Omega 3", "mfr": "Gyeongnam Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-016.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "코큐텐 100mg 맥스", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "辅酶Q10 100mg Max", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "CoQ10 100mg Max", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-017.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "일동 비타민D3 5000IU", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "日东 维生素D3 5000IU", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Ildong Vitamin D3 5000IU", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-018.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "일동 활성형 엽산 플러스", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "日东 活性叶酸 Plus", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Ildong Active Folic Acid Plus", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-019.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "홍삼진 굿데이 스틱", "mfr": "농협홍삼", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "红参津 Good Day Stick", "mfr": "农协红参", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Red Ginseng Jin Good Day Stick", "mfr": "Nonghyup Red Ginseng", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-020.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "일동 지속성 비타민C 1000", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "日东 缓释维生素C 1000", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Ildong Sustained Release Vitamin C 1000", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-021.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "일동 멜라케어 트리플", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "日东 Mela Care Triple", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Ildong Mela Care Triple", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  },
+  {
+    "img": "o-022.jpg",
+    "emoji": "💊",
+    "cat": [0, 3],
+    "ko": { "name": "프로바이오틱스 프라임", "mfr": "부광약품", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
+    "zh": { "name": "益生菌 Prime", "mfr": "富光药品", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
+    "en": { "name": "Probiotics Prime", "mfr": "Bukwang Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+  }
 ]
