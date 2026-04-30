@@ -1340,49 +1340,49 @@
     "img": "o-011.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "일동 베베 플러스 유산균", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "日东 Bebe Plus 益生菌", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Ildong Bebe Plus Probiotics", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "일동 베베 플러스 유산균", "mfr": "일동제약", "ing": "프로바이오틱스, 철, 아연, 비타민D, 비타민B1,2,6,12, 나이아신", "desc": "유산균 증식 및 유해균 억제. 배변활동 원활, 장건강에 도움등", "use": "1일 1포" },
+    "zh": { "name": "日东 Bebe Plus 益生菌", "mfr": "日东制药", "ing": "益生菌、铁、锌、维生素D、维生素B1、B2、B6、B12、烟酸", "desc": "增殖乳酸菌及抑制有害菌。有助于排便顺畅及肠道健康等。", "use": "每日1包" },
+    "en": { "name": "Ildong Bebe Plus Probiotics", "mfr": "Ildong Pharm", "ing": "Probiotics, Iron, Zinc, Vitamin D, Vitamin B1, B2, B6, B12, Niacin", "desc": "Proliferates lactic acid bacteria and suppresses harmful bacteria. Helps with smooth bowel movements and intestinal health.", "use": "1 pack once a day" }
   },
   {
     "img": "o-012.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "일동 키즈 플러스 유산균", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "日东 Kids Plus 益生菌", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Ildong Kids Plus Probiotics", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "일동 키즈 플러스 유산균", "mfr": "일동제약", "ing": "프로바이오틱스, 아연, 비타민D", "desc": "유산균 증식 및 유해균 억제. 배변활동 원활, 장건강에 도움등", "use": "1일 1포" },
+    "zh": { "name": "日东 Kids Plus 益生菌", "mfr": "日东制药", "ing": "益生菌、锌、维生素D", "desc": "增殖乳酸菌及抑制有害菌。有助于排便顺畅及肠道健康等。", "use": "每日1包" },
+    "en": { "name": "Ildong Kids Plus Probiotics", "mfr": "Ildong Pharm", "ing": "Probiotics, Zinc, Vitamin D", "desc": "Proliferates lactic acid bacteria and suppresses harmful bacteria. Helps with smooth bowel movements and intestinal health.", "use": "1 pack once a day" }
   },
   {
     "img": "o-013.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "프로탁스", "mfr": "부광약품", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "Protax", "mfr": "富光药品", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Protax", "mfr": "Bukwang Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "프로탁스", "mfr": "부광약품", "ing": "프로폴리스추출물, 칼슘, 아연, 비타민C,D", "desc": "뼈와 치아 형성에 필요, 신경과 근육 기능 유지에 필요, 결합조직 형성과 기능유지에 필요", "use": "1일 1회 1정" },
+    "zh": { "name": "Protax", "mfr": "富光药品", "ing": "蜂胶提取物、钙、锌、维生素C、D", "desc": "骨骼和牙齿形成所需，维持神经和肌肉功能所需，结缔组织形成和维持功能所需。", "use": "每日1次，每次1片" },
+    "en": { "name": "Protax", "mfr": "Bukwang Pharm", "ing": "Propolis extract, Calcium, Zinc, Vitamin C, D", "desc": "Necessary for bone and teeth formation, maintaining nerve and muscle function, and connective tissue formation and function.", "use": "1 tablet once a day" }
   },
   {
     "img": "o-014.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "프롬팜", "mfr": "동아제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "From Pharm", "mfr": "东亚制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "From Pharm", "mfr": "Dong-A Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "프롬팜", "mfr": "동아제약", "ing": "루테인지아잔틴복합추출물, 헤마토코쿠스추출물, 비타민A,E, 아연", "desc": "눈건강에 도움, 눈의 피로도 개선에 도움등", "use": "1일 1회 1캡슐" },
+    "zh": { "name": "From Pharm", "mfr": "东亚制药", "ing": "叶黄素玉米黄质复合提取物、雨生红球藻提取物、维生素A、E、锌", "desc": "有助于眼部健康，有助于改善眼部疲劳等。", "use": "每日1次，每次1粒" },
+    "en": { "name": "From Pharm", "mfr": "Dong-A Pharm", "ing": "Lutein Zeaxanthin complex extract, Haematococcus extract, Vitamin A, E, Zinc", "desc": "Helps with eye health and relieves eye fatigue.", "use": "1 capsule once a day" }
   },
   {
     "img": "o-015.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "경남 아쿠아셀 오메가3", "mfr": "경남제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "庆南 Aqua Cell Omega 3", "mfr": "庆南制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Gyeongnam Aqua Cell Omega 3", "mfr": "Gyeongnam Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "경남 아쿠아셀 오메가3", "mfr": "경남제약", "ing": "아쿠아셀 공법 EPA DHA함유 오메가3, 비타민D,E", "desc": "혈중 중성지질 개선, 혈행 개선에 도움, 기억력개선에 도움, 눈 건강에 도움등", "use": "1일 1회 1캡슐" },
+    "zh": { "name": "庆南 Aqua Cell Omega 3", "mfr": "庆南制药", "ing": "Aqua Cell工艺含EPA、DHA的Omega-3、维生素D、E", "desc": "改善血液中性脂质，有助于改善血液循环，有助于改善记忆力，有助于眼部健康等。", "use": "每日1次，每次1粒" },
+    "en": { "name": "Gyeongnam Aqua Cell Omega 3", "mfr": "Gyeongnam Pharm", "ing": "Aqua Cell technology Omega-3 containing EPA and DHA, Vitamin D, E", "desc": "Improves blood triglycerides, helps improve blood circulation, helps improve memory, helps eye health.", "use": "1 capsule once a day" }
   },
   {
     "img": "o-016.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "코큐텐 100mg 맥스", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "辅酶Q10 100mg Max", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "CoQ10 100mg Max", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "코큐텐 100mg 맥스", "mfr": "일동제약", "ing": "코엔자임Q10, 비타민B6, 비타민E", "desc": "항산화, 높은 혈압 감소에 도움등", "use": "1일 1회 1캡슐" },
+    "zh": { "name": "辅酶Q10 100mg Max", "mfr": "日东制药", "ing": "辅酶Q10、维生素B6、维生素E", "desc": "抗氧化，有助于降低高血压等。", "use": "每日1次，每次1粒" },
+    "en": { "name": "CoQ10 100mg Max", "mfr": "Ildong Pharm", "ing": "Coenzyme Q10, Vitamin B6, Vitamin E", "desc": "Antioxidant, helps reduce high blood pressure.", "use": "1 capsule once a day" }
   },
   {
     "img": "o-017.jpg",
