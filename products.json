@@ -1300,9 +1300,9 @@
     "img": "o-006.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "일동그린프로폴리스", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "日东绿蜂胶", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Ildong Green Propolis", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "일동그린프로폴리스", "mfr": "일동제약", "ing": "프로폴리스추출물, 아연", "desc": "구강 항균, 항산화, 정상적인 면역기능", "use": "1일 1회 2캡슐을 씹어서 섭취" },
+    "zh": { "name": "日东绿蜂胶", "mfr": "日东制药", "ing": "蜂胶提取物、锌", "desc": "口腔抗菌、抗氧化、正常的免疫功能", "use": "每日1次，每次2粒，咀嚼服用" },
+    "en": { "name": "Ildong Green Propolis", "mfr": "Ildong Pharm", "ing": "Propolis extract, Zinc", "desc": "Oral antibacterial, antioxidant, normal immune function", "use": "Chew 2 capsules once a day" }
   },
   {
     "img": "o-007.jpg",
@@ -1316,26 +1316,26 @@
     "img": "o-008.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "콘드로이친&엠에스엠 1500", "mfr": "원광제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "软骨素&MSM 1500", "mfr": "圆光制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Chondroitin & MSM 1500", "mfr": "Wonkwang Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "콘드로이친&엠에스엠 1500", "mfr": "원광제약", "ing": "MSM 1500mg, 뮤코다당·단백, 비타민D, 보스웰리아추출물, 초록입홍합분말, 아보카도추출물, 강황뿌리줄기추출물, 히알루론산, 우유단백추출물", "desc": "관절 및 연골건강에 도움, 골다공증발생 위험 감소에 도움, 뼈의 형성과 유지", "use": "1일 1회 2정" },
+    "zh": { "name": "软骨素&MSM 1500", "mfr": "圆光制药", "ing": "MSM 1500mg、粘多糖·蛋白、维生素D、乳香提取物、绿唇贻贝粉末、鳄梨提取物、姜黄根茎提取物、透明质酸、牛奶蛋白提取物", "desc": "有助于关节和软骨健康，有助于降低骨质疏松发生风险，骨骼的形成与维持", "use": "每日1次，每次2片" },
+    "en": { "name": "Chondroitin & MSM 1500", "mfr": "Wonkwang Pharm", "ing": "MSM 1500mg, Mucopolysaccharide-protein, Vitamin D, Boswellia extract, Green-lipped mussel powder, Avocado extract, Turmeric rhizome extract, Hyaluronic acid, Milk protein extract", "desc": "Helps joint and cartilage health, helps reduce the risk of osteoporosis, bone formation and maintenance", "use": "2 tablets once a day" }
   },
   {
     "img": "o-009.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "하이락토 더블액션", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "Hi-Lacto 双效", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Hi-Lacto Double Action", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "하이락토 더블액션", "mfr": "일동제약", "ing": "프로바이오틱스, 락추로스분말, 아연", "desc": "장건강, 배변활동 원활에 도움, 정상적인 면역기능에 도움", "use": "1일 1회 1포" },
+    "zh": { "name": "Hi-Lacto 双效", "mfr": "日东制药", "ing": "益生菌、乳果糖粉末、锌", "desc": "有助于肠道健康、排便顺畅，有助于正常的免疫功能", "use": "每日1次，每次1包" },
+    "en": { "name": "Hi-Lacto Double Action", "mfr": "Ildong Pharm", "ing": "Probiotics, Lactulose powder, Zinc", "desc": "Helps intestinal health, smooth bowel movements, and normal immune function", "use": "1 pack once a day" }
   },
   {
     "img": "o-010.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "프로캄 진 프로바이오틱스 플러스 30", "mfr": "한미약품", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "Procalm Jin 益生菌 Plus 30", "mfr": "韩美药品", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Procalm Jin Probiotics Plus 30", "mfr": "Hanmi Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
-  },
+    "ko": { "name": "프로캄 진 프로바이오틱스 플러스 30", "mfr": "한미약품", "ing": "여성 질 유래 특허 유산균 3종, 다니스코 7종 유산균, 아연", "desc": "유산균 증식 및 유해균 억제, 배변 활동 원활, 장건강에 도움. 정상적인 면역기능, 세포분열에 필요", "use": "1일 1회 1캡슐" },
+    "zh": { "name": "Procalm Jin 益生菌 Plus 30", "mfr": "韩美药品", "ing": "3种女性阴道来源专利乳酸菌、7种丹尼斯克乳酸菌、锌", "desc": "增殖乳酸菌及抑制有害菌，排便顺畅，有助于肠道健康。正常的免疫功能及细胞分裂所需", "use": "每日1次，每次1粒" },
+    "en": { "name": "Procalm Jin Probiotics Plus 30", "mfr": "Hanmi Pharm", "ing": "3 patented lactic acid bacteria derived from female vagina, 7 Danisco lactic acid bacteria, Zinc", "desc": "Proliferates lactic acid bacteria and suppresses harmful bacteria, smooth bowel movements, helps intestinal health. Necessary for normal immune function and cell division", "use": "1 capsule once a day" }
+  }
   {
     "img": "o-011.jpg",
     "emoji": "💊",
@@ -1420,9 +1420,9 @@
     "img": "o-021.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "일동 멜라케어 트리플", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "日东 Mela Care Triple", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Ildong Mela Care Triple", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "일동 멜라케어 트리플", "mfr": "일동제약", "ing": "식물성 멜라토닌(토마토추출분말, 서양고추나물추출분말, 피스타치오추출분말 등)", "desc": "-", "use": "1일 1회, 1회 1정을 취침 전 물과 함께 섭취" },
+    "zh": { "name": "日东 Mela Care Triple", "mfr": "日东制药", "ing": "植物性褪黑素(番茄提取物粉末、圣约翰草提取物粉末、开心果提取物粉末等)", "desc": "-", "use": "每日1次，每次1片，睡前用水送服" },
+    "en": { "name": "Ildong Mela Care Triple", "mfr": "Ildong Pharm", "ing": "Plant-based Melatonin (Tomato extract powder, St. John's wort extract powder, Pistachio extract powder, etc.)", "desc": "-", "use": "Take 1 tablet once daily with water before bedtime" }
   },
   {
     "img": "o-022.jpg",
