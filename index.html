@@ -191,13 +191,18 @@ function initDOMCache() {
 async function loadProducts() {
     try {
         let response;
+        
+        // 10분(600,000ms)마다 숫자가 1씩 자동으로 올라가는 자동 버전 생성
+        // 수정 후 최대 10분 이내에 모든 사용자에게 최신 데이터가 자동으로 반영됩니다.
+        const autoVersion = Math.floor(Date.now() / (1000 * 60 * 60));
+
         try {
             // 배포 환경(웹 서버, GitHub Pages 등)에서는 상대 경로로 호출합니다.
-            response = await fetch('./products.json?v=1.0');
+            response = await fetch(`./products.json?v=${autoVersion}`);
         } catch (err) {
             // 미리보기(blob:)나 로컬 파일(file://) 환경에서 파싱 에러가 발생하면 
             // 원본 GitHub의 절대 경로 주소로 대체하여 호출합니다.
-            response = await fetch('https://raw.githubusercontent.com/Myungseong-pharm/MSpharm/main/products.json');
+            response = await fetch(`https://raw.githubusercontent.com/Myungseong-pharm/MSpharm/main/products.json?v=${autoVersion}`);
         }
 
         if (!response || !response.ok) throw new Error('네트워크 응답 오류');
