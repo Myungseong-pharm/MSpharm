@@ -1388,33 +1388,33 @@
     "img": "o-017.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "일동 비타민D3 5000IU", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "日东 维生素D3 5000IU", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Ildong Vitamin D3 5000IU", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "일동 비타민D3 5000IU", "mfr": "일동제약", "ing": "비타민D3 5000IU", "desc": "칼슘과 인이 흡수되고 이용되는데 필요, 뼈의 형성과 유지에 필요, 골다공증발생 위험 감소에 도움", "use": "1일 1회 1캡슐" },
+    "zh": { "name": "日东 维生素D3 5000IU", "mfr": "日东制药", "ing": "维生素D3 5000IU", "desc": "钙和磷吸收和利用所需，骨骼的形成和维持所需，有助于降低骨质疏松发生风险", "use": "每日1次，每次1粒" },
+    "en": { "name": "Ildong Vitamin D3 5000IU", "mfr": "Ildong Pharm", "ing": "Vitamin D3 5000IU", "desc": "Necessary for the absorption and utilization of calcium and phosphorus, necessary for bone formation and maintenance, helps reduce the risk of osteoporosis", "use": "1 capsule once a day" }
   },
   {
     "img": "o-018.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "일동 활성형 엽산 플러스", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "日东 活性叶酸 Plus", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Ildong Active Folic Acid Plus", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "일동 활성형 엽산 플러스", "mfr": "일동제약", "ing": "엽산, 비타민B6,B12,D, 메틸테트라히드로엽산글루코사민", "desc": "세포와 혈액생성에 필요. 태아 신경관의 정상 발달에 필요등등", "use": "1일 1회 1정" },
+    "zh": { "name": "日东 活性叶酸 Plus", "mfr": "日东制药", "ing": "叶酸、维生素B6、B12、D、甲基四氢叶酸氨基葡萄糖", "desc": "细胞和血液生成所需。胎儿神经管正常发育所需等。", "use": "每日1次，每次1片" },
+    "en": { "name": "Ildong Active Folic Acid Plus", "mfr": "Ildong Pharm", "ing": "Folic acid, Vitamin B6, B12, D, Methyltetrahydrofolate glucosamine", "desc": "Necessary for cell and blood production. Necessary for the normal development of the fetal neural tube, etc.", "use": "1 tablet once a day" }
   },
   {
     "img": "o-019.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "홍삼진 굿데이 스틱", "mfr": "농협홍삼", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "红参津 Good Day Stick", "mfr": "农协红参", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Red Ginseng Jin Good Day Stick", "mfr": "Nonghyup Red Ginseng", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "홍삼진 굿데이 스틱", "mfr": "농협홍삼", "ing": "홍삼농축액(6년근 국산)", "desc": "-", "use": "1일 1회 1포" },
+    "zh": { "name": "红参津 Good Day Stick", "mfr": "农协红参", "ing": "红参浓缩液(6年根，韩国产)", "desc": "-", "use": "每日1次，每次1包" },
+    "en": { "name": "Red Ginseng Jin Good Day Stick", "mfr": "Nonghyup Red Ginseng", "ing": "Red ginseng extract (6-year-old, domestic)", "desc": "-", "use": "1 pack once a day" }
   },
   {
     "img": "o-020.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "일동 지속성 비타민C 1000", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "日东 缓释维生素C 1000", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Ildong Sustained Release Vitamin C 1000", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "일동 지속성 비타민C 1000", "mfr": "일동제약", "ing": "비타민C 1000mg", "desc": "결합조직 형성과 기능유지에 필요, 철의 흡수에 필요등", "use": "1일 1회 1정" },
+    "zh": { "name": "日东 缓释维生素C 1000", "mfr": "日东制药", "ing": "维生素C 1000mg", "desc": "结缔组织形成和维持功能所需，铁的吸收所需等。", "use": "每日1次，每次1片" },
+    "en": { "name": "Ildong Sustained Release Vitamin C 1000", "mfr": "Ildong Pharm", "ing": "Vitamin C 1000mg", "desc": "Necessary for connective tissue formation and function maintenance, necessary for iron absorption, etc.", "use": "1 tablet once a day" }
   },
   {
     "img": "o-021.jpg",
@@ -1428,8 +1428,8 @@
     "img": "o-022.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "프로바이오틱스 프라임", "mfr": "부광약품", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "益生菌 Prime", "mfr": "富光药品", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Probiotics Prime", "mfr": "Bukwang Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "프로바이오틱스 프라임", "mfr": "부광약품", "ing": "프로바이오틱스(Chr. Hansen 유산균 6종), 아연, 셀레늄", "desc": "장 건강.배변활동 원활.유산균 증식 및 유해균 억제에 도움, 정상적인 면역기능에 필요등", "use": "1일 1회 1캡슐" },
+    "zh": { "name": "益生菌 Prime", "mfr": "富光药品", "ing": "益生菌(科汉森 Chr. Hansen 6种乳酸菌)、锌、硒", "desc": "有助于肠道健康、排便顺畅、增殖乳酸菌及抑制有害菌，正常的免疫功能所需等。", "use": "每日1次，每次1粒" },
+    "en": { "name": "Probiotics Prime", "mfr": "Bukwang Pharm", "ing": "Probiotics (6 types of Chr. Hansen lactic acid bacteria), Zinc, Selenium", "desc": "Helps with intestinal health, smooth bowel movements, proliferates lactic acid bacteria and suppresses harmful bacteria, necessary for normal immune function, etc.", "use": "1 capsule once a day" }
   }
 ]
