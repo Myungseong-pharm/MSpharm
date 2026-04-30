@@ -53,10 +53,11 @@
                 <h1 id="h-name" class="text-lg font-bold text-emerald-600 leading-tight">명성약국</h1>
                 <p id="h-sub" class="text-[10px] text-gray-400 font-medium tracking-tighter">Myung_Seong Pharmacy</p>
             </div>
+            <!-- 버튼 순서를 중국어(CN) - 영어(EN) - 한국어(KR)로 변경했습니다 -->
             <div class="flex gap-1">
-                <button onclick="setLang('ko')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="ko">KR</button>
                 <button onclick="setLang('zh')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="zh">CN</button>
                 <button onclick="setLang('en')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="en">EN</button>
+                <button onclick="setLang('ko')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="ko">KR</button>
             </div>
         </div>
     </header>
@@ -162,7 +163,8 @@ const T = {
 const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/Myungseong-pharm/MSpharm-imeges/main/';
 
 let products = [];
-let state = { lang: 'ko', activeCat: 0 };
+// 접속 시 기본 언어를 'zh'(중국어)로 변경했습니다.
+let state = { lang: 'zh', activeCat: 0 };
 const DOM = {}; // 자주 사용하는 DOM 요소 캐싱용 객체
 
 // DOM 요소들을 초기에 한 번만 찾아서 저장합니다 (성능 최적화)
@@ -194,7 +196,7 @@ async function loadProducts() {
         
         // 10분(600,000ms)마다 숫자가 1씩 자동으로 올라가는 자동 버전 생성
         // 수정 후 최대 10분 이내에 모든 사용자에게 최신 데이터가 자동으로 반영됩니다.
-        const autoVersion = Math.floor(Date.now() / (1000 * 60 * 60));
+        const autoVersion = Math.floor(Date.now() / (1000 * 60 * 10));
 
         try {
             // 배포 환경(웹 서버, GitHub Pages 등)에서는 상대 경로로 호출합니다.
@@ -245,7 +247,7 @@ function updateLanguageUI() {
 function setActiveCat(index) {
     state.activeCat = index;
     render();
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // 카테고리 변경 시 화면 상단으로 이동
 }
 
 function getProductHTML(p, t) {
