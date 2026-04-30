@@ -161,25 +161,60 @@ const T = {
 
 const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/Myungseong-pharm/MSpharm-imeges/main/';
 
-// 외부에 있는 JSON 데이터를 담을 빈 배열
 let products = [];
 let state = { lang: 'ko', activeCat: 0 };
+const DOM = {}; // 자주 사용하는 DOM 요소 캐싱용 객체
 
-// github에서 products.json을 불러오는 함수
+// DOM 요소들을 초기에 한 번만 찾아서 저장합니다 (성능 최적화)
+function initDOMCache() {
+    DOM.hName = document.getElementById('h-name');
+    DOM.hSub = document.getElementById('h-sub');
+    DOM.catsContainer = document.getElementById('cats-container');
+    DOM.productsContainer = document.getElementById('products-container');
+    DOM.emptyState = document.getElementById('empty-state');
+    DOM.loadingState = document.getElementById('loading-state');
+    
+    DOM.mImgContainer = document.getElementById('m-img-container');
+    DOM.mCat = document.getElementById('m-cat');
+    DOM.mName = document.getElementById('m-name');
+    DOM.mMfr = document.getElementById('m-mfr');
+    DOM.mLabelIng = document.getElementById('m-label-ing');
+    DOM.mIng = document.getElementById('m-ing');
+    DOM.mLabelDesc = document.getElementById('m-label-desc');
+    DOM.mDesc = document.getElementById('m-desc');
+    DOM.mLabelUse = document.getElementById('m-label-use');
+    DOM.mUse = document.getElementById('m-use');
+    DOM.backdrop = document.getElementById('modal-backdrop');
+    DOM.modal = document.getElementById('detail-modal');
+}
+
 async function loadProducts() {
     try {
-        // 캐시를 방지하기 위해 현재 시간값을 주소 뒤에 붙여서 불러옵니다.
-        const response = await fetch('products.json?t=' + new Date().getTime());
-        if (!response.ok) throw new Error('네트워크 응답 오류');
+        let response;
+        try {
+            // 배포 환경(웹 서버, GitHub Pages 등)에서는 상대 경로로 호출합니다.
+            response = await fetch('./products.json?v=1.0');
+        } catch (err) {
+            // 미리보기(blob:)나 로컬 파일(file://) 환경에서 파싱 에러가 발생하면 
+            // 원본 GitHub의 절대 경로 주소로 대체하여 호출합니다.
+            response = await fetch('https://raw.githubusercontent.com/Myungseong-pharm/MSpharm/main/products.json');
+        }
+
+        if (!response || !response.ok) throw new Error('네트워크 응답 오류');
         
         products = await response.json();
         
-        document.getElementById('loading-state').classList.add('hidden');
-        document.getElementById('products-container').classList.remove('hidden');
+        // 데이터 바인딩을 가볍게 하기 위해, 객체에 고유 식별자(인덱스)를 부여합니다.
+        products.forEach((p, index) => {
+            p.id = index;
+        });
+        
+        DOM.loadingState.classList.add('hidden');
+        DOM.productsContainer.classList.remove('hidden');
         render(); 
     } catch (error) {
         console.error("데이터 로드 실패:", error);
-        document.getElementById('loading-state').innerHTML = '<p class="text-red-500 text-sm mt-4">데이터를 불러오지 못했습니다.<br>새로고침 해주세요.</p>';
+        DOM.loadingState.innerHTML = '<p class="text-red-500 text-sm mt-4">데이터를 불러오지 못했습니다.<br>새로고침 해주세요.</p>';
     }
 }
 
@@ -191,8 +226,8 @@ function setLang(l) {
 
 function updateLanguageUI() {
     const t = T[state.lang];
-    document.getElementById('h-name').textContent = t.name;
-    document.getElementById('h-sub').textContent = t.sub;
+    DOM.hName.textContent = t.name;
+    DOM.hSub.textContent = t.sub;
     
     document.querySelectorAll('.lang-btn').forEach(btn => {
         const isSelected = btn.getAttribute('onclick').includes(state.lang);
@@ -205,18 +240,20 @@ function updateLanguageUI() {
 function setActiveCat(index) {
     state.activeCat = index;
     render();
+    window.scrollTo(0, 0);
 }
 
 function getProductHTML(p, t) {
     const d = p[state.lang];
+    
+    // loading="lazy" 추가로 화면에 보일 때 이미지를 로드하여 네트워크 비용을 절약합니다.
     const imgContent = p.img 
-        ? `<img src="${IMAGE_BASE_URL}${p.img}" alt="${d.name}" class="w-full h-full object-contain p-2 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-3xl\\'>${p.emoji}</div>';">` 
+        ? `<img src="${IMAGE_BASE_URL}${p.img}" loading="lazy" alt="${d.name}" class="w-full h-full object-contain p-2 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-3xl\\'>${p.emoji}</div>';">` 
         : `<div class="text-3xl">${p.emoji}</div>`;
 
-    const pString = JSON.stringify(p).replace(/"/g, '&quot;');
-
+    // onclick 시 전체 객체 문자열이 아닌 id 숫자 하나만 넘기도록 최적화
     return `
-        <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 cursor-pointer" onclick="openModal(${pString})">
+        <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 cursor-pointer" onclick="openModal(${p.id})">
             <div class="aspect-square bg-gray-50/50 flex items-center justify-center relative border-b border-gray-100">
                 ${imgContent}
             </div>
@@ -238,8 +275,7 @@ function render() {
         return products.filter(p => p.cat.includes(i)).length;
     });
 
-    const catsContainer = document.getElementById('cats-container');
-    catsContainer.innerHTML = t.cats.map((cat, i) => `
+    DOM.catsContainer.innerHTML = t.cats.map((cat, i) => `
         <button onclick="setActiveCat(${i})" class="category-btn w-full px-1 py-2.5 rounded-lg text-xs font-bold transition-all text-gray-700 hover:bg-gray-200 flex flex-col items-center justify-center gap-1 ${state.activeCat === i ? 'active' : ''}">
             <span class="text-center break-keep leading-tight">${cat}</span>
             <span class="text-[10px] opacity-70 font-semibold">(${catCounts[i]})</span>
@@ -247,44 +283,43 @@ function render() {
     `).join('');
 
     const filtered = products.filter(p => state.activeCat === 0 || p.cat.includes(state.activeCat));
-    const productsContainer = document.getElementById('products-container');
-    const emptyState = document.getElementById('empty-state');
     
     if (filtered.length === 0) {
-        productsContainer.innerHTML = '';
-        emptyState.classList.remove('hidden');
+        DOM.productsContainer.innerHTML = '';
+        DOM.emptyState.classList.remove('hidden');
     } else {
-        emptyState.classList.add('hidden');
-        productsContainer.innerHTML = filtered.map(p => getProductHTML(p, t)).join('');
+        DOM.emptyState.classList.add('hidden');
+        DOM.productsContainer.innerHTML = filtered.map(p => getProductHTML(p, t)).join('');
     }
 }
 
-function openModal(p) {
+// 전달받은 id 값으로 products 배열에서 데이터를 찾아옵니다.
+function openModal(id) {
+    const p = products[id];
+    if (!p) return;
+    
     const d = p[state.lang];
     const t = T[state.lang];
     
-    const mImgContainer = document.getElementById('m-img-container');
-    mImgContainer.innerHTML = p.img 
-        ? `<img src="${IMAGE_BASE_URL}${p.img}" alt="${d.name}" class="w-full h-full object-contain p-6 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-6xl\\'>${p.emoji}</div>';">` 
+    // 모달 내부 이미지도 지연 로딩 적용
+    DOM.mImgContainer.innerHTML = p.img 
+        ? `<img src="${IMAGE_BASE_URL}${p.img}" loading="lazy" alt="${d.name}" class="w-full h-full object-contain p-6 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-6xl\\'>${p.emoji}</div>';">` 
         : `<div class="text-6xl">${p.emoji}</div>`;
 
-    document.getElementById('m-cat').textContent = t.cats[p.cat[1]||p.cat[0]];
-    document.getElementById('m-name').textContent = d.name;
-    document.getElementById('m-mfr').textContent = d.mfr;
-    document.getElementById('m-label-ing').textContent = t.labelIng;
-    document.getElementById('m-ing').textContent = d.ing;
-    document.getElementById('m-label-desc').textContent = t.labelDesc;
-    document.getElementById('m-desc').textContent = d.desc;
-    document.getElementById('m-label-use').textContent = t.labelUse;
-    document.getElementById('m-use').textContent = d.use;
+    DOM.mCat.textContent = t.cats[p.cat[1]||p.cat[0]];
+    DOM.mName.textContent = d.name;
+    DOM.mMfr.textContent = d.mfr;
+    DOM.mLabelIng.textContent = t.labelIng;
+    DOM.mIng.textContent = d.ing;
+    DOM.mLabelDesc.textContent = t.labelDesc;
+    DOM.mDesc.textContent = d.desc;
+    DOM.mLabelUse.textContent = t.labelUse;
+    DOM.mUse.textContent = d.use;
 
-    const backdrop = document.getElementById('modal-backdrop');
-    const modal = document.getElementById('detail-modal');
-    
-    backdrop.classList.remove('hidden');
+    DOM.backdrop.classList.remove('hidden');
     setTimeout(() => {
-        backdrop.classList.add('opacity-100');
-        modal.classList.remove('translate-y-full');
+        DOM.backdrop.classList.add('opacity-100');
+        DOM.modal.classList.remove('translate-y-full');
     }, 10);
 }
 
@@ -293,19 +328,17 @@ function closeModal(e) {
 }
 
 function closeModalBtn() {
-    const backdrop = document.getElementById('modal-backdrop');
-    const modal = document.getElementById('detail-modal');
-    
-    backdrop.classList.remove('opacity-100');
-    modal.classList.add('translate-y-full');
+    DOM.backdrop.classList.remove('opacity-100');
+    DOM.modal.classList.add('translate-y-full');
     setTimeout(() => {
-        backdrop.classList.add('hidden');
+        DOM.backdrop.classList.add('hidden');
     }, 300);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    initDOMCache(); // 초기 DOM 요소 캐싱
     updateLanguageUI();
-    loadProducts(); // 페이지가 열릴 때 외부의 products.json 파일을 가져옵니다.
+    loadProducts(); 
 });
 </script>
 </body>
