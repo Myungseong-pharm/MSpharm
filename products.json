@@ -1264,7 +1264,7 @@
     "zh": { "name": "格鲁维他动力", "mfr": "大熊生命科学", "ing": "维生素B1、B2、B6、L-苯丙氨酸、L-蛋氨酸、L-亮氨酸、L-谷氨酰胺等", "desc": "增强活力、补充能量", "use": "每日1次，每次1包，充分摇匀后饮用。" },
     "en": { "name": "Gluvita Power", "mfr": "Daewoong Life Science", "ing": "Vitamin B1, B2, B6, L-Phenylalanine, L-Methionine, L-Leucine, L-Glutamine, etc.", "desc": "Vitality enhancement, energy boost", "use": "Take 1 pack once daily after shaking well." }
   },
-{
+  {
     "img": "o-002.jpg",
     "emoji": "💊",
     "cat": [0, 3],
