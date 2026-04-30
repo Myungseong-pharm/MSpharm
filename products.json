@@ -1260,41 +1260,41 @@
     "img": "o-001.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "글루비타파워", "mfr": "대웅생명과학", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "格鲁维他动力", "mfr": "大熊生命科学", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Gluvita Power", "mfr": "Daewoong Life Science", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "글루비타파워", "mfr": "대웅생명과학", "ing": "비타민B1, B2, B6, L-페닐알라닌, L-메티오닌, L-로이신, L-글루타민 등", "desc": "활력증진, 에너지 충진", "use": "1일 1회, 1포를 충분히 흔들어서 섭취하십시오." },
+    "zh": { "name": "格鲁维他动力", "mfr": "大熊生命科学", "ing": "维生素B1、B2、B6、L-苯丙氨酸、L-蛋氨酸、L-亮氨酸、L-谷氨酰胺等", "desc": "增强活力、补充能量", "use": "每日1次，每次1包，充分摇匀后饮用。" },
+    "en": { "name": "Gluvita Power", "mfr": "Daewoong Life Science", "ing": "Vitamin B1, B2, B6, L-Phenylalanine, L-Methionine, L-Leucine, L-Glutamine, etc.", "desc": "Vitality enhancement, energy boost", "use": "Take 1 pack once daily after shaking well." }
   },
-  {
+{
     "img": "o-002.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "일동쏘팔메토코사놀 프리미엄", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "日东锯棕榈八氢番茄红素高级版", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Ildong Saw Palmetto Octacosanol Premium", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "일동쏘팔메토코사놀 프리미엄", "mfr": "일동제약", "ing": "로르산, 아연, 옥타코사놀, 망간, 비타민B6, 비타민B2", "desc": "전립선 건강, 지구력 증진, 에너지 생성, 정상적인 면역기능", "use": "하루 한번 1캡슐" },
+    "zh": { "name": "日东锯棕榈八氢番茄红素高级版", "mfr": "日东制药", "ing": "月桂酸、锌、八氢番茄红素、锰、维生素B6、维生素B2", "desc": "前列腺健康、增强耐力、能量产生、正常的免疫功能", "use": "每日1次，每次1粒" },
+    "en": { "name": "Ildong Saw Palmetto Octacosanol Premium", "mfr": "Ildong Pharm", "ing": "Lauric acid, Zinc, Octacosanol, Manganese, Vitamin B6, Vitamin B2", "desc": "Prostate health, endurance enhancement, energy production, normal immune function", "use": "1 capsule once a day" }
   },
   {
     "img": "o-003.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "폴리코맥스", "mfr": "제로이팜", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "Polico Max", "mfr": "Zeroe Pharm", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Polico Max", "mfr": "Zeroe Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "폴리코맥스", "mfr": "제로이팜", "ing": "해안송껍질추출물, 옹국추출물, 은행잎추출물, 사탕수수추출물 등", "desc": "혈중 콜레스테롤 개선 및 혈행 개선", "use": "1일 1회 1정" },
+    "zh": { "name": "Polico Max", "mfr": "Zeroe Pharm", "ing": "海岸松树皮提取物、翁菊提取物、银杏叶提取物、甘蔗提取物等", "desc": "改善血液胆固醇及改善血液循环", "use": "每日1次，每次1片" },
+    "en": { "name": "Polico Max", "mfr": "Zeroe Pharm", "ing": "Maritime pine bark extract, Aster yomena extract, Ginkgo leaf extract, Sugarcane extract, etc.", "desc": "Improves blood cholesterol and blood circulation", "use": "1 tablet once a day" }
   },
   {
     "img": "o-004.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "당다운골드", "mfr": "나이스팜", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "糖下金", "mfr": "Nice Pharm", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "Dang Down Gold", "mfr": "Nice Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
-  },
+    "ko": { "name": "당다운골드", "mfr": "나이스팜", "ing": "여주추출물, 노팔선인장추출물, 상백피추출물, 크롬, 바나바잎추출물, 셀레늄, 비타민C, 아연", "desc": "식후 혈당 상승억제에 도움", "use": "1일 1회 1정" },
+    "zh": { "name": "糖下金", "mfr": "Nice Pharm", "ing": "苦瓜提取物、胭脂仙人掌提取物、桑白皮提取物、铬、巴拿巴叶提取物、硒、维生素C、锌", "desc": "有助于抑制餐后血糖上升", "use": "每日1次，每次1片" },
+    "en": { "name": "Dang Down Gold", "mfr": "Nice Pharm", "ing": "Bitter melon extract, Nopal cactus extract, Mulberry bark extract, Chromium, Banaba leaf extract, Selenium, Vitamin C, Zinc", "desc": "Helps to suppress the rise in postprandial blood sugar", "use": "1 tablet once a day" }
+  }
   {
     "img": "o-005.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "더리버진", "mfr": "비타랩스", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "The Liverjin", "mfr": "Vita Labs", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "The Liverjin", "mfr": "Vita Labs", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "더리버진", "mfr": "비타랩스", "ing": "밀크씨슬추출물(실리마린), 나이아신, 판토텐산, 비타민B1, B6, B12", "desc": "간건강에 도움, 에너지 대사 및 생성에 도움", "use": "1일 1회 1캡슐" },
+    "zh": { "name": "The Liverjin", "mfr": "Vita Labs", "ing": "水飞蓟提取物(水飞蓟素)、烟酸、泛酸、维生素B1、B6、B12", "desc": "有助于肝脏健康，有助于能量代谢及产生", "use": "每日1次，每次1粒" },
+    "en": { "name": "The Liverjin", "mfr": "Vita Labs", "ing": "Milk thistle extract (Silymarin), Niacin, Pantothenic acid, Vitamin B1, B6, B12", "desc": "Helps liver health, helps energy metabolism and production", "use": "1 capsule once a day" }
   },
   {
     "img": "o-006.jpg",
@@ -1308,9 +1308,9 @@
     "img": "o-007.jpg",
     "emoji": "💊",
     "cat": [0, 3],
-    "ko": { "name": "100프로 식물성 철분엽산", "mfr": "일동제약", "ing": "업데이트 예정", "desc": "업데이트 예정", "use": "업데이트 예정" },
-    "zh": { "name": "100%植物性铁叶酸", "mfr": "日东制药", "ing": "即将更新", "desc": "即将更新", "use": "即将更新" },
-    "en": { "name": "100% Plant-based Iron & Folic Acid", "mfr": "Ildong Pharm", "ing": "To be updated", "desc": "To be updated", "use": "To be updated" }
+    "ko": { "name": "100프로 식물성 철분엽산", "mfr": "일동제약", "ing": "커리나무잎추출분말(철분 12 mg), 레몬추출분말(엽산 500 μg)", "desc": "철분: 체내 산소운반과 혈액생성에 필요, 에너지생성에 필요\n엽산: 세포와 혈액 생성에 필요, 태아 신경관의 정상발달에 필요, 혈액의 호모시스테인 수준을 정상으로 유지하는데 필요", "use": "1일 1회, 1회 1캡슐을 물과 함께 섭취하십시오." },
+    "zh": { "name": "100%植物性铁叶酸", "mfr": "日东制药", "ing": "咖喱树叶提取物粉末(铁 12mg)、柠檬提取物粉末(叶酸 500μg)", "desc": "铁：体内氧气运输和血液生成所需，能量产生所需。\n叶酸：细胞和血液生成所需，胎儿神经管正常发育所需，维持血液同型半胱氨酸水平正常所需。", "use": "每日1次，每次1粒，用水送服。" },
+    "en": { "name": "100% Plant-based Iron & Folic Acid", "mfr": "Ildong Pharm", "ing": "Curry tree leaf extract powder (Iron 12mg), Lemon extract powder (Folic acid 500μg)", "desc": "Iron: Necessary for oxygen transport, blood production, and energy production.\nFolic acid: Necessary for cell and blood production, normal development of the fetal neural tube, and maintaining normal homocysteine levels.", "use": "Take 1 capsule once daily with water." }
   },
   {
     "img": "o-008.jpg",
