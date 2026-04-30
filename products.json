@@ -1287,7 +1287,7 @@
     "ko": { "name": "당다운골드", "mfr": "나이스팜", "ing": "여주추출물, 노팔선인장추출물, 상백피추출물, 크롬, 바나바잎추출물, 셀레늄, 비타민C, 아연", "desc": "식후 혈당 상승억제에 도움", "use": "1일 1회 1정" },
     "zh": { "name": "糖下金", "mfr": "Nice Pharm", "ing": "苦瓜提取物、胭脂仙人掌提取物、桑白皮提取物、铬、巴拿巴叶提取物、硒、维生素C、锌", "desc": "有助于抑制餐后血糖上升", "use": "每日1次，每次1片" },
     "en": { "name": "Dang Down Gold", "mfr": "Nice Pharm", "ing": "Bitter melon extract, Nopal cactus extract, Mulberry bark extract, Chromium, Banaba leaf extract, Selenium, Vitamin C, Zinc", "desc": "Helps to suppress the rise in postprandial blood sugar", "use": "1 tablet once a day" }
-  }
+  },
   {
     "img": "o-005.jpg",
     "emoji": "💊",
@@ -1335,7 +1335,7 @@
     "ko": { "name": "프로캄 진 프로바이오틱스 플러스 30", "mfr": "한미약품", "ing": "여성 질 유래 특허 유산균 3종, 다니스코 7종 유산균, 아연", "desc": "유산균 증식 및 유해균 억제, 배변 활동 원활, 장건강에 도움. 정상적인 면역기능, 세포분열에 필요", "use": "1일 1회 1캡슐" },
     "zh": { "name": "Procalm Jin 益生菌 Plus 30", "mfr": "韩美药品", "ing": "3种女性阴道来源专利乳酸菌、7种丹尼斯克乳酸菌、锌", "desc": "增殖乳酸菌及抑制有害菌，排便顺畅，有助于肠道健康。正常的免疫功能及细胞分裂所需", "use": "每日1次，每次1粒" },
     "en": { "name": "Procalm Jin Probiotics Plus 30", "mfr": "Hanmi Pharm", "ing": "3 patented lactic acid bacteria derived from female vagina, 7 Danisco lactic acid bacteria, Zinc", "desc": "Proliferates lactic acid bacteria and suppresses harmful bacteria, smooth bowel movements, helps intestinal health. Necessary for normal immune function and cell division", "use": "1 capsule once a day" }
-  }
+  },
   {
     "img": "o-011.jpg",
     "emoji": "💊",
