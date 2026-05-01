@@ -68,7 +68,7 @@
                     <h1 id="h-name" class="text-lg font-bold text-emerald-600 leading-tight">명성약국</h1>
                     <p id="h-sub" class="text-[10px] text-gray-400 font-medium tracking-tighter">Myung_Seong Pharmacy</p>
                 </div>
-                <!-- 카메라 검색 버튼 추가 -->
+                <!-- 카메라 검색 버튼 -->
                 <button onclick="triggerCamera()" class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center active:scale-95 transition-transform border border-emerald-100">
                     <i class="fa-solid fa-camera text-lg"></i>
                 </button>
@@ -110,11 +110,11 @@
     <div id="ai-loading" class="fixed inset-0 bg-black/60 z-[60] hidden flex flex-col items-center justify-center p-6 text-center">
         <div class="relative w-48 h-48 bg-white/10 rounded-2xl border border-white/20 overflow-hidden mb-6">
             <div class="scan-line"></div>
-            <i class="fa-solid fa-pills text-white/20 text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></i>
-            <img id="preview-img" class="w-full h-full object-cover opacity-50 hidden">
+            <i class="fa-solid fa-magnifying-glass text-white/20 text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></i>
+            <img id="preview-img" class="w-full h-full object-cover opacity-80 hidden">
         </div>
-        <h3 class="text-white font-bold text-lg mb-2">AI 제품 분석 중...</h3>
-        <p class="text-white/60 text-sm">사진 속의 제품을 찾고 있습니다.<br>잠시만 기다려주세요.</p>
+        <h3 id="ai-status-text" class="text-white font-bold text-lg mb-2">제품 분석 중...</h3>
+        <p class="text-white/60 text-sm">약 상자의 텍스트를 읽고 있습니다.</p>
     </div>
 
     <!-- Modal Backdrop -->
@@ -161,6 +161,7 @@ const T = {
     name: '명성약국', sub: 'Myung_Seong Pharmacy',
     emptyState: '제품이 없습니다.',
     aiError: '제품을 인식하지 못했습니다. 다시 시도해주세요.',
+    aiFound: '제품을 찾았습니다!',
     cats: ['전체', '피부케어', '약국 영양제', '건강기능식품', '해열·진통·소염', '감기·기침·목', '알러지·코감기', '소화·위장', '눈·코 외용', '피부·구강 외용', '파스류', '어린이 해열·감기', '어린이영양제', '근육이완제', '벌레·모기', '드링크', '기타'],
     labelIng: '주요 성분', labelDesc: '효능 및 설명', labelUse: '용법용량 및 주의사항'
   },
@@ -168,20 +169,22 @@ const T = {
     name: '明星药局', sub: 'Myung_Seong Pharmacy',
     emptyState: '没有产品。',
     aiError: '无法识别产品。请再试一次。',
-    cats: ['全部', '皮肤护理', '药店营养剂', '健康功能食品', '退烧·镇痛·消炎', '感冒·咳嗽·喉咙', '过敏·鼻感冒', '消化·肠胃', '眼·鼻外用', '皮肤·口腔外用', '贴剂', '儿童退烧·感冒', '儿童营养剂', '肌肉松弛剂', '防蚊·驱虫', '饮품', '其他'],
+    aiFound: '找到了产品！',
+    cats: ['全部', '皮肤护理', '药店营养剂', '健康功能食品', '退烧·镇痛·消炎', '感冒·咳嗽·喉咙', '过敏·鼻感冒', '消化·肠胃', '眼·鼻外用', '皮肤·口腔外用', '贴剂', '儿童退烧·감기', '儿童营养剂', '肌肉松弛剂', '防蚊·驱虫', '饮품', '其他'],
     labelIng: '主要成分', labelDesc: '功效与说明', labelUse: '用法用量及注意事项'
   },
   en: {
     name: 'Myung_Seong Pharmacy', sub: 'Pharmacy',
     emptyState: 'No products available.',
     aiError: 'Could not identify product. Please try again.',
+    aiFound: 'Product found!',
     cats: ['All', 'Skin Care', 'Pharmacy Supplements', 'Health Functional Foods', 'Fever/Pain', 'Cold/Cough', 'Allergy/Nasal', 'Digestion', 'Eye/Nose', 'Skin/Oral', 'Patches', 'Kids Cold', 'Kids Vitamins', 'Muscle Relaxants', 'Bug/Mosquito', 'Drinks', 'Other'],
     labelIng: 'Key Ingredients', labelDesc: 'Description & Efficacy', labelUse: 'Dosage & Warnings'
   }
 };
 
 const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/Myungseong-pharm/MSpharm-imeges/main/';
-const apiKey = ""; // Gemini API 키 (환경에서 제공됨)
+const apiKey = ""; // API Key는 실행 환경에서 주입됩니다.
 
 let products = [];
 let state = { lang: 'ko', activeCat: 0 };
@@ -196,6 +199,7 @@ function initDOMCache() {
     DOM.loadingState = document.getElementById('loading-state');
     DOM.aiLoading = document.getElementById('ai-loading');
     DOM.previewImg = document.getElementById('preview-img');
+    DOM.aiStatusText = document.getElementById('ai-status-text');
     
     DOM.mImgContainer = document.getElementById('m-img-container');
     DOM.mCat = document.getElementById('m-cat');
@@ -215,32 +219,28 @@ async function loadProducts() {
     try {
         const autoVersion = Math.floor(Date.now() / (1000 * 60 * 10));
         let response = await fetch(`https://raw.githubusercontent.com/Myungseong-pharm/MSpharm/main/products.json?v=${autoVersion}`);
-        if (!response.ok) throw new Error('네트워크 응답 오류');
+        if (!response.ok) throw new Error('데이터 로드 실패');
         products = await response.json();
         products.forEach((p, index) => p.id = index);
         DOM.loadingState.classList.add('hidden');
         DOM.productsContainer.classList.remove('hidden');
         render(); 
     } catch (error) {
-        console.error("데이터 로드 실패:", error);
-        DOM.loadingState.innerHTML = '<p class="text-red-500 text-sm mt-4">데이터를 불러오지 못했습니다.</p>';
+        DOM.loadingState.innerHTML = '<p class="text-red-500 text-sm mt-4">데이터 로딩 오류</p>';
     }
 }
 
-// 카메라 트리거
 function triggerCamera() {
     document.getElementById('camera-input').click();
 }
 
-// 이미지 처리 및 AI 검색
 async function handleImageSearch(event) {
     const file = event.target.files[0];
     if (!file) return;
 
-    // 로딩 UI 표시
     DOM.aiLoading.classList.remove('hidden');
+    DOM.aiStatusText.textContent = "이미지 분석 중...";
     
-    // 프리뷰 표시
     const reader = new FileReader();
     reader.onload = (e) => {
         DOM.previewImg.src = e.target.result;
@@ -253,17 +253,20 @@ async function handleImageSearch(event) {
         const matchId = await identifyProductWithAI(base64Data);
         
         if (matchId !== null) {
-            openModal(matchId);
+            DOM.aiStatusText.textContent = T[state.lang].aiFound;
+            setTimeout(() => openModal(matchId), 500);
         } else {
             showMessage(T[state.lang].aiError);
         }
     } catch (error) {
-        console.error("AI 인식 실패:", error);
+        console.error("AI Search Error:", error);
         showMessage(T[state.lang].aiError);
     } finally {
-        DOM.aiLoading.classList.add('hidden');
-        DOM.previewImg.classList.add('hidden');
-        event.target.value = ''; // 인풋 초기화
+        setTimeout(() => {
+            DOM.aiLoading.classList.add('hidden');
+            DOM.previewImg.classList.add('hidden');
+        }, 1000);
+        event.target.value = '';
     }
 }
 
@@ -276,23 +279,22 @@ async function fileToBase64(file) {
     });
 }
 
-// Gemini AI를 이용한 제품 식별
 async function identifyProductWithAI(base64Image) {
-    // 제품 목록 정보를 AI에게 전달할 텍스트로 요약 (성능을 위해 이름과 제조사만 전달)
-    const productInfo = products.map(p => `ID:${p.id}, Name:${p.ko.name}, Manufacturer:${p.ko.mfr}`).join('\n');
+    // 모델 성능 최적화를 위해 간결한 리스트 제공
+    const simplifiedList = products.map(p => `ID:${p.id} | Name:${p.ko.name} | Mfr:${p.ko.mfr}`).join('\n');
     
-    const prompt = `이 사진은 약국에 있는 약 제품의 사진이야. 사진 속의 제품 이름과 제조사 등을 확인해서 아래 제공된 목록 중 어떤 제품인지 찾아줘. 
-    반드시 목록에 있는 ID 숫자만 한 글자로 응답해줘. 만약 목록에 없다면 'null'이라고만 대답해.
+    const prompt = `이 사진에서 보이는 약 제품이 무엇인지 확인해주세요.
+    먼저 사진 속의 텍스트(제품명, 제조사)를 읽고, 아래 제공된 [제품 목록]에서 가장 일치하는 제품의 ID(숫자)를 하나만 말해주세요.
+    만약 목록에 확실한 제품이 없다면 'null'이라고 답하세요.
     
-    목록:
-    ${productInfo}`;
+    [제품 목록]:
+    ${simplifiedList}`;
 
     const payload = {
         contents: [{
-            role: "user",
             parts: [
                 { text: prompt },
-                { inlineData: { mimeType: "image/png", data: base64Image } }
+                { inlineData: { mimeType: "image/jpeg", data: base64Image } }
             ]
         }]
     };
@@ -308,14 +310,22 @@ async function identifyProductWithAI(base64Image) {
                 body: JSON.stringify(payload)
             });
 
+            if (!response.ok) throw new Error('API Response Error');
+
             const result = await response.json();
-            const text = result.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+            const textResponse = result.candidates?.[0]?.content?.parts?.[0]?.text || "";
             
-            if (text && !isNaN(text)) return parseInt(text);
+            // 정규표현식으로 숫자(ID) 추출
+            const idMatch = textResponse.match(/\d+/);
+            if (idMatch) {
+                const id = parseInt(idMatch[0]);
+                // 유효한 범위의 ID인지 확인
+                if (products.some(p => p.id === id)) return id;
+            }
             return null;
         } catch (error) {
             retries--;
-            if (retries === 0) throw error;
+            if (retries === 0) return null;
             await new Promise(r => setTimeout(r, delay));
             delay *= 2;
         }
@@ -325,13 +335,14 @@ async function identifyProductWithAI(base64Image) {
 
 function showMessage(msg) {
     const box = document.createElement('div');
-    box.className = 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/80 text-white px-6 py-4 rounded-2xl z-[100] text-sm font-medium backdrop-blur-md transition-opacity duration-300';
+    box.className = 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/80 text-white px-6 py-4 rounded-2xl z-[100] text-sm font-medium backdrop-blur-md text-center';
     box.textContent = msg;
     document.body.appendChild(box);
     setTimeout(() => {
+        box.style.transition = 'opacity 0.5s';
         box.style.opacity = '0';
-        setTimeout(() => box.remove(), 300);
-    }, 2000);
+        setTimeout(() => box.remove(), 500);
+    }, 2500);
 }
 
 function setLang(l) {
@@ -366,9 +377,9 @@ function render() {
     const catCounts = t.cats.map((_, i) => i === 0 ? products.length : products.filter(p => p.cat.includes(i)).length);
 
     DOM.catsContainer.innerHTML = t.cats.map((cat, i) => `
-        <button onclick="setActiveCat(${i})" class="category-btn w-full px-1 py-2.5 rounded-lg text-xs font-bold transition-all text-gray-700 hover:bg-gray-200 flex flex-col items-center justify-center gap-1 ${state.activeCat === i ? 'active' : ''}">
+        <button onclick="setActiveCat(${i})" class="category-btn w-full px-1 py-2.5 rounded-lg text-[11px] font-bold transition-all text-gray-700 hover:bg-gray-200 flex flex-col items-center justify-center gap-1 ${state.activeCat === i ? 'active' : ''}">
             <span class="text-center break-keep leading-tight">${cat}</span>
-            <span class="text-[10px] opacity-70 font-semibold">(${catCounts[i]})</span>
+            <span class="text-[9px] opacity-70">(${catCounts[i]})</span>
         </button>
     `).join('');
 
