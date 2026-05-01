@@ -242,10 +242,10 @@ async function handleImageSearch(event) {
     DOM.aiStatusText.textContent = "이미지 분석 중...";
 
     try {
-        // 원본 사진 대신 해상도와 용량을 줄인 이미지를 생성 (최대 너비 800px)
-        const base64Data = await compressImage(file, 800);
+        // 해상도를 1200px로 높이고 화질을 올려 글자 인식률을 대폭 향상시킵니다.
+        const base64Data = await compressImage(file, 1200);
         
-        // 압축된 이미지를 미리보기에 사용 (메모리 절약)
+        // 압축된 이미지를 미리보기에 사용
         DOM.previewImg.src = "data:image/jpeg;base64," + base64Data;
         DOM.previewImg.classList.remove('hidden');
 
@@ -290,10 +290,14 @@ function compressImage(file, maxWidth) {
                 canvas.width = width;
                 canvas.height = height;
                 const ctx = canvas.getContext('2d');
+                
+                // JPEG 변환 시 투명 배경이 검게 변하는 것을 방지하기 위해 흰색 배경 처리
+                ctx.fillStyle = "#FFFFFF";
+                ctx.fillRect(0, 0, width, height);
                 ctx.drawImage(img, 0, 0, width, height);
                 
-                // JPEG 포맷으로 품질을 70%로 낮추어 용량 최적화 후 base64 데이터만 추출
-                const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+                // 화질을 85%로 설정하여 작은 글씨의 가독성 유지
+                const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
                 resolve(dataUrl.split(',')[1]); 
             };
             img.onerror = error => reject(error);
@@ -307,23 +311,39 @@ async function identifyProductWithAI(base64Image) {
     // 모델 성능 최적화를 위해 간결한 리스트 제공
     const simplifiedList = products.map(p => `ID:${p.id} | Name:${p.ko.name} | Mfr:${p.ko.mfr}`).join('\n');
     
-    const prompt = `이 사진에서 보이는 약 제품이 무엇인지 확인해주세요.
-    먼저 사진 속의 텍스트(제품명, 제조사)를 읽고, 아래 제공된 [제품 목록]에서 가장 일치하는 제품의 ID(숫자)를 하나만 말해주세요.
-    만약 목록에 확실한 제품이 없다면 'null'이라고 답하세요.
+    const prompt = `당신은 약국 보조 AI입니다. 사용자가 제공한 사진을 분석하여 아래 [제품 목록] 중 어떤 제품인지 찾아야 합니다.
+    사진 속의 글자(제품명, 성분, 제조사 등)와 포장 디자인을 꼼꼼히 확인하고, 가장 일치하는 제품의 ID(숫자)를 찾아주세요.
+    목록에 일치하는 제품이 없거나 도저히 알아볼 수 없다면 -1을 반환하세요.
     
     [제품 목록]:
     ${simplifiedList}`;
 
     const payload = {
         contents: [{
+            role: "user",
             parts: [
                 { text: prompt },
                 { inlineData: { mimeType: "image/jpeg", data: base64Image } }
             ]
-        }]
+        }],
+        // AI가 무조건 JSON 형태로 숫자를 응답하도록 강제 (오류 확률 0%)
+        generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: {
+                type: "OBJECT",
+                properties: {
+                    matchedId: {
+                        type: "INTEGER",
+                        description: "일치하는 제품의 ID. 없으면 -1"
+                    }
+                },
+                required: ["matchedId"]
+            }
+        }
     };
 
-    let retries = 5;
+    // 불필요하게 오래 기다리지 않도록 재시도 횟수와 딜레이 시간 단축
+    let retries = 3; 
     let delay = 1000;
 
     while (retries > 0) {
@@ -334,24 +354,36 @@ async function identifyProductWithAI(base64Image) {
                 body: JSON.stringify(payload)
             });
 
-            if (!response.ok) throw new Error('API Response Error');
+            if (!response.ok) {
+                const errText = await response.text();
+                console.error("API Error Details:", response.status, errText);
+                // 400번대 클라이언트 에러는 재시도해도 실패하므로 즉각 중단
+                if (response.status >= 400 && response.status < 500 && response.status !== 429) {
+                    return null;
+                }
+                throw new Error('API Response Error');
+            }
 
             const result = await response.json();
-            const textResponse = result.candidates?.[0]?.content?.parts?.[0]?.text || "";
+            const textResponse = result.candidates?.[0]?.content?.parts?.[0]?.text;
             
-            // 정규표현식으로 숫자(ID) 추출
-            const idMatch = textResponse.match(/\d+/);
-            if (idMatch) {
-                const id = parseInt(idMatch[0]);
-                // 유효한 범위의 ID인지 확인
-                if (products.some(p => p.id === id)) return id;
+            if (textResponse) {
+                const parsed = JSON.parse(textResponse);
+                const id = parsed.matchedId;
+                
+                // 추출된 ID가 유효한 제품 ID인지 확인
+                if (id !== undefined && id !== -1 && products.some(p => p.id === id)) {
+                    return id;
+                }
+                return null; // 일치하는 제품이 없음
             }
             return null;
         } catch (error) {
+            console.error("AI Identify Attempt Failed:", error);
             retries--;
             if (retries === 0) return null;
             await new Promise(r => setTimeout(r, delay));
-            delay *= 2;
+            delay *= 1.5; 
         }
     }
     return null;
