@@ -240,16 +240,15 @@ async function handleImageSearch(event) {
 
     DOM.aiLoading.classList.remove('hidden');
     DOM.aiStatusText.textContent = "이미지 분석 중...";
-    
-    const reader = new FileReader();
-    reader.onload = (e) => {
-        DOM.previewImg.src = e.target.result;
-        DOM.previewImg.classList.remove('hidden');
-    };
-    reader.readAsDataURL(file);
 
     try {
-        const base64Data = await fileToBase64(file);
+        // 원본 사진 대신 해상도와 용량을 줄인 이미지를 생성 (최대 너비 800px)
+        const base64Data = await compressImage(file, 800);
+        
+        // 압축된 이미지를 미리보기에 사용 (메모리 절약)
+        DOM.previewImg.src = "data:image/jpeg;base64," + base64Data;
+        DOM.previewImg.classList.remove('hidden');
+
         const matchId = await identifyProductWithAI(base64Data);
         
         if (matchId !== null) {
@@ -260,7 +259,7 @@ async function handleImageSearch(event) {
         }
     } catch (error) {
         console.error("AI Search Error:", error);
-        showMessage(T[state.lang].aiError);
+        showMessage("이미지 처리 중 오류가 발생했습니다.");
     } finally {
         setTimeout(() => {
             DOM.aiLoading.classList.add('hidden');
@@ -270,11 +269,36 @@ async function handleImageSearch(event) {
     }
 }
 
-async function fileToBase64(file) {
+// 기존 fileToBase64 함수를 대체하는 이미지 압축 함수
+function compressImage(file, maxWidth) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onload = (event) => {
+            const img = new Image();
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                let width = img.width;
+                let height = img.height;
+
+                // 비율을 유지하면서 최대 너비(maxWidth)에 맞게 크기 조절
+                if (width > maxWidth) {
+                    height = Math.round((height * maxWidth) / width);
+                    width = maxWidth;
+                }
+
+                canvas.width = width;
+                canvas.height = height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, width, height);
+                
+                // JPEG 포맷으로 품질을 70%로 낮추어 용량 최적화 후 base64 데이터만 추출
+                const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+                resolve(dataUrl.split(',')[1]); 
+            };
+            img.onerror = error => reject(error);
+            img.src = event.target.result;
+        };
         reader.onerror = error => reject(error);
     });
 }
