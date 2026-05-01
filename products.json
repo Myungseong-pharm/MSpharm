@@ -157,7 +157,7 @@
     "cat": [0, 16],
     "ko": { "name": "스피롱액", "mfr": "에이치엘비제약", "ing": "디멘히드리네이트 50mg, 카페인무수물 20mg, 피리독신염산염 5mg", "desc": "멀미에 의한 어지러움, 구토, 두통의 예방 및 완화", "use": "만 15세 이상: 멀미 예방을 위해 승차 30분 전 1회 1병(30mL) 복용. 추가 복용 시 4시간 이상 간격." },
     "zh": { "name": "Spiron液", "mfr": "HLB制药", "ing": "茶苯海明、无水咖啡因等", "desc": "预防和缓解晕车引起的头晕、呕吐、头痛。", "use": "15岁以上：乘车前30分钟服用1瓶(30mL)。如需追加服用，请间隔4小时以上。" },
-    "en": { "name": "Spiron Liquid", "mfr": "HLB Pharm", "ing": "Dimenhydrinate, Caffeine, etc.", "desc": "Prevention and relief of dizziness, nausea, and headache from motion sickness.", "Adults 15+: 1 bottle(30mL) 30 min before travel. Allow at least 4 hours before taking an additional dose." }
+    "en": { "name": "Spiron Liquid", "mfr": "HLB Pharm", "ing": "Dimenhydrinate, Caffeine, etc.", "desc": "Prevention and relief of dizziness, nausea, and headache from motion sickness.", "use": "Adults 15+: 1 bottle(30mL) 30 min before travel. Allow at least 4 hours before taking an additional dose." }
   },
   {
     "img": "l-001.jpg",
