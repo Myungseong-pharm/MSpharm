@@ -41,20 +41,6 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-
-        /* 스캔 애니메이션 */
-        @keyframes scan {
-            0% { top: 0%; }
-            100% { top: 100%; }
-        }
-        .scan-line {
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, transparent, #10b981, transparent);
-            box-shadow: 0 0 8px #10b981;
-            animation: scan 2s linear infinite;
-        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -63,18 +49,11 @@
     <!-- Header -->
     <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-gray-200 px-4 py-3">
         <div class="flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div>
-                    <h1 id="h-name" class="text-lg font-bold text-emerald-600 leading-tight">명성약국</h1>
-                    <p id="h-sub" class="text-[10px] text-gray-400 font-medium tracking-tighter">Myung_Seong Pharmacy</p>
-                </div>
-                <!-- 카메라 검색 버튼 -->
-                <button onclick="triggerCamera()" class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center active:scale-95 transition-transform border border-emerald-100">
-                    <i class="fa-solid fa-camera text-lg"></i>
-                </button>
-                <input type="file" id="camera-input" accept="image/*" capture="environment" class="hidden" onchange="handleImageSearch(event)">
+            <div>
+                <h1 id="h-name" class="text-lg font-bold text-emerald-600 leading-tight">명성약국</h1>
+                <p id="h-sub" class="text-[10px] text-gray-400 font-medium tracking-tighter">Myung_Seong Pharmacy</p>
             </div>
-            
+            <!-- 버튼 순서를 중국어(CN) - 영어(EN) - 한국어(KR)로 변경했습니다 -->
             <div class="flex gap-1">
                 <button onclick="setLang('zh')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="zh">CN</button>
                 <button onclick="setLang('en')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="en">EN</button>
@@ -87,34 +66,30 @@
     <div class="flex">
         <!-- Categories (Sidebar) -->
         <aside class="w-24 sticky top-[57px] h-[calc(100vh-57px)] bg-gray-50 border-r border-gray-200 overflow-y-auto hide-scrollbar py-2 flex flex-col gap-1 items-center">
-            <div id="cats-container" class="w-full flex flex-col gap-1 px-1.5"></div>
+            <div id="cats-container" class="w-full flex flex-col gap-1 px-1.5">
+                <!-- Categories will be injected here -->
+            </div>
         </aside>
 
         <!-- Product Grid -->
         <main class="flex-1 p-3">
+            <!-- 로딩 상태 표시 -->
             <div id="loading-state" class="py-20 text-center">
                 <i class="fa-solid fa-circle-notch fa-spin text-emerald-500 text-3xl mb-3"></i>
                 <p class="text-gray-400 text-sm mt-3">데이터를 불러오는 중...</p>
             </div>
             
-            <div id="products-container" class="grid grid-cols-2 gap-3 hidden"></div>
+            <!-- 제품 리스트 -->
+            <div id="products-container" class="grid grid-cols-2 gap-3 hidden">
+                <!-- Products will be injected here -->
+            </div>
             
+            <!-- 검색 결과 없음 표시 -->
             <div id="empty-state" class="hidden py-20 text-center">
                 <i class="fa-solid fa-box-open text-gray-200 text-4xl mb-3"></i>
                 <p class="text-gray-400 text-sm">제품이 없습니다.</p>
             </div>
         </main>
-    </div>
-
-    <!-- AI 분석 로딩 오버레이 -->
-    <div id="ai-loading" class="fixed inset-0 bg-black/60 z-[60] hidden flex flex-col items-center justify-center p-6 text-center">
-        <div class="relative w-48 h-48 bg-white/10 rounded-2xl border border-white/20 overflow-hidden mb-6">
-            <div class="scan-line"></div>
-            <i class="fa-solid fa-magnifying-glass text-white/20 text-6xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></i>
-            <img id="preview-img" class="w-full h-full object-cover opacity-80 hidden">
-        </div>
-        <h3 id="ai-status-text" class="text-white font-bold text-lg mb-2">제품 분석 중...</h3>
-        <p class="text-white/60 text-sm">약 상자의 텍스트를 읽고 있습니다.</p>
     </div>
 
     <!-- Modal Backdrop -->
@@ -130,66 +105,69 @@
         </div>
 
         <div class="p-6">
-            <div id="m-img-container" class="w-full aspect-[4/3] bg-gray-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative border border-gray-100"></div>
+            <div id="m-img-container" class="w-full aspect-[4/3] bg-gray-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative border border-gray-100">
+                <!-- Image or Emoji -->
+            </div>
+            
             <div class="mb-6">
                 <span id="m-cat" class="inline-block px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded text-[10px] font-bold mb-2 tracking-wide uppercase">카테고리</span>
                 <h2 id="m-name" class="text-2xl font-bold text-gray-900 leading-tight mb-1">제품명</h2>
                 <p id="m-mfr" class="text-sm text-gray-400">제조사</p>
             </div>
+
             <div class="space-y-6">
                 <section>
                     <h3 id="m-label-ing" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">주요 성분</h3>
                     <div id="m-ing" class="bg-emerald-50/50 border border-emerald-100/50 rounded-xl p-3 text-sm text-emerald-800 leading-relaxed font-medium"></div>
                 </section>
+
                 <section>
                     <h3 id="m-label-desc" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">효능 및 설명</h3>
                     <p id="m-desc" class="text-gray-700 text-sm leading-relaxed whitespace-pre-line"></p>
                 </section>
+
                 <section>
                     <h3 id="m-label-use" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">용법용량 및 주의사항</h3>
                     <div id="m-use" class="bg-amber-50 border border-amber-100 rounded-xl p-3 text-sm text-amber-800 leading-relaxed italic whitespace-pre-line"></div>
                 </section>
             </div>
+            
             <div class="h-10"></div>
         </div>
     </div>
 </div>
 
 <script>
+// 번역 및 기본 텍스트 설정
 const T = {
   ko: {
     name: '명성약국', sub: 'Myung_Seong Pharmacy',
     emptyState: '제품이 없습니다.',
-    aiError: '제품을 인식하지 못했습니다. 다시 시도해주세요.',
-    aiFound: '제품을 찾았습니다!',
     cats: ['전체', '피부케어', '약국 영양제', '건강기능식품', '해열·진통·소염', '감기·기침·목', '알러지·코감기', '소화·위장', '눈·코 외용', '피부·구강 외용', '파스류', '어린이 해열·감기', '어린이영양제', '근육이완제', '벌레·모기', '드링크', '기타'],
     labelIng: '주요 성분', labelDesc: '효능 및 설명', labelUse: '용법용량 및 주의사항'
   },
   zh: {
     name: '明星药局', sub: 'Myung_Seong Pharmacy',
     emptyState: '没有产品。',
-    aiError: '无法识别产品。请再试一次。',
-    aiFound: '找到了产品！',
-    cats: ['全部', '皮肤护理', '药店营养剂', '健康功能食品', '退烧·镇痛·消炎', '感冒·咳嗽·喉咙', '过敏·鼻感冒', '消化·肠胃', '眼·鼻外用', '皮肤·口腔外用', '贴剂', '儿童退烧·감기', '儿童营养剂', '肌肉松弛剂', '防蚊·驱虫', '饮품', '其他'],
+    cats: ['全部', '皮肤护理', '药店营养剂', '健康功能食品', '退烧·镇痛·消炎', '感冒·咳嗽·喉咙', '过敏·鼻感冒', '消化·肠胃', '眼·鼻外用', '皮肤·口腔外用', '贴剂', '儿童退烧·感冒', '儿童营养剂', '肌肉松弛剂', '防蚊·驱虫', '饮品', '其他'],
     labelIng: '主要成分', labelDesc: '功效与说明', labelUse: '用法用量及注意事项'
   },
   en: {
     name: 'Myung_Seong Pharmacy', sub: 'Pharmacy',
     emptyState: 'No products available.',
-    aiError: 'Could not identify product. Please try again.',
-    aiFound: 'Product found!',
     cats: ['All', 'Skin Care', 'Pharmacy Supplements', 'Health Functional Foods', 'Fever/Pain', 'Cold/Cough', 'Allergy/Nasal', 'Digestion', 'Eye/Nose', 'Skin/Oral', 'Patches', 'Kids Cold', 'Kids Vitamins', 'Muscle Relaxants', 'Bug/Mosquito', 'Drinks', 'Other'],
     labelIng: 'Key Ingredients', labelDesc: 'Description & Efficacy', labelUse: 'Dosage & Warnings'
   }
 };
 
 const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/Myungseong-pharm/MSpharm-imeges/main/';
-const apiKey = ""; // API Key는 실행 환경에서 주입됩니다.
 
 let products = [];
-let state = { lang: 'ko', activeCat: 0 };
-const DOM = {};
+// 접속 시 기본 언어를 'zh'(중국어)로 변경했습니다.
+let state = { lang: 'zh', activeCat: 0 };
+const DOM = {}; // 자주 사용하는 DOM 요소 캐싱용 객체
 
+// DOM 요소들을 초기에 한 번만 찾아서 저장합니다 (성능 최적화)
 function initDOMCache() {
     DOM.hName = document.getElementById('h-name');
     DOM.hSub = document.getElementById('h-sub');
@@ -197,9 +175,6 @@ function initDOMCache() {
     DOM.productsContainer = document.getElementById('products-container');
     DOM.emptyState = document.getElementById('empty-state');
     DOM.loadingState = document.getElementById('loading-state');
-    DOM.aiLoading = document.getElementById('ai-loading');
-    DOM.previewImg = document.getElementById('preview-img');
-    DOM.aiStatusText = document.getElementById('ai-status-text');
     
     DOM.mImgContainer = document.getElementById('m-img-container');
     DOM.mCat = document.getElementById('m-cat');
@@ -217,188 +192,37 @@ function initDOMCache() {
 
 async function loadProducts() {
     try {
+        let response;
+        
+        // 10분(600,000ms)마다 숫자가 1씩 자동으로 올라가는 자동 버전 생성
+        // 수정 후 최대 10분 이내에 모든 사용자에게 최신 데이터가 자동으로 반영됩니다.
         const autoVersion = Math.floor(Date.now() / (1000 * 60 * 10));
-        let response = await fetch(`https://raw.githubusercontent.com/Myungseong-pharm/MSpharm/main/products.json?v=${autoVersion}`);
-        if (!response.ok) throw new Error('데이터 로드 실패');
+
+        try {
+            // 배포 환경(웹 서버, GitHub Pages 등)에서는 상대 경로로 호출합니다.
+            response = await fetch(`./products.json?v=${autoVersion}`);
+        } catch (err) {
+            // 미리보기(blob:)나 로컬 파일(file://) 환경에서 파싱 에러가 발생하면 
+            // 원본 GitHub의 절대 경로 주소로 대체하여 호출합니다.
+            response = await fetch(`https://raw.githubusercontent.com/Myungseong-pharm/MSpharm/main/products.json?v=${autoVersion}`);
+        }
+
+        if (!response || !response.ok) throw new Error('네트워크 응답 오류');
+        
         products = await response.json();
-        products.forEach((p, index) => p.id = index);
+        
+        // 데이터 바인딩을 가볍게 하기 위해, 객체에 고유 식별자(인덱스)를 부여합니다.
+        products.forEach((p, index) => {
+            p.id = index;
+        });
+        
         DOM.loadingState.classList.add('hidden');
         DOM.productsContainer.classList.remove('hidden');
         render(); 
     } catch (error) {
-        DOM.loadingState.innerHTML = '<p class="text-red-500 text-sm mt-4">데이터 로딩 오류</p>';
+        console.error("데이터 로드 실패:", error);
+        DOM.loadingState.innerHTML = '<p class="text-red-500 text-sm mt-4">데이터를 불러오지 못했습니다.<br>새로고침 해주세요.</p>';
     }
-}
-
-function triggerCamera() {
-    document.getElementById('camera-input').click();
-}
-
-async function handleImageSearch(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    DOM.aiLoading.classList.remove('hidden');
-    DOM.aiStatusText.textContent = "이미지 분석 중...";
-
-    try {
-        // 해상도를 1200px로 높이고 화질을 올려 글자 인식률을 대폭 향상시킵니다.
-        const base64Data = await compressImage(file, 1200);
-        
-        // 압축된 이미지를 미리보기에 사용
-        DOM.previewImg.src = "data:image/jpeg;base64," + base64Data;
-        DOM.previewImg.classList.remove('hidden');
-
-        const matchId = await identifyProductWithAI(base64Data);
-        
-        if (matchId !== null) {
-            DOM.aiStatusText.textContent = T[state.lang].aiFound;
-            setTimeout(() => openModal(matchId), 500);
-        } else {
-            showMessage(T[state.lang].aiError);
-        }
-    } catch (error) {
-        console.error("AI Search Error:", error);
-        showMessage("이미지 처리 중 오류가 발생했습니다.");
-    } finally {
-        setTimeout(() => {
-            DOM.aiLoading.classList.add('hidden');
-            DOM.previewImg.classList.add('hidden');
-        }, 1000);
-        event.target.value = '';
-    }
-}
-
-// 기존 fileToBase64 함수를 대체하는 이미지 압축 함수
-function compressImage(file, maxWidth) {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = (event) => {
-            const img = new Image();
-            img.onload = () => {
-                const canvas = document.createElement('canvas');
-                let width = img.width;
-                let height = img.height;
-
-                // 비율을 유지하면서 최대 너비(maxWidth)에 맞게 크기 조절
-                if (width > maxWidth) {
-                    height = Math.round((height * maxWidth) / width);
-                    width = maxWidth;
-                }
-
-                canvas.width = width;
-                canvas.height = height;
-                const ctx = canvas.getContext('2d');
-                
-                // JPEG 변환 시 투명 배경이 검게 변하는 것을 방지하기 위해 흰색 배경 처리
-                ctx.fillStyle = "#FFFFFF";
-                ctx.fillRect(0, 0, width, height);
-                ctx.drawImage(img, 0, 0, width, height);
-                
-                // 화질을 85%로 설정하여 작은 글씨의 가독성 유지
-                const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
-                resolve(dataUrl.split(',')[1]); 
-            };
-            img.onerror = error => reject(error);
-            img.src = event.target.result;
-        };
-        reader.onerror = error => reject(error);
-    });
-}
-
-async function identifyProductWithAI(base64Image) {
-    // 모델 성능 최적화를 위해 간결한 리스트 제공
-    const simplifiedList = products.map(p => `ID:${p.id} | Name:${p.ko.name} | Mfr:${p.ko.mfr}`).join('\n');
-    
-    const prompt = `당신은 약국 보조 AI입니다. 사용자가 제공한 사진을 분석하여 아래 [제품 목록] 중 어떤 제품인지 찾아야 합니다.
-    사진 속의 글자(제품명, 성분, 제조사 등)와 포장 디자인을 꼼꼼히 확인하고, 가장 일치하는 제품의 ID(숫자)를 찾아주세요.
-    목록에 일치하는 제품이 없거나 도저히 알아볼 수 없다면 -1을 반환하세요.
-    
-    [제품 목록]:
-    ${simplifiedList}`;
-
-    const payload = {
-        contents: [{
-            role: "user",
-            parts: [
-                { text: prompt },
-                { inlineData: { mimeType: "image/jpeg", data: base64Image } }
-            ]
-        }],
-        // AI가 무조건 JSON 형태로 숫자를 응답하도록 강제 (오류 확률 0%)
-        generationConfig: {
-            responseMimeType: "application/json",
-            responseSchema: {
-                type: "OBJECT",
-                properties: {
-                    matchedId: {
-                        type: "INTEGER",
-                        description: "일치하는 제품의 ID. 없으면 -1"
-                    }
-                },
-                required: ["matchedId"]
-            }
-        }
-    };
-
-    // 불필요하게 오래 기다리지 않도록 재시도 횟수와 딜레이 시간 단축
-    let retries = 3; 
-    let delay = 1000;
-
-    while (retries > 0) {
-        try {
-            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-
-            if (!response.ok) {
-                const errText = await response.text();
-                console.error("API Error Details:", response.status, errText);
-                // 400번대 클라이언트 에러는 재시도해도 실패하므로 즉각 중단
-                if (response.status >= 400 && response.status < 500 && response.status !== 429) {
-                    return null;
-                }
-                throw new Error('API Response Error');
-            }
-
-            const result = await response.json();
-            const textResponse = result.candidates?.[0]?.content?.parts?.[0]?.text;
-            
-            if (textResponse) {
-                const parsed = JSON.parse(textResponse);
-                const id = parsed.matchedId;
-                
-                // 추출된 ID가 유효한 제품 ID인지 확인
-                if (id !== undefined && id !== -1 && products.some(p => p.id === id)) {
-                    return id;
-                }
-                return null; // 일치하는 제품이 없음
-            }
-            return null;
-        } catch (error) {
-            console.error("AI Identify Attempt Failed:", error);
-            retries--;
-            if (retries === 0) return null;
-            await new Promise(r => setTimeout(r, delay));
-            delay *= 1.5; 
-        }
-    }
-    return null;
-}
-
-function showMessage(msg) {
-    const box = document.createElement('div');
-    box.className = 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/80 text-white px-6 py-4 rounded-2xl z-[100] text-sm font-medium backdrop-blur-md text-center';
-    box.textContent = msg;
-    document.body.appendChild(box);
-    setTimeout(() => {
-        box.style.transition = 'opacity 0.5s';
-        box.style.opacity = '0';
-        setTimeout(() => box.remove(), 500);
-    }, 2500);
 }
 
 function setLang(l) {
@@ -413,8 +237,7 @@ function updateLanguageUI() {
     DOM.hSub.textContent = t.sub;
     
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        const lang = btn.getAttribute('data-lang');
-        const isSelected = lang === state.lang;
+        const isSelected = btn.getAttribute('onclick').includes(state.lang);
         btn.classList.toggle('bg-emerald-600', isSelected);
         btn.classList.toggle('text-white', isSelected);
         btn.classList.toggle('border-emerald-600', isSelected);
@@ -424,53 +247,70 @@ function updateLanguageUI() {
 function setActiveCat(index) {
     state.activeCat = index;
     render();
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // 카테고리 변경 시 화면 상단으로 이동
+}
+
+function getProductHTML(p, t) {
+    const d = p[state.lang];
+    
+    // loading="lazy" 추가로 화면에 보일 때 이미지를 로드하여 네트워크 비용을 절약합니다.
+    const imgContent = p.img 
+        ? `<img src="${IMAGE_BASE_URL}${p.img}" loading="lazy" alt="${d.name}" class="w-full h-full object-contain p-2 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-3xl\\'>${p.emoji}</div>';">` 
+        : `<div class="text-3xl">${p.emoji}</div>`;
+
+    // onclick 시 전체 객체 문자열이 아닌 id 숫자 하나만 넘기도록 최적화
+    return `
+        <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 cursor-pointer" onclick="openModal(${p.id})">
+            <div class="aspect-square bg-gray-50/50 flex items-center justify-center relative border-b border-gray-100">
+                ${imgContent}
+            </div>
+            <div class="p-3">
+                <p class="text-[9px] font-bold text-emerald-500 uppercase tracking-tighter mb-1">${t.cats[p.cat[1]||p.cat[0]]}</p>
+                <h3 class="text-[12px] font-bold text-gray-800 leading-tight line-clamp-2 h-8 mb-1">${d.name}</h3>
+                <p class="text-[10px] text-gray-400 truncate">${d.mfr}</p>
+            </div>
+        </div>
+    `;
 }
 
 function render() {
     if (products.length === 0) return;
+
     const t = T[state.lang];
-    const catCounts = t.cats.map((_, i) => i === 0 ? products.length : products.filter(p => p.cat.includes(i)).length);
+    const catCounts = t.cats.map((_, i) => {
+        if (i === 0) return products.length;
+        return products.filter(p => p.cat.includes(i)).length;
+    });
 
     DOM.catsContainer.innerHTML = t.cats.map((cat, i) => `
-        <button onclick="setActiveCat(${i})" class="category-btn w-full px-1 py-2.5 rounded-lg text-[11px] font-bold transition-all text-gray-700 hover:bg-gray-200 flex flex-col items-center justify-center gap-1 ${state.activeCat === i ? 'active' : ''}">
+        <button onclick="setActiveCat(${i})" class="category-btn w-full px-1 py-2.5 rounded-lg text-xs font-bold transition-all text-gray-700 hover:bg-gray-200 flex flex-col items-center justify-center gap-1 ${state.activeCat === i ? 'active' : ''}">
             <span class="text-center break-keep leading-tight">${cat}</span>
-            <span class="text-[9px] opacity-70">(${catCounts[i]})</span>
+            <span class="text-[10px] opacity-70 font-semibold">(${catCounts[i]})</span>
         </button>
     `).join('');
 
     const filtered = products.filter(p => state.activeCat === 0 || p.cat.includes(state.activeCat));
+    
     if (filtered.length === 0) {
         DOM.productsContainer.innerHTML = '';
         DOM.emptyState.classList.remove('hidden');
     } else {
         DOM.emptyState.classList.add('hidden');
-        DOM.productsContainer.innerHTML = filtered.map(p => {
-            const d = p[state.lang];
-            const imgContent = p.img 
-                ? `<img src="${IMAGE_BASE_URL}${p.img}" loading="lazy" class="w-full h-full object-contain p-2 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-3xl\\'>${p.emoji}</div>';">` 
-                : `<div class="text-3xl">${p.emoji}</div>`;
-            return `
-                <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 cursor-pointer" onclick="openModal(${p.id})">
-                    <div class="aspect-square bg-gray-50/50 flex items-center justify-center relative border-b border-gray-100">${imgContent}</div>
-                    <div class="p-3">
-                        <p class="text-[9px] font-bold text-emerald-500 uppercase tracking-tighter mb-1">${t.cats[p.cat[1]||p.cat[0]]}</p>
-                        <h3 class="text-[12px] font-bold text-gray-800 leading-tight line-clamp-2 h-8 mb-1">${d.name}</h3>
-                        <p class="text-[10px] text-gray-400 truncate">${d.mfr}</p>
-                    </div>
-                </div>`;
-        }).join('');
+        DOM.productsContainer.innerHTML = filtered.map(p => getProductHTML(p, t)).join('');
     }
 }
 
+// 전달받은 id 값으로 products 배열에서 데이터를 찾아옵니다.
 function openModal(id) {
-    const p = products.find(prod => prod.id === id);
+    const p = products[id];
     if (!p) return;
+    
     const d = p[state.lang];
     const t = T[state.lang];
     
+    // 모달 내부 이미지도 지연 로딩 적용
     DOM.mImgContainer.innerHTML = p.img 
-        ? `<img src="${IMAGE_BASE_URL}${p.img}" class="w-full h-full object-contain p-6 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-6xl\\'>${p.emoji}</div>';">` 
+        ? `<img src="${IMAGE_BASE_URL}${p.img}" loading="lazy" alt="${d.name}" class="w-full h-full object-contain p-6 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-6xl\\'>${p.emoji}</div>';">` 
         : `<div class="text-6xl">${p.emoji}</div>`;
 
     DOM.mCat.textContent = t.cats[p.cat[1]||p.cat[0]];
@@ -490,15 +330,20 @@ function openModal(id) {
     }, 10);
 }
 
-function closeModal(e) { if (e.target.id === 'modal-backdrop') closeModalBtn(); }
+function closeModal(e) {
+    if (e.target.id === 'modal-backdrop') closeModalBtn();
+}
+
 function closeModalBtn() {
     DOM.backdrop.classList.remove('opacity-100');
     DOM.modal.classList.add('translate-y-full');
-    setTimeout(() => DOM.backdrop.classList.add('hidden'), 300);
+    setTimeout(() => {
+        DOM.backdrop.classList.add('hidden');
+    }, 300);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    initDOMCache();
+    initDOMCache(); // 초기 DOM 요소 캐싱
     updateLanguageUI();
     loadProducts(); 
 });
