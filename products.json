@@ -1687,5 +1687,37 @@
     "ko": { "name": "페리톡 겔", "mfr": "한미약품", "ing": "리도카인염산염수화물 5.33mg, 염화세틸피리디늄수화물 0.26mg", "desc": "의치 자극이나 입안의 궤양으로 인한 통증 완화", "use": "면봉이나 깨끗한 손으로 소량을 덜어 통증 부위에 바른다. 20분 이상 기다려도 통증이 계속되는 경우에는 추가로 이 약을 바를 수 있으며, 그 후에는 3시간 이상 간격을 두고 바른다." },
     "zh": { "name": "Peritox 凝胶", "mfr": "韩美药品", "ing": "盐酸利多卡因, 西吡氯铵", "desc": "缓解假牙刺激或口腔溃疡引起的疼痛。", "use": "用棉签或干净的手取少量涂抹于疼痛部位。等待20分钟以上疼痛持续时可追加涂抹，之后需间隔3小时以上。" },
     "en": { "name": "Peritox Gel", "mfr": "Hanmi Pharm", "ing": "Lidocaine HCl, Cetylpyridinium chloride", "desc": "Pain relief from denture irritation or mouth ulcers.", "use": "Apply a small amount to the painful area using a cotton swab or clean hand. If pain persists after 20 mins, may reapply; thereafter, allow at least a 3-hour interval between applications." }
+  },
+  {
+    "img": "h-007.jpg",
+    "emoji": "🌸",
+    "cat": [0, 6],
+    "ko": { "name": "플로라딘 연질캡슐", "mfr": "동화약품", "ing": "로라타딘 10.0mg", "desc": "알레르기성 비염 증상(재채기, 콧물, 가려움, 눈의 작열감) 및 만성 특발성 두드러기 완화", "use": "성인 및 12세 이상 소아: 1일 1회 10mg 복용. 6~12세 미만(체중 30kg 이상): 1일 1회 10mg 투여." },
+    "zh": { "name": "Floradin软胶囊", "mfr": "东和药品", "ing": "氯雷他定 10.0mg", "desc": "缓解过敏性鼻炎症状（打喷嚏、流鼻涕、瘙痒、眼部灼热感）及慢性特发性荨麻疹症状。", "use": "成人及12岁以上儿童：每日1次，每次10mg。6~12岁（体重30kg以上）：每日1次，每次10mg。" },
+    "en": { "name": "Floradin Soft Capsule", "mfr": "Dong-Wha Pharm", "ing": "Loratadine 10.0mg", "desc": "Relief of allergic rhinitis symptoms (sneezing, runny nose, itching, burning eyes) and chronic idiopathic hives.", "use": "Adults & kids 12+: 10mg once daily. Kids 6-12 (over 30kg): 10mg once daily." }
+  },
+  {
+    "img": "h-008.jpg",
+    "emoji": "🤧",
+    "cat": [0, 6],
+    "ko": { "name": "알러샷", "mfr": "녹십자", "ing": "세티리진염산염 10.00mg", "desc": "계절성 및 다년성 알레르기성 비염, 알레르기성 결막염, 만성 특발성 두드러기, 피부소양증(가려움증) 완화", "use": "성인 및 6세 이상의 소아: 1일 1회 10mg 취침 전 복용." },
+    "zh": { "name": "Allershot", "mfr": "绿十字", "ing": "盐酸西替利嗪 10.00mg", "desc": "缓解季节性和常年性过敏性鼻炎、过敏性结膜炎、慢性特发性荨麻疹、皮肤瘙痒。", "use": "成人及6岁以上儿童：每日1次，睡前服用10mg。" },
+    "en": { "name": "Allershot", "mfr": "GC Pharma", "ing": "Cetirizine HCl 10.00mg", "desc": "Relief of seasonal/perennial allergic rhinitis, allergic conjunctivitis, chronic idiopathic hives, and skin itching.", "use": "Adults & kids 6+: 10mg once daily at bedtime." }
+  },
+  {
+    "img": "h-009.jpg",
+    "emoji": "💊",
+    "cat": [0, 6],
+    "ko": { "name": "알러텍정", "mfr": "고려제약", "ing": "세티리진염산염 10.00mg", "desc": "계절성/다년성 알레르기성 비염, 알레르기성 결막염, 만성 특발성 두드러기, 피부소양증, 습진, 피부염 완화", "use": "성인 및 6세 이상의 소아: 1일 1회 10mg 취침 전 경구 투여." },
+    "zh": { "name": "Allertec片", "mfr": "高丽制药", "ing": "盐酸西替利嗪 10.00mg", "desc": "缓解季节性和常年性过敏性鼻炎、过敏性结膜炎、慢性特发性荨麻疹、皮肤瘙痒、湿疹及皮炎。", "use": "成人及6岁以上儿童：每日1次，睡前服用10mg。" },
+    "en": { "name": "Allertec Tablet", "mfr": "Koryo Pharm", "ing": "Cetirizine HCl 10.00mg", "desc": "Relief of seasonal/perennial allergic rhinitis, allergic conjunctivitis, chronic idiopathic hives, itching, eczema, and dermatitis.", "use": "Adults & kids 6+: 10mg once daily at bedtime." }
+  },
+  {
+    "img": "h-010.jpg",
+    "emoji": "🌿",
+    "cat": [0, 6],
+    "ko": { "name": "지민에스정", "mfr": "한풍제약", "ing": "클로르페니라민말레산염 4.0mg, 인진호탕 건조엑스 53.3mg, DL-메틸에페드린염산염 12.0mg", "desc": "두드러기, 습진, 가려움증, 옻 증상 완화", "use": "성인(15세 이상): 1회 1정, 1일 3회 식후에 복용한다." },
+    "zh": { "name": "Jimin-S片", "mfr": "汉风制药", "ing": "氯苯那敏 4.0mg, 茵陈蒿汤干浸膏 53.3mg, 甲基麻黄碱 12.0mg", "desc": "缓解荨麻疹、湿疹、瘙痒、漆树过敏（漆疮）症状。", "use": "成人(15岁以上)：每次1片，每日3次，饭后服用。" },
+    "en": { "name": "Jimin-S Tablet", "mfr": "Hanpoong Pharm", "ing": "Chlorpheniramine maleate 4.0mg, Injinhotang dry extract 53.3mg, DL-Methylephedrine 12.0mg", "desc": "Relief of hives, eczema, itching, and lacquer (poison ivy/oak) rash.", "use": "Adults 15+: 1 tablet, 3 times daily after meals." }
   }
 ]
