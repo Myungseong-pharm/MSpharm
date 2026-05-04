@@ -1495,8 +1495,8 @@
     "ko": { "name": "프로캄 후시메디 리페어 크림 S", "mfr": "한미약품", "ing": "푸시디움 코식네움 발효여과물, 프로바이오틱스 3종 콤플렉스, 토코페롤", "desc": "피부의 주름 개선에 도움을 준다.", "use": "적당량을 덜어 피부에 골고루 펴 바릅니다." },
     "zh": { "name": "Pro-Calm Fusimedi 修复面霜 S", "mfr": "韩美药品", "ing": "梭链孢酸发酵滤液、3种益生菌复合成分、生育酚", "desc": "有助于改善皮肤皱纹。", "use": "取适量均匀涂抹于皮肤上。" },
     "en": { "name": "Pro-Calm Fusimedi Repair Cream S", "mfr": "Hanmi Pharm", "ing": "Fusidium coccineum ferment filtrate, 3-probiotics complex, Tocopherol", "desc": "Helps improve skin wrinkles.", "use": "Take an appropriate amount and apply evenly to the skin." }
-  }
-    {
+  },
+  {
     "img": "a-025.jpg",
     "emoji": "🫧",
     "cat": [0, 1],
