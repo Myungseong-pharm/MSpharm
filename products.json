@@ -1543,5 +1543,21 @@
     "ko": { "name": "프로캄 후시메디 리페어 겔 마스크 S", "mfr": "한미약품", "ing": "푸시디움코식네움 발효여과물, 프로바이오틱스 3종콤플렉스, 나이아신아마이드", "desc": "피부 미백에 도움을 준다.", "use": "세안 후 피부결을 정돈해준 뒤 시트를 꺼내어 얼굴 전체에 고르게 밀착시킨 후 10~20분 후 마스크를 제거하고 피부에 남은 에센스를 톡톡 두드려 흡수시킨 뒤 마무리해줍니다." },
     "zh": { "name": "Pro-Calm Fusimedi 修复凝胶面膜 S", "mfr": "韩美药品", "ing": "梭链孢酸发酵滤液, 3种益生菌复合成分, 烟酰胺", "desc": "有助于皮肤美白。", "use": "洁面并调理肌肤后，取出面膜均匀贴合于面部。10~20分钟后取下面膜，轻拍残留精华至吸收。" },
     "en": { "name": "Pro-Calm Fusimedi Repair Gel Mask S", "mfr": "Hanmi Pharm", "ing": "Fusidium coccineum ferment filtrate, 3-probiotics complex, Niacinamide", "desc": "Helps brighten the skin.", "use": "After cleansing and toning, take out the sheet and apply it evenly over the face. Remove the mask after 10-20 minutes and gently pat the remaining essence until absorbed." }
+  },
+  {
+    "img": "g-008.jpg",
+    "emoji": "💧",
+    "cat": [0, 9],
+    "ko": { "name": "노스엣액", "mfr": "신신제약", "ing": "염화알루미늄 20.00g", "desc": "겨드랑이, 손, 발의 다한증(땀과다증)", "use": "저녁에 적용 부위에 적당량을 바른 후 다음날 아침 물로 씻어 제거한다. 발한이 멈출 때까지는 매일 밤 한번씩 사용하고 증상이 호전될 경우에는 일주일에 1～2회로 줄인다." },
+    "zh": { "name": "Noseat 液", "mfr": "新新制药", "ing": "氯化铝 20.00g", "desc": "腋下、手、足的多汗症（出汗过多）。", "use": "晚上取适量涂抹于患处，次日早晨用水洗净。在出汗停止前每晚使用一次，症状好转后减至每周1~2次。" },
+    "en": { "name": "Noseat Liquid", "mfr": "Sinshin Pharm", "ing": "Aluminum chloride 20.00g", "desc": "Hyperhidrosis (excessive sweating) of underarms, hands, and feet.", "use": "Apply an appropriate amount to the affected area at night and wash off with water the next morning. Use every night until sweating stops, then reduce to 1-2 times a week when symptoms improve." }
+  },
+  {
+    "img": "g-009.jpg",
+    "emoji": "💦",
+    "cat": [0, 9],
+    "ko": { "name": "스웨트롤 패드액", "mfr": "동아제약", "ing": "글리코피롤레이트 23.4mg", "desc": "안면 다한증(땀 과다증)", "use": "성인 1일 1회, 이 약 1매를 눈, 코, 입을 제외한 안면 환부(질환부위)에 가볍게 5회 정도 문지른다. 적용 전 환부를 깨끗이 씻고 충분히 건조시켜야 하며, 적용 후 4시간 이내에는 씻지 말아야 한다." },
+    "zh": { "name": "Sweatrol 擦拭垫液", "mfr": "东亚制药", "ing": "格隆溴铵 23.4mg", "desc": "面部多汗症（出汗过多）。", "use": "成人每日1次，避开眼、鼻、口，在面部患处轻轻擦拭约5次。使用前需清洗并彻底干燥患处，使用后4小时内请勿洗脸。" },
+    "en": { "name": "Sweatrol Pad Liquid", "mfr": "Dong-A Pharm", "ing": "Glycopyrrolate 23.4mg", "desc": "Facial hyperhidrosis (excessive sweating).", "use": "Adults: Once daily, gently wipe the pad about 5 times on the affected facial area, avoiding eyes, nose, and mouth. Clean and dry the area thoroughly before application. Do not wash the area for 4 hours after application." }
   }
 ]
