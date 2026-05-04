@@ -132,7 +132,7 @@
     "emoji": "🤧",
     "cat": [0, 5],
     "ko": { "name": "엑스콜큐업코프시럽 20mL", "mfr": "한풍제약", "ing": "맥문동탕연조엑스, 아세트아미노펜 400mg, 티페피딘히벤즈산염 12.5mg", "desc": "인후통, 기침, 가래, 발열 등 감기 증상 완화에 효과적인 시럽제", "use": "보통 성인(만 15세 이상) 1회 1포(20mL)를 1일 3회 식후 30분에 복용. 4시간 간격 유지." },
-    "zh": { "name": "Xcold Q-Up止咳糖浆", "mfr": "汉风制药", "ing": "麦门冬汤 + 对乙酰氨미노펜", "desc": "缓解咽喉痛、咳嗽、咳痰、发热等感冒症状的糖浆剂。", "use": "15岁以上成人：每次1包，每日3次。" },
+    "zh": { "name": "Xcold Q-Up止咳糖浆", "mfr": "汉风制药", "ing": "麦门冬汤 + 对乙酰氨基酚", "desc": "缓解咽喉痛、咳嗽、咳痰、发热等感冒症状的糖浆剂。", "use": "15岁以上成人：每次1包，每日3次。" },
     "en": { "name": "Xcold Q-Up Cough Syrup", "mfr": "Hanpoong Pharm", "ing": "Maengmundong-tang + Acetaminophen", "desc": "Syrup relief for sore throat, cough, phlegm, and fever.", "use": "Adults 15+: 1 pack (20mL), 3 times daily after meals." }
   },
   {
@@ -444,7 +444,7 @@
     "emoji": "🩹",
     "cat": [0, 10],
     "ko": { "name": "신신아렉스마일드", "mfr": "신신제약", "ing": "살리실산메틸, L-멘톨, 캄파, 토코페롤", "desc": "자극이 적으면서 근육통 및 관절염에 효과적인 마일드 타입의 파스", "use": "1일 1~2회 환부에 부착" },
-    "zh": { "name": "Arex Mild贴剂", "mfr": "新新제약", "ing": "水杨酸甲酯等", "desc": "刺激较小，且对肌肉痛及关节炎有效的温和型贴剂。", "use": "每日1~2次贴于患处。" },
+    "zh": { "name": "Arex Mild贴剂", "mfr": "新新制药", "ing": "水杨酸甲酯等", "desc": "刺激较小，且对肌肉痛及关节炎有效的温和型贴剂。", "use": "每日1~2次贴于患处。" },
     "en": { "name": "Sinshin Arex Mild", "mfr": "Sinshin Pharm", "ing": "Methyl salicylate, Menthol, etc.", "desc": "Mild-type patch effective for muscle pain and arthritis with less irritation.", "use": "Apply 1~2 times daily." }
   },
   {
@@ -604,7 +604,7 @@
     "emoji": "🩹",
     "cat": [0, 14],
     "ko": { "name": "디판버그겔", "mfr": "태극제약", "ing": "디펜히드라민, 디부카인, 크로타미톤, 에녹솔론, 멘톨, 캄파", "desc": "벌레 물린 데, 가려움, 두드러기, 습진 완화 (시원한 겔 타입)", "use": "1일 1~수회 환부에 적당량 도포" },
-    "zh": { "name": "Diepanburg凝胶", "mfr": "太极制药", "ing": "苯海라明等", "desc": "缓解蚊虫叮咬、瘙痒、荨麻疹、湿疹（清爽凝胶型）。", "use": "每日1至数次。" },
+    "zh": { "name": "Diepanburg凝胶", "mfr": "太极制药", "ing": "苯海拉明等", "desc": "缓解蚊虫叮咬、瘙痒、荨麻疹、湿疹（清爽凝胶型）。", "use": "每日1至数次。" },
     "en": { "name": "Diepanburg Gel", "mfr": "Taeguk Pharm", "ing": "Diphenhydramine complex", "desc": "Relief for bug bites, itching, and hives (cooling gel type).", "use": "Apply to the affected area several times daily." }
   },
   {
