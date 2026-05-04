@@ -1496,4 +1496,52 @@
     "zh": { "name": "Pro-Calm Fusimedi 修复面霜 S", "mfr": "韩美药品", "ing": "梭链孢酸发酵滤液、3种益生菌复合成分、生育酚", "desc": "有助于改善皮肤皱纹。", "use": "取适量均匀涂抹于皮肤上。" },
     "en": { "name": "Pro-Calm Fusimedi Repair Cream S", "mfr": "Hanmi Pharm", "ing": "Fusidium coccineum ferment filtrate, 3-probiotics complex, Tocopherol", "desc": "Helps improve skin wrinkles.", "use": "Take an appropriate amount and apply evenly to the skin." }
   }
+    {
+    "img": "a-025.jpg",
+    "emoji": "🫧",
+    "cat": [0, 1],
+    "ko": { "name": "애크논 딥 클렌징 폼", "mfr": "동아제약", "ing": "4X 안티 아크네 솔루션(나이아신 아마이드, BHA, Zinc PCA, IPMP)", "desc": "여드름성 피부를 완화하는 데 도움을 준다.", "use": "본품 적당량을 취해 피부에 사용한 후 물로 바로 깨끗이 씻어낸다." },
+    "zh": { "name": "Acnon 深层洁面乳", "mfr": "东亚制药", "ing": "4X 抗痘配方 (烟酰胺, BHA, Zinc PCA, IPMP)", "desc": "有助于缓解痘痘肌。", "use": "取适量于皮肤上使用后，立即用清水洗净。" },
+    "en": { "name": "Acnon Deep Cleansing Foam", "mfr": "Dong-A Pharm", "ing": "4X Anti-Acne Solution (Niacinamide, BHA, Zinc PCA, IPMP)", "desc": "Helps relieve acne-prone skin.", "use": "Take an appropriate amount, apply to the skin, and rinse off immediately with water." }
+  },
+  {
+    "img": "a-026.jpg",
+    "emoji": "💧",
+    "cat": [0, 1],
+    "ko": { "name": "노드라나액", "mfr": "동아제약", "ing": "글리시리진산이칼륨 5mg, 알란토인 2mg, 헤파리노이드 3mg", "desc": "성인∙노인의 건피증(피부건조증), 소아의 건조성 피부, 추위로 인한 손발의 살갗의 틈, 거친 피부, 팔꿈치∙무릎∙발뒤꿈치∙발목의 각화증, 가벼운 동상(염증 제외), 타박상∙염좌 후의 부종∙근육통∙관절통", "use": "1일 1~수회 적당량을 환부에 문질러 바르거나 거즈 등에 펴바른다." },
+    "zh": { "name": "Nodrana 液", "mfr": "东亚制药", "ing": "甘草酸二钾 5mg, 尿囊素 2mg, 类肝素 3mg", "desc": "成人/老年人干皮症，小儿干燥性皮肤，因寒冷导致的干裂，粗糙皮肤，角化症，轻微冻伤，挫伤/扭伤后肿胀、肌肉痛、关节痛。", "use": "每日1至数次，取适量涂抹于患处或涂于纱布上敷用。" },
+    "en": { "name": "Nodrana Solution", "mfr": "Dong-A Pharm", "ing": "Dipotassium glycyrrhizate 5mg, Allantoin 2mg, Heparinoid 3mg", "desc": "Dry skin in adults/elderly, dry skin in children, chapped skin from cold, rough skin, keratosis, mild frostbite, swelling/muscle pain/joint pain after bruises/sprains.", "use": "Apply an appropriate amount to the affected area or spread on gauze 1 to several times a day." }
+  },
+  {
+    "img": "a-027.jpg",
+    "emoji": "🩹",
+    "cat": [0, 1],
+    "ko": { "name": "마데캄 멜라패치", "mfr": "동국제약", "ing": "나이아신아마이드, 트라넥사믹애씨드, 마그네슘아시코빌포스페이트, 아데노신, 바쿠치올, 센텔라아시아티카(마데카소사이드)", "desc": "기미, 잡티, 색소침착, 주름 집중 케어", "use": "본품을 피부에 붙인 후 8시간 후에 떼어 냅니다." },
+    "zh": { "name": "Madecalm 褪黑贴", "mfr": "东国制药", "ing": "烟酰胺, 氨甲环酸, 维生素C衍生物, 腺苷, 补骨脂酚, 积雪草提取物", "desc": "集中护理黄褐斑、瑕疵、色素沉着和皱纹。", "use": "贴于皮肤上，8小时后取下。" },
+    "en": { "name": "Madecalm Mela Patch", "mfr": "Dongkook Pharm", "ing": "Niacinamide, Tranexamic Acid, Magnesium Ascorbyl Phosphate, Adenosine, Bakuchiol, Centella Asiatica (Madecassoside)", "desc": "Intensive care for melasma, blemishes, pigmentation, and wrinkles.", "use": "Apply to the skin and remove after 8 hours." }
+  },
+  {
+    "img": "a-028.jpg",
+    "emoji": "🧴",
+    "cat": [0, 1],
+    "ko": { "name": "아토팜 엠엘이 로션", "mfr": "네오팜", "ing": "5가지 아미노산 성분(류신, 라이신, 페닐알라닌, 트레오닌, 발린)", "desc": "수분 밸런스, 보습, 영양공급", "use": "세안 또는 샤워 후 물기를 닦고 적당량을 덜어 얼굴과 전신에 부드럽게 펴 발라 흡수시켜 줍니다. 유·소아를 포함한 모든 연령대에 사용 가능" },
+    "zh": { "name": "爱多康 MLE 乳液", "mfr": "Neopharm", "ing": "5种氨基酸成分 (亮氨酸, 赖氨酸, 苯丙氨酸, 苏氨酸, 缬氨酸)", "desc": "水分平衡、保湿、营养供应。", "use": "洁面或沐浴擦干后，取适量轻柔涂抹于面部及全身。包括婴幼儿在内的所有年龄段均可使用。" },
+    "en": { "name": "Atopalm MLE Lotion", "mfr": "Neopharm", "ing": "5 Amino Acids (Leucine, Lysine, Phenylalanine, Threonine, Valine)", "desc": "Moisture balance, hydration, and nourishment.", "use": "After washing or showering, towel dry and gently apply an appropriate amount to the face and body. Suitable for all ages including infants and children." }
+  },
+  {
+    "img": "a-029.jpg",
+    "emoji": "✨",
+    "cat": [0, 1],
+    "ko": { "name": "프로캄 EGF·PDRN 액티브 시너지 마스크", "mfr": "한미약품", "ing": "EGF 1.2ppm, PDRN 1000ppm, 센텔라 정량 추출물, 판테놀", "desc": "피부의 미백에 도움을 준다. 피부의 주름개선에 도움을 준다.", "use": "본품을 피부에 붙이고 10~20분 후 지지체를 제거한 다음 남은 제품을 골고루 펴 바른다." },
+    "zh": { "name": "Pro-Calm EGF·PDRN 活性协同面膜", "mfr": "韩美药品", "ing": "EGF 1.2ppm, PDRN 1000ppm, 积雪草定量提取物, 泛醇", "desc": "有助于皮肤美白。有助于改善皮肤皱纹。", "use": "敷于面部10~20分钟后取下支撑体，将剩余精华均匀涂抹。" },
+    "en": { "name": "Pro-Calm EGF·PDRN Active Synergy Mask", "mfr": "Hanmi Pharm", "ing": "EGF 1.2ppm, PDRN 1000ppm, Centella quantitative extract, Panthenol", "desc": "Helps brighten the skin and improve wrinkles.", "use": "Apply to the skin, remove the support after 10-20 minutes, and spread the remaining essence evenly." }
+  },
+  {
+    "img": "a-030.jpg",
+    "emoji": "✨",
+    "cat": [0, 1],
+    "ko": { "name": "프로캄 후시메디 리페어 겔 마스크 S", "mfr": "한미약품", "ing": "푸시디움코식네움 발효여과물, 프로바이오틱스 3종콤플렉스, 나이아신아마이드", "desc": "피부 미백에 도움을 준다.", "use": "세안 후 피부결을 정돈해준 뒤 시트를 꺼내어 얼굴 전체에 고르게 밀착시킨 후 10~20분 후 마스크를 제거하고 피부에 남은 에센스를 톡톡 두드려 흡수시킨 뒤 마무리해줍니다." },
+    "zh": { "name": "Pro-Calm Fusimedi 修复凝胶面膜 S", "mfr": "韩美药品", "ing": "梭链孢酸发酵滤液, 3种益生菌复合成分, 烟酰胺", "desc": "有助于皮肤美白。", "use": "洁面并调理肌肤后，取出面膜均匀贴合于面部。10~20分钟后取下面膜，轻拍残留精华至吸收。" },
+    "en": { "name": "Pro-Calm Fusimedi Repair Gel Mask S", "mfr": "Hanmi Pharm", "ing": "Fusidium coccineum ferment filtrate, 3-probiotics complex, Niacinamide", "desc": "Helps brighten the skin.", "use": "After cleansing and toning, take out the sheet and apply it evenly over the face. Remove the mask after 10-20 minutes and gently pat the remaining essence until absorbed." }
+  }
 ]
