@@ -1559,5 +1559,133 @@
     "ko": { "name": "스웨트롤 패드액", "mfr": "동아제약", "ing": "글리코피롤레이트 23.4mg", "desc": "안면 다한증(땀 과다증)", "use": "성인 1일 1회, 이 약 1매를 눈, 코, 입을 제외한 안면 환부(질환부위)에 가볍게 5회 정도 문지른다. 적용 전 환부를 깨끗이 씻고 충분히 건조시켜야 하며, 적용 후 4시간 이내에는 씻지 말아야 한다." },
     "zh": { "name": "Sweatrol 擦拭垫液", "mfr": "东亚制药", "ing": "格隆溴铵 23.4mg", "desc": "面部多汗症（出汗过多）。", "use": "成人每日1次，避开眼、鼻、口，在面部患处轻轻擦拭约5次。使用前需清洗并彻底干燥患处，使用后4小时内请勿洗脸。" },
     "en": { "name": "Sweatrol Pad Liquid", "mfr": "Dong-A Pharm", "ing": "Glycopyrrolate 23.4mg", "desc": "Facial hyperhidrosis (excessive sweating).", "use": "Adults: Once daily, gently wipe the pad about 5 times on the affected facial area, avoiding eyes, nose, and mouth. Clean and dry the area thoroughly before application. Do not wash the area for 4 hours after application." }
+  },
+  {
+    "img": "g-011.jpg",
+    "emoji": "🩹",
+    "cat": [0, 9],
+    "ko": { "name": "클리스톤지 크림", "mfr": "부광약품", "ing": "베타메타손발레레이트 0.61mg, 겐타마이신황산염 1mg", "desc": "2차 감염된 알레르기성 또는 염증성 피부질환 : 습진, 접촉피부염, 지루피부염, 아토피피부염, 광피부염, 만성단순태선, 간찰진(피부스침증), 박탈피부염, 가려움, 건선(마른비늘증), 1도 화상", "use": "1일 1～3회 환부(질환 부위)에 적당량을 바른다." },
+    "zh": { "name": "克立斯通G乳膏", "mfr": "富光药品", "ing": "戊酸倍他米松 0.61mg, 硫酸庆大霉素 1mg", "desc": "缓解继发感染的过敏性或炎症性皮肤病：湿疹、接触性皮炎、脂溢性皮炎、特应性皮炎、光照性皮炎、慢性单纯性苔藓、擦烂、剥脱性皮炎、瘙痒、银屑病及一度烧伤。", "use": "每日1~3次，取适量涂抹于患处。" },
+    "en": { "name": "Clistone-G Cream", "mfr": "Bukwang Pharm", "ing": "Betamethasone valerate 0.61mg, Gentamicin sulfate 1mg", "desc": "Relief of secondarily infected allergic or inflammatory skin diseases: eczema, contact dermatitis, seborrheic dermatitis, atopic dermatitis, photodermatitis, chronic lichen simplex, intertrigo, exfoliative dermatitis, itching, psoriasis, and 1st-degree burns.", "use": "Apply an appropriate amount to the affected area 1-3 times daily." }
+  },
+  {
+    "img": "g-012.jpg",
+    "emoji": "🌿",
+    "cat": [0, 9],
+    "ko": { "name": "마데카솔 분말", "mfr": "동국제약", "ing": "센텔라정량추출물 20mg", "desc": "상처, 피부궤양의 보조적 부분 치료", "use": "질환 부위에 1일 1～2회 적량 적용한다." },
+    "zh": { "name": "玛地卡索粉", "mfr": "东国制药", "ing": "积雪草定量提取物 20mg", "desc": "伤口、皮肤溃疡的辅助局部治疗。", "use": "每日1~2次，适量涂抹于患处。" },
+    "en": { "name": "Madecassol Powder", "mfr": "Dongkook Pharm", "ing": "Centella quantitative extract 20mg", "desc": "Adjunctive local treatment for wounds and skin ulcers.", "use": "Apply an appropriate amount to the affected area 1-2 times daily." }
+  },
+  {
+    "img": "g-013.jpg",
+    "emoji": "🩹",
+    "cat": [0, 9],
+    "ko": { "name": "스티모린 에스 크림", "mfr": "신일제약", "ing": "소맥추출수성액(1→108) 150.0mg", "desc": "표재성 피부 미란과 욕창 치료", "use": "1일 2회 크림을 도포한 후 멸균 거즈로 덮는다." },
+    "zh": { "name": "Stimolin S 乳膏", "mfr": "信一制药", "ing": "小麦提取水溶液(1→108) 150.0mg", "desc": "治疗浅表性皮肤糜烂和褥疮。", "use": "每日2次涂抹乳膏后，用无菌纱布覆盖。" },
+    "en": { "name": "Stimolin S Cream", "mfr": "Sinil Pharm", "ing": "Aqueous wheat extract(1→108) 150.0mg", "desc": "Treatment of superficial skin erosions and bedsores (pressure ulcers).", "use": "Apply the cream twice daily and cover with sterile gauze." }
+  },
+  {
+    "img": "g-014.jpg",
+    "emoji": "🩹",
+    "cat": [0, 9],
+    "ko": { "name": "노블루겔", "mfr": "JW중외제약", "ing": "헤파리노이드 3.0mg", "desc": "외상(타박상, 삠, 멍) 후의 통증ㆍ혈종ㆍ힘줄주위조직염ㆍ근육통ㆍ관절염, 혈전성정맥염, 혈행장해에 의한 통증과 염증성 질환(주사 후의 단단해짐 및 통증), 동창, 비후흉터ㆍ켈로이드의 치료와 예방, 주부습진의 건조형, 근육성 기운목(유아기)", "use": "통상, 증상에 따라 적량을, 1일 1～수회 문질러 바르거나 가제 등에 펴바른다." },
+    "zh": { "name": "Noblue 凝胶", "mfr": "JW中外制药", "ing": "类肝素 3.0mg", "desc": "用于外伤（挫伤、扭伤、淤青）后的疼痛、血肿、腱周组织炎、肌肉痛、关节炎，血栓性静脉炎，血流障碍引起的疼痛和炎症性疾病，冻疮，肥厚性疤痕和瘢痕疙瘩的治疗与预防，主妇湿疹的干燥型，小儿肌性斜颈。", "use": "通常根据症状，每日1至数次，取适量涂抹并揉搓，或涂于纱布上敷用。" },
+    "en": { "name": "Noblue Gel", "mfr": "JW Jungwae Pharm", "ing": "Heparinoid 3.0mg", "desc": "Treatment and prevention of pain/hematoma post-trauma (bruises, sprains), peritendinitis, muscle/joint pain, thrombophlebitis, pain/inflammation from circulatory disorders, chilblains, hypertrophic/keloid scars, dry housewife's eczema, and muscular torticollis in infants.", "use": "Apply and rub an appropriate amount 1 to several times daily, or spread on gauze according to symptoms." }
+  },
+  {
+    "img": "g-015.jpg",
+    "emoji": "🩹",
+    "cat": [0, 9],
+    "ko": { "name": "디판큐어 크림", "mfr": "동아제약", "ing": "D-판테놀 50mg, 히드로코르티손아세테이트 5mg", "desc": "알레르기성 비감염성 염증 또는 피부 자극 증상의 국소 치료 : 벌레 물린 데, 가려움 및 일광 화상 후 피부 반응", "use": "1) 환부에 1일 1~2회 얇게 바르고 부드럽게 마사지한다. 2) 사용기간은 2주를 초과해서는 안된다." },
+    "zh": { "name": "D-Pan Cure 乳膏", "mfr": "东亚制药", "ing": "D-泛醇 50mg, 醋酸氢化可的松 5mg", "desc": "过敏性非感染性炎症或皮肤刺激症状的局部治疗：蚊虫叮咬、瘙痒及日晒后的皮肤反应。", "use": "1) 每日1~2次，薄涂于患处并轻轻按摩。 2) 使用时间不得超过2周。" },
+    "en": { "name": "D-Pan Cure Cream", "mfr": "Dong-A Pharm", "ing": "D-Panthenol 50mg, Hydrocortisone acetate 5mg", "desc": "Local treatment for allergic non-infectious inflammation or skin irritation: bug bites, itching, and post-sunburn skin reactions.", "use": "1) Apply a thin layer to the affected area 1-2 times daily and massage gently. 2) Do not use for more than 2 weeks." }
+  },
+  {
+    "img": "g-016.jpg",
+    "emoji": "🦶",
+    "cat": [0, 9],
+    "ko": { "name": "다나큐아 크림", "mfr": "광동제약", "ing": "우레아 200.0mg, 글리시리진산이칼륨 5.0mg, 토코페롤아세테이트 5.0mg", "desc": "고령자의 건피증, 성인의 거친 피부, 발뒤꿈치 및 복사뼈 부위의 각화증", "use": "1일 1 ～ 수회 적당량을 환부를 씻은 다음 바른다." },
+    "zh": { "name": "Dana Cure 乳膏", "mfr": "广东制药", "ing": "尿素 200.0mg, 甘草酸二钾 5.0mg, 醋酸生育酚 5.0mg", "desc": "用于老年人干皮症、成人皮肤粗糙、脚后跟及脚踝部位的角化症。", "use": "每日1至数次，清洗患处后涂抹适量。" },
+    "en": { "name": "Dana Cure Cream", "mfr": "Kwangdong Pharm", "ing": "Urea 200.0mg, Dipotassium glycyrrhizate 5.0mg, Tocopherol acetate 5.0mg", "desc": "For dry skin in the elderly, rough skin in adults, and keratosis of the heels and ankles.", "use": "Wash the affected area and apply an appropriate amount 1 to several times daily." }
+  },
+  {
+    "img": "g-017.jpg",
+    "emoji": "🩹",
+    "cat": [0, 9],
+    "ko": { "name": "더마큐 연고", "mfr": "일동제약", "ing": "히드로코르티손아세테이트 5.00mg, 디펜히드라민염산염 5.00mg, 산화아연 20.00mg", "desc": "습진, 땀띠, 피부 가려움, 알레르기 피부질환, 화상, 동상", "use": "1일 2 ∼ 3회 환부에 적당량 바른다." },
+    "zh": { "name": "Derma-Q 软膏", "mfr": "日东制药", "ing": "醋酸氢化可的松 5.00mg, 盐酸苯海拉明 5.00mg, 氧化锌 20.00mg", "desc": "用于湿疹、痱子、皮肤瘙痒、过敏性皮肤病、烧伤、冻伤。", "use": "每日2~3次，取适量涂抹于患处。" },
+    "en": { "name": "Derma-Q Ointment", "mfr": "Ildong Pharm", "ing": "Hydrocortisone acetate 5.00mg, Diphenhydramine HCl 5.00mg, Zinc oxide 20.00mg", "desc": "For eczema, heat rash, skin itching, allergic skin diseases, burns, and frostbite.", "use": "Apply an appropriate amount to the affected area 2-3 times daily." }
+  },
+  {
+    "img": "g-018.jpg",
+    "emoji": "👄",
+    "cat": [0, 9],
+    "ko": { "name": "바이락스 클리어 크림", "mfr": "고려제약", "ing": "아시클로버 50mg, 히드로코르티손 10mg", "desc": "재발성 구순포진의 초기 치료", "use": "성인 환부의 가장자리까지 충분히 적용할 수 있는 적당량으로 하여 1일 5회, 5일동안 사용합니다. 치료는 초기증상 및 증후가 보이는 즉시 가능한 빨리 시작합니다." },
+    "zh": { "name": "Virax Clear 乳膏", "mfr": "高丽制药", "ing": "阿昔洛韦 50mg, 氢化可的松 10mg", "desc": "复发性唇疱疹的初期治疗。", "use": "成人：取适量充分涂抹于患处及边缘，每日5次，连续使用5天。在出现初期症状或迹象时尽快开始治疗。" },
+    "en": { "name": "Virax Clear Cream", "mfr": "Koryo Pharm", "ing": "Acyclovir 50mg, Hydrocortisone 10mg", "desc": "Early treatment of recurrent cold sores (herpes labialis).", "use": "Adults: Apply an appropriate amount covering the affected area and its margins 5 times daily for 5 days. Start treatment as soon as early symptoms or signs appear." }
+  },
+  {
+    "img": "g-019.jpg",
+    "emoji": "💆‍♂️",
+    "cat": [0, 9],
+    "ko": { "name": "두피앤 액", "mfr": "한미약품", "ing": "프레드니솔론발레로아세테이트 0.15g, L-멘톨 3.5g, 티몰 0.15g, 크로타미톤 5.0g, 에녹솔론 1.0g, 알란토인 0.2g", "desc": "습진, 피부염, 가려움, 두드러기, 땀띠, 벌레물린데", "use": "1일 수회(여러 차례) 질환 부위에 적당량을 바른다." },
+    "zh": { "name": "Dupi& 液", "mfr": "韩美药品", "ing": "戊酸醋酸泼尼松龙, 薄荷醇, 克罗米通等", "desc": "用于湿疹、皮炎、瘙痒、荨麻疹、痱子、蚊虫叮咬。", "use": "每日数次，取适量涂抹于患处。" },
+    "en": { "name": "Dupi & Liquid", "mfr": "Hanmi Pharm", "ing": "Prednisolone valeroacetate, Menthol, Crotamiton, etc.", "desc": "For eczema, dermatitis, itching, hives, heat rash, and bug bites.", "use": "Apply an appropriate amount to the affected area several times a day." }
+  },
+  {
+    "img": "g-020.jpg",
+    "emoji": "😮",
+    "cat": [0, 9],
+    "ko": { "name": "알보칠 액", "mfr": "동화약품", "ing": "폴리크레줄렌액50% 720mg", "desc": "질 세균 감염, 구내염 및 치육염", "use": "질 세균 감염 : 용액을 적신 거즈를 질 안에 넣고 가벼운 압력으로 해당부위를 1 〜 3분간 누른다. 3 〜 4일 간격으로 두 번 사용하고, 증상이 사라지지 않으면 의사와 상담한다. 구내염 및 치육염 : 이 약을 적신 면봉 등을 이용해 여러번 반복하여 발라준다." },
+    "zh": { "name": "Albothyl 溶液", "mfr": "东和药品", "ing": "聚甲酚磺醛 50% 720mg", "desc": "阴道细菌感染、口腔炎及牙龈炎。", "use": "阴道感染：将浸有溶液的纱布放入阴道，轻轻按压患处1~3分钟。每3~4天使用一次，使用两次，若症状未消失请咨询医生。口腔炎及牙龈炎：使用浸有本品的棉签反复涂抹患处。" },
+    "en": { "name": "Albothyl Liquid", "mfr": "Dong-Wha Pharm", "ing": "Policresulen 50% 720mg", "desc": "Vaginal bacterial infections, stomatitis, and gingivitis.", "use": "Vaginal infections: Insert gauze soaked in the solution into the vagina and press lightly on the area for 1-3 minutes. Use twice at 3-4 day intervals; consult a doctor if symptoms persist. Stomatitis and gingivitis: Apply repeatedly using a cotton swab soaked in the product." }
+  },
+  {
+    "img": "g-021.jpg",
+    "emoji": "👄",
+    "cat": [0, 9],
+    "ko": { "name": "녹십자 아시클로버 크림", "mfr": "녹십자", "ing": "아시클로버 50mg", "desc": "단순포진[물집] 바이러스 감염증(초기 및 재발성 생식기 포진[물집]과 구순포진[물집] 포함)", "use": "1. 이 약은 약 4시간 간격으로 1일 5회 환부[질환 부위]에 바르십시오. 2. 치료는 5일간 계속하여야 하며, 5일간 사용 후에도 치료되지 않을 경우에는 5일간 더 사용할 수 있습니다." },
+    "zh": { "name": "绿十字 阿昔洛韦乳膏", "mfr": "绿十字", "ing": "阿昔洛韦 50mg", "desc": "单纯疱疹病毒感染（包括初期及复发性生殖器疱疹和唇疱疹）。", "use": "1. 每隔约4小时涂抹1次，每日5次。 2. 治疗应持续5天，若5天后未愈，可再使用5天。" },
+    "en": { "name": "GC Acyclovir Cream", "mfr": "GC Pharma", "ing": "Acyclovir 50mg", "desc": "Herpes simplex virus infections (including initial and recurrent genital herpes and cold sores).", "use": "1. Apply to the affected area 5 times a day at roughly 4-hour intervals. 2. Continue treatment for 5 days; if not healed, may use for an additional 5 days." }
+  },
+  {
+    "img": "g-022.jpg",
+    "emoji": "🦷",
+    "cat": [0, 9],
+    "ko": { "name": "히아로 겔", "mfr": "한미약품", "ing": "히알루론산나트륨 200mg", "desc": "치육점막이 상승된 히알루론산 농도를 필요로 하는 치은염, 잇몸출혈과 같은 염증상태와 스케일링, 박리, 발치, 외과적 처치후와 같은 외상성 상태의 치료", "use": "1. 양치 후 1일 3 ∼ 4회(식사 후), 3 ∼ 4주간, 모든 증상이 소실될 때까지 지속적으로 사용한다. 2. 잇몸 조직에 이 약을 도포하여 점막 표면에 잘 분포할 수 있도록 손가락으로 가볍게 마사지한다." },
+    "zh": { "name": "Hyaro 凝胶", "mfr": "韩美药品", "ing": "透明质酸钠 200mg", "desc": "用于需要高浓度透明质酸的牙龈粘膜炎症状态（如牙龈炎、牙龈出血）以及外伤状态（如洗牙、剥离、拔牙、外科处理后）的治疗。", "use": "1. 刷牙后每日3~4次（饭后），连续使用3~4周直到症状消失。 2. 涂抹于牙龈组织并用手指轻轻按摩，使其均匀分布在粘膜表面。" },
+    "en": { "name": "Hyaro Gel", "mfr": "Hanmi Pharm", "ing": "Sodium hyaluronate 200mg", "desc": "Treatment of inflammatory conditions (gingivitis, bleeding gums) and traumatic conditions (post-scaling, peeling, extractions, surgical procedures) where gingival mucosa requires increased hyaluronic acid.", "use": "1. Apply 3-4 times daily (after meals) post-brushing for 3-4 weeks until symptoms resolve. 2. Massage gently with a finger to distribute evenly over the mucosa." }
+  },
+  {
+    "img": "g-023.jpg",
+    "emoji": "👅",
+    "cat": [0, 9],
+    "ko": { "name": "오라메디 연고", "mfr": "동국제약", "ing": "트리암시놀론아세토니드 1mg", "desc": "다음 질환에 의한 염증의 완화 : 만성 박리성 치은염, 미란 또는 궤양을 수반하는 난치성 구내염 및 설염", "use": "1일 1-수회 환부에 적당량을 바른다. 연령, 증상에 따라 적절히 증감한다." },
+    "zh": { "name": "Oramedi 软膏", "mfr": "东国制药", "ing": "曲安奈德 1mg", "desc": "缓解以下疾病引起的炎症：慢性剥脱性牙龈炎，伴有糜烂或溃疡的顽固性口腔炎及舌炎。", "use": "每日1至数次，取适量涂抹于患处。根据年龄和症状适当增减。" },
+    "en": { "name": "Oramedi Ointment", "mfr": "Dongkook Pharm", "ing": "Triamcinolone acetonide 1mg", "desc": "Relief of inflammation from: chronic exfoliative gingivitis, intractable stomatitis and glossitis accompanied by erosions or ulcers.", "use": "Apply an appropriate amount to the affected area 1 to several times daily. Adjust according to age and symptoms." }
+  },
+  {
+    "img": "g-024.jpg",
+    "emoji": "🦵",
+    "cat": [0, 9],
+    "ko": { "name": "타벡스 겔", "mfr": "부광약품", "ing": "에스신 10.0mg, 살리실산디에틸아민 50.0mg", "desc": "다음 증상의 진통ㆍ소염 : 타박상(멍), 삠", "use": "1일 1~ 수회 환부에 적당량 바른다." },
+    "zh": { "name": "Tavex 凝胶", "mfr": "富光药品", "ing": "七叶皂苷 10.0mg, 水杨酸二乙胺 50.0mg", "desc": "以下症状的镇痛消炎：挫伤（淤青）、扭伤。", "use": "每日1至数次，取适量涂抹于患处。" },
+    "en": { "name": "Tavex Gel", "mfr": "Bukwang Pharm", "ing": "Escin 10.0mg, Diethylamine salicylate 50.0mg", "desc": "Analgesic and anti-inflammatory for: bruises and sprains.", "use": "Apply an appropriate amount to the affected area 1 to several times daily." }
+  },
+  {
+    "img": "g-025.jpg",
+    "emoji": "🩹",
+    "cat": [0, 9],
+    "ko": { "name": "디판셉틱 크림", "mfr": "동아제약", "ing": "D-판테놀 50.0mg, 클로르헥시딘염산염 5.0mg", "desc": "감염위험이 있는 다음과 같은 형태의 상처 : 찰과상, 베인 상처, 찢긴 상처, 화상, 피부염. 만성상처 : 다리궤양, 욕창. 이차감염된 피부감염증. 수유기 동안의 유두균열. 소수술 상처", "use": "상처 또는 감염된 피부부위를 청결히 한 후 필요에 따라 1일 1～수회 얇게 바른다. 상처를 통상의 방법, 즉 바른 후 드레싱하거나 드레싱하지 않은 상태로 치료할 수 있다." },
+    "zh": { "name": "D-Panseptic 乳膏", "mfr": "东亚制药", "ing": "D-泛醇 50.0mg, 盐酸氯己定 5.0mg", "desc": "有感染风险的伤口：擦伤、割伤、撕裂伤、烧伤、皮炎。慢性伤口：腿部溃疡、褥疮。继发感染的皮肤病。哺乳期乳头皲裂。小手术伤口。", "use": "清洁伤口或感染部位后，每日1至数次薄涂。涂抹后可选择包扎或不包扎。" },
+    "en": { "name": "D-Panseptic Cream", "mfr": "Dong-A Pharm", "ing": "D-Panthenol 50.0mg, Chlorhexidine HCl 5.0mg", "desc": "Wounds with risk of infection: abrasions, cuts, lacerations, burns, dermatitis. Chronic wounds: leg ulcers, bedsores. Secondarily infected skin infections. Cracked nipples during nursing. Minor surgical wounds.", "use": "Clean the area and apply a thin layer 1 to several times daily as needed. Can be used with or without dressing." }
+  },
+  {
+    "img": "g-026.jpg",
+    "emoji": "👄",
+    "cat": [0, 9],
+    "ko": { "name": "페리톡 겔", "mfr": "한미약품", "ing": "리도카인염산염수화물 5.33mg, 염화세틸피리디늄수화물 0.26mg", "desc": "의치 자극이나 입안의 궤양으로 인한 통증 완화", "use": "면봉이나 깨끗한 손으로 소량을 덜어 통증 부위에 바른다. 20분 이상 기다려도 통증이 계속되는 경우에는 추가로 이 약을 바를 수 있으며, 그 후에는 3시간 이상 간격을 두고 바른다." },
+    "zh": { "name": "Peritox 凝胶", "mfr": "韩美药品", "ing": "盐酸利多卡因, 西吡氯铵", "desc": "缓解假牙刺激或口腔溃疡引起的疼痛。", "use": "用棉签或干净的手取少量涂抹于疼痛部位。等待20分钟以上疼痛持续时可追加涂抹，之后需间隔3小时以上。" },
+    "en": { "name": "Peritox Gel", "mfr": "Hanmi Pharm", "ing": "Lidocaine HCl, Cetylpyridinium chloride", "desc": "Pain relief from denture irritation or mouth ulcers.", "use": "Apply a small amount to the painful area using a cotton swab or clean hand. If pain persists after 20 mins, may reapply; thereafter, allow at least a 3-hour interval between applications." }
   }
 ]
