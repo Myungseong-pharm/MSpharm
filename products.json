@@ -1719,5 +1719,101 @@
     "ko": { "name": "지민에스정", "mfr": "한풍제약", "ing": "클로르페니라민말레산염 4.0mg, 인진호탕 건조엑스 53.3mg, DL-메틸에페드린염산염 12.0mg", "desc": "두드러기, 습진, 가려움증, 옻 증상 완화", "use": "성인(15세 이상): 1회 1정, 1일 3회 식후에 복용한다." },
     "zh": { "name": "Jimin-S片", "mfr": "汉风制药", "ing": "氯苯那敏 4.0mg, 茵陈蒿汤干浸膏 53.3mg, 甲基麻黄碱 12.0mg", "desc": "缓解荨麻疹、湿疹、瘙痒、漆树过敏（漆疮）症状。", "use": "成人(15岁以上)：每次1片，每日3次，饭后服用。" },
     "en": { "name": "Jimin-S Tablet", "mfr": "Hanpoong Pharm", "ing": "Chlorpheniramine maleate 4.0mg, Injinhotang dry extract 53.3mg, DL-Methylephedrine 12.0mg", "desc": "Relief of hives, eczema, itching, and lacquer (poison ivy/oak) rash.", "use": "Adults 15+: 1 tablet, 3 times daily after meals." }
+  },
+  {
+    "img": "p-001.jpg",
+    "emoji": "🧴",
+    "cat": [0, 17],
+    "ko": { "name": "로시놀 더블액션크림", "mfr": "녹십자", "ing": "테르비나핀염산염 10mg, 글리시리진산이칼륨 5mg, 리도카인 20mg, l-멘톨 10mg", "desc": "피부사상균에 의한 피부진균감염증 : 무좀, 완선(사타구니백선), 백선 치료", "use": "1일 1회, 적당량을 환부에 바른다." },
+    "zh": { "name": "罗西诺双效霜", "mfr": "绿十字", "ing": "盐酸特比萘芬、甘草酸二钾、利多卡因、l-薄荷醇", "desc": "治疗由皮肤癣菌引起的皮肤真菌感染：脚气、股癣、体癣。", "use": "每日1次，取适量涂抹于患处。" },
+    "en": { "name": "Rosinol Double Action Cream", "mfr": "Green Cross", "ing": "Terbinafine HCl 10mg, Dipotassium glycyrrhizate 5mg, Lidocaine 20mg, l-Menthol 10mg", "desc": "Treatment for fungal skin infections caused by dermatophytes: athlete's foot, jock itch, and ringworm.", "use": "Apply an appropriate amount to the affected area once daily." }
+  },
+  {
+    "img": "p-002.jpg",
+    "emoji": "💦",
+    "cat": [0, 17],
+    "ko": { "name": "테라미 스프레이액", "mfr": "초당약품", "ing": "클로트리마졸 1.00g, 크로타미톤 5.00g, 리도카인 2.00g, l-멘톨 1.00g", "desc": "무좀, 완선(사타구니백선), 체부백선 완화", "use": "1일 2~3회 적당량을 환부에 바른다." },
+    "zh": { "name": "泰拉米喷雾液", "mfr": "草堂药品", "ing": "克霉唑、克罗米通、利多卡因、l-薄荷醇", "desc": "缓解脚气、股癣、体癣。", "use": "每日2~3次，取适量涂抹于患处。" },
+    "en": { "name": "Terami Spray", "mfr": "Chodang Pharm", "ing": "Clotrimazole 1.00g, Crotamiton 5.00g, Lidocaine 2.00g, l-Menthol 1.00g", "desc": "Relief for athlete's foot, jock itch, and body ringworm.", "use": "Apply an appropriate amount to the affected area 2-3 times daily." }
+  },
+  {
+    "img": "p-003.jpg",
+    "emoji": "🧴",
+    "cat": [0, 17],
+    "ko": { "name": "바르지오 모두크림", "mfr": "동화약품", "ing": "테르비나핀염산염 10mg, 이소프로필메틸페놀 10mg, 우레아 100mg, 리도카인 20mg, 디펜히드라민염산염 10mg, 에녹솔론 1mg", "desc": "무좀, 완선(사타구니백선), 백선 치료용 다기능 크림", "use": "1일 1회 적당량을 환부에 도포한다." },
+    "zh": { "name": "Barzio多效霜", "mfr": "东和药品", "ing": "盐酸特比萘芬、异丙基甲基酚、尿素、利多卡因等", "desc": "用于治疗脚气、股癣、体癣的多功能抗真菌霜。", "use": "每日1次，取适量涂抹于患处。" },
+    "en": { "name": "Barzio Modu Cream", "mfr": "Dong-Wha Pharm", "ing": "Terbinafine HCl 10mg, Urea 100mg, Lidocaine 20mg, etc.", "desc": "Multi-function anti-fungal cream for athlete's foot, jock itch, and ringworm.", "use": "Apply an appropriate amount to the affected area once daily." }
+  },
+  {
+    "img": "p-004.jpg",
+    "emoji": "🦶",
+    "cat": [0, 17],
+    "ko": { "name": "티어실 원스", "mfr": "삼일제약", "ing": "테르비나핀염산염 11.25mg", "desc": "피부사상균에 의한 족부백선(무좀) 단회 치료제 (15세 이상)", "use": "단 1회 적용. 적용 전 환부를 씻고 완전히 건조시킨 후 환부와 그 주위가 충분히 적셔지도록 바른다." },
+    "zh": { "name": "替欧洁一次净", "mfr": "三一制药", "ing": "盐酸特比萘芬 11.25mg", "desc": "由皮肤癣菌引起的足癣（脚气）单次治疗剂（适用于15岁以上）。", "use": "仅使用1次。使用前清洗并完全干燥患处后，涂抹充足的量使其及周围充分湿润。" },
+    "en": { "name": "Tiersil Once", "mfr": "Samil Pharm", "ing": "Terbinafine HCl 11.25mg", "desc": "Single-dose treatment for athlete's foot caused by dermatophytes (ages 15+).", "use": "Apply only once. Wash and completely dry the area before applying a sufficient amount." }
+  },
+  {
+    "img": "p-005.jpg",
+    "emoji": "🦶",
+    "cat": [0, 17],
+    "ko": { "name": "라미실 원스", "mfr": "지피테라퓨틱스코리아", "ing": "테르비나핀염산염 11.25mg", "desc": "피부사상균에 의한 족부백선(무좀) 1회 적용 치료제 (15세 이상)", "use": "단 1회 적용. 양쪽 발과 손을 씻고 건조시킨 후 환부와 주위가 충분히 적셔지도록 바른다." },
+    "zh": { "name": "兰美抒一次净", "mfr": "GP Therapeutics Korea", "ing": "盐酸特比萘芬 11.25mg", "desc": "由皮肤癣菌引起的足癣（脚气）单次涂抹治疗剂（适用于15岁以上）。", "use": "仅使用1次。清洗并干燥双手双脚后，涂抹充足的量使患处及周围充分湿润。" },
+    "en": { "name": "Lamisil Once", "mfr": "GP Therapeutics Korea", "ing": "Terbinafine HCl 11.25mg", "desc": "Single-application treatment for athlete's foot (ages 15+).", "use": "Apply only once. Wash and dry both feet and hands, then apply enough to cover the affected area and its surroundings." }
+  },
+  {
+    "img": "p-006.jpg",
+    "emoji": "💨",
+    "cat": [0, 17],
+    "ko": { "name": "피엠쿨 에어로솔", "mfr": "경남제약", "ing": "테르비나핀염산염 0.4g, 리도카인 0.8g, 디펜히드라민 0.4g, 에녹솔론 0.04g", "desc": "무좀, 완선(사타구니백선), 백선 치료용 쿨링 에어로솔", "use": "환부를 깨끗이 씻고 완전히 건조시킨 후 1일 1회 적당량 뿌린다." },
+    "zh": { "name": "PM Cool 气雾剂", "mfr": "庆南制药", "ing": "盐酸特比萘芬、利多卡因、苯海拉明等", "desc": "用于治疗脚气、股癣、体癣的清凉气雾剂。", "use": "清洗并完全干燥患处后，每日1次喷洒适量。" },
+    "en": { "name": "PM Cool Aerosol", "mfr": "Gyeongnam Pharm", "ing": "Terbinafine HCl, Lidocaine, Diphenhydramine, etc.", "desc": "Cooling aerosol treatment for athlete's foot, jock itch, and ringworm.", "use": "Wash and dry the affected area completely, then spray an appropriate amount once daily." }
+  },
+  {
+    "img": "p-007.jpg",
+    "emoji": "💧",
+    "cat": [0, 17],
+    "ko": { "name": "피엠 외용액", "mfr": "경남제약", "ing": "에코나졸질산염 10mg, 살리실산 100mg, 리도카인 20mg, L-멘톨 20mg", "desc": "무좀, 완선(사타구니백선), 체부백선 완화용 액상 치료제", "use": "1일 1~수회 적당량을 환부에 바른다." },
+    "zh": { "name": "PM 外用液", "mfr": "庆南制药", "ing": "硝酸益康唑、水杨酸、利多卡因、l-薄荷醇", "desc": "缓解脚气、股癣、体癣的液体治疗剂。", "use": "每日1至数次，取适量涂抹于患处。" },
+    "en": { "name": "PM Solution", "mfr": "Gyeongnam Pharm", "ing": "Econazole nitrate, Salicylic acid, Lidocaine, Menthol", "desc": "Topical liquid treatment for athlete's foot, jock itch, and body ringworm.", "use": "Apply an appropriate amount to the affected area 1 to several times daily." }
+  },
+  {
+    "img": "p-008.jpg",
+    "emoji": "💅",
+    "cat": [0, 17],
+    "ko": { "name": "바르지오 네일라카", "mfr": "동화약품", "ing": "시클로피록스 80mg", "desc": "조갑진균증 (손, 발톱무좀) 치료용 네일라카", "use": "손발을 씻고 건조시킨 후 하루에 한번 얇은 막이 형성되도록 환부에 바른다." },
+    "zh": { "name": "Barzio 护甲液", "mfr": "东和药品", "ing": "环吡酮 80mg", "desc": "用于治疗甲真菌病（灰指甲、脚趾甲真菌）的护甲液。", "use": "清洗并干燥手脚后，每日1次涂抹于患处，使其形成薄膜。" },
+    "en": { "name": "Barzio Nail Lacquer", "mfr": "Dong-Wha Pharm", "ing": "Ciclopirox 80mg", "desc": "Nail lacquer for treating onychomycosis (fungal nail infections).", "use": "Wash and dry hands/feet, then apply once daily to form a thin film over the affected nail." }
+  },
+  {
+    "img": "p-009.jpg",
+    "emoji": "💅",
+    "cat": [0, 17],
+    "ko": { "name": "무조날 맥스 외용액", "mfr": "한미약품", "ing": "테르비나핀염산염 88.00mg", "desc": "조갑진균증 (손, 발톱무좀) 치료용 외용액", "use": "처음 4주간은 1일 1회, 그 이후는 주 1회 적용한다." },
+    "zh": { "name": "Muzonal Max 外用液", "mfr": "韩美药品", "ing": "盐酸特比萘芬 88.00mg", "desc": "治疗甲真菌病（灰指甲、脚趾甲真菌）的外用液。", "use": "最初4周每日1次，之后每周涂抹1次。" },
+    "en": { "name": "Muzonal Max Solution", "mfr": "Hanmi Pharm", "ing": "Terbinafine HCl 88.00mg", "desc": "Topical solution for onychomycosis (fungal nail infections).", "use": "Apply once daily for the first 4 weeks, then once a week thereafter." }
+  },
+  {
+    "img": "p-010.jpg",
+    "emoji": "🧴",
+    "cat": [0, 17],
+    "ko": { "name": "라미실 크림 1%", "mfr": "지피테라퓨틱스코리아", "ing": "테르비나핀염산염 10mg", "desc": "족부백선(무좀), 사타구니백선, 체부백선, 어루러기 등 피부진균 감염증 치료", "use": "1일 1-2회 환부에 바른다." },
+    "zh": { "name": "兰美抒乳膏 1%", "mfr": "GP Therapeutics Korea", "ing": "盐酸特比萘芬 10mg", "desc": "治疗足癣（脚气）、股癣、体癣、花斑癣等皮肤真菌感染。", "use": "每日1~2次涂抹于患处。" },
+    "en": { "name": "Lamisil Cream 1%", "mfr": "GP Therapeutics Korea", "ing": "Terbinafine HCl 10mg", "desc": "Treatment for fungal skin infections including athlete's foot, jock itch, body ringworm, and pityriasis versicolor.", "use": "Apply to the affected area 1-2 times daily." }
+  },
+  {
+    "img": "p-011.jpg",
+    "emoji": "🧴",
+    "cat": [0, 17],
+    "ko": { "name": "터비뉴 더블액션겔", "mfr": "동아제약", "ing": "테르비나핀염산염 10mg, 리도카인 20mg, 에녹솔론 1mg, 디펜히드라민염산염 10mg, 이소프로필메틸페놀 10mg", "desc": "무좀, 완선(사타구니백선), 백선 치료 겔", "use": "1일 1회 적량을 환부에 도포한다." },
+    "zh": { "name": "特比萘芬双效凝胶", "mfr": "东亚制药", "ing": "盐酸特比萘芬、利多卡因、苯海拉明等", "desc": "用于治疗脚气、股癣、体癣的凝胶。", "use": "每日1次，取适量涂抹于患处。" },
+    "en": { "name": "Turbinew Double Action Gel", "mfr": "Dong-A Pharm", "ing": "Terbinafine HCl, Lidocaine, Diphenhydramine, etc.", "desc": "Gel treatment for athlete's foot, jock itch, and ringworm.", "use": "Apply an appropriate amount to the affected area once daily." }
+  },
+  {
+    "img": "p-012.jpg",
+    "emoji": "🧴",
+    "cat": [0, 17],
+    "ko": { "name": "엘린플러스 크림", "mfr": "태극제약", "ing": "히드로코르티손 10mg, 클로트리마졸 10mg", "desc": "염증 및 가려움을 수반하는 피부 진균증(백선, 피부 칸디다증, 어루러기) 치료", "use": "1일 1~2회(아침, 저녁) 바른다. 급성증상이 없어진 다음에는 코르티코스테로이드가 없는 약물을 사용한다." },
+    "zh": { "name": "Elin Plus 乳膏", "mfr": "太极制药", "ing": "氢化可的松 10mg, 克霉唑 10mg", "desc": "治疗伴有炎症和瘙痒的皮肤真菌症（癣、皮肤念珠菌病、花斑癣）。", "use": "每日1~2次（早晚）涂抹。急性症状消失后，应改用不含皮质类固醇的药物。" },
+    "en": { "name": "Elin Plus Cream", "mfr": "Taeguk Pharm", "ing": "Hydrocortisone 10mg, Clotrimazole 10mg", "desc": "Treatment for fungal skin infections with inflammation and itching (ringworm, cutaneous candidiasis, pityriasis versicolor).", "use": "Apply 1-2 times daily (morning and evening). Switch to a corticosteroid-free product once acute symptoms resolve." }
   }
 ]
