@@ -626,7 +626,7 @@
   {
     "img": "e-020.jpg",
     "emoji": "⚡",
-    "cat": [0, 9],
+    "cat": [0, 7],
     "ko": { "name": "샤이닝정", "mfr": "동화약품", "ing": "아세트아미노펜 500mg, 부틸스코폴라민브롬화물 10mg", "desc": "평활근 수축 완화 및 경련성 통증 완화 (복통, 위장관 경련을 가라앉히는 진경진통제)", "use": "성인 1회 1~2정, 1일 3회 복용" },
     "zh": { "name": "Shining片", "mfr": "东和药品", "ing": "对乙酰氨基酚 + 丁基东莨菪碱", "desc": "缓解平滑肌收缩及痉挛性疼痛（缓解腹痛、胃肠道痉挛的解痉镇痛药）。", "use": "成人每次1~2片，每日3次。" },
     "en": { "name": "Shining Tablet", "mfr": "Dong-Wha Pharm", "ing": "Acetaminophen 500mg, Hyoscine butylbromide 10mg", "desc": "Relief of smooth muscle spasms and cramp-like pain (antispasmodic for stomach cramps).", "use": "Adults: 1-2 tablets, 3 times daily." }
