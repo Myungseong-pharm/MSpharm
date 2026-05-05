@@ -1815,5 +1815,45 @@
     "ko": { "name": "엘린플러스 크림", "mfr": "태극제약", "ing": "히드로코르티손 10mg, 클로트리마졸 10mg", "desc": "염증 및 가려움을 수반하는 피부 진균증(백선, 피부 칸디다증, 어루러기) 치료", "use": "1일 1~2회(아침, 저녁) 바른다. 급성증상이 없어진 다음에는 코르티코스테로이드가 없는 약물을 사용한다." },
     "zh": { "name": "Elin Plus 乳膏", "mfr": "太极制药", "ing": "氢化可的松 10mg, 克霉唑 10mg", "desc": "治疗伴有炎症和瘙痒的皮肤真菌症（癣、皮肤念珠菌病、花斑癣）。", "use": "每日1~2次（早晚）涂抹。急性症状消失后，应改用不含皮质类固醇的药物。" },
     "en": { "name": "Elin Plus Cream", "mfr": "Taeguk Pharm", "ing": "Hydrocortisone 10mg, Clotrimazole 10mg", "desc": "Treatment for fungal skin infections with inflammation and itching (ringworm, cutaneous candidiasis, pityriasis versicolor).", "use": "Apply 1-2 times daily (morning and evening). Switch to a corticosteroid-free product once acute symptoms resolve." }
+  },
+  {
+    "img": "e-015.jpg",
+    "emoji": "💊",
+    "cat": [0, 7],
+    "ko": { "name": "닥터 베아제정", "mfr": "대웅제약", "ing": "디아스타제·프로테아제 등 다중 소화효소, 우르소데옥시콜산, 시메티콘", "desc": "소화불량, 식욕감퇴(식욕부진), 과식, 체함, 소화촉진, 소화불량으로 인한 위부팽만감", "use": "성인 : 1회 1정을 1일 3회 식후 복용한다." },
+    "zh": { "name": "Dr. Bearse 消化片", "mfr": "大熊制药", "ing": "多种消化酶、熊去氧胆酸(UDCA)、西甲硅油等", "desc": "缓解消化不良、食欲减退、过食、食积、促进消化、改善胃部胀满感。", "use": "成人：每次1片，每日3次饭后服用。" },
+    "en": { "name": "Dr. Bearse Tablet", "mfr": "Daewoong Pharm", "ing": "Multi-digestive enzymes, UDCA, Simethicone, etc.", "desc": "Relief of indigestion, loss of appetite, overeating, and bloating. Promotes digestion.", "use": "Adults: 1 tablet, 3 times daily after meals." }
+  },
+  {
+    "img": "e-016.jpg",
+    "emoji": "🌿",
+    "cat": [0, 7],
+    "ko": { "name": "한풍올가에스과립", "mfr": "한풍제약", "ing": "창출, 육계, 건강, 감초, 후박, 진피, 저령, 택사, 작약, 백출, 복령, 대추", "desc": "물설사, 구토, 목마름, 요량감소를 수반하는 식체(위체), 더위먹음, 복냉, 급성 위장염, 복통 완화", "use": "보통 성인 1회 1포를 1일 3회 식전 또는 식간에 복용한다." },
+    "zh": { "name": "汉风 Olga-S 颗粒", "mfr": "汉风制药", "ing": "苍术、肉桂、干姜、甘草、厚朴、陈皮等韩方成分", "desc": "缓解伴有水样腹泻、呕吐、口渴、尿量减少的食积、中暑、腹冷、急性胃肠炎、腹痛。", "use": "成人每次1包，每日3次饭前或饭间服用。" },
+    "en": { "name": "Hanpoong Olga-S Granules", "mfr": "Hanpoong Pharm", "ing": "Atractylodes, Cinnamon, Ginger, Licorice, Magnolia, Citrus peel, etc.", "desc": "Relief for indigestion, heat exhaustion, cold abdomen, acute gastroenteritis, and abdominal pain accompanied by watery diarrhea, vomiting, or thirst.", "use": "Adults: 1 pack, 3 times daily before or between meals." }
+  },
+  {
+    "img": "e-017.jpg",
+    "emoji": "💊",
+    "cat": [0, 7],
+    "ko": { "name": "까스앤프리츄정", "mfr": "한미약품", "ing": "시메티콘 80mg", "desc": "위장관내 가스로 인한 복부 증상(복부팽만감, 공기연하증 등)의 개선", "use": "성인 : 1회 1정, 1일 3회 식후 또는 취침시에 씹어서 복용한다." },
+    "zh": { "name": "Gas & Free 咀嚼片", "mfr": "韩美药品", "ing": "西甲硅油 80mg", "desc": "改善胃肠道内气体引起的腹部症状（腹部胀满、吞气症等）。", "use": "成人：每次1片，每日3次，饭后或睡前咀嚼服用。" },
+    "en": { "name": "Gas & Free Chewable Tab.", "mfr": "Hanmi Pharm", "ing": "Simethicone 80mg", "desc": "Improves abdominal symptoms caused by gastrointestinal gas (bloating, aerophagia).", "use": "Adults: Chew 1 tablet, 3 times daily after meals or at bedtime." }
+  },
+  {
+    "img": "e-018.jpg",
+    "emoji": "💊",
+    "cat": [0, 7],
+    "ko": { "name": "파미딘정", "mfr": "종근당", "ing": "파모티딘 10mg", "desc": "위산과다, 속쓰림, 신트림 완화", "use": "16세 이상 1회 1정(10mg), 1일 최대 2정(20mg)까지 복용할 수 있다." },
+    "zh": { "name": "Famidine 片", "mfr": "钟根堂", "ing": "法莫替丁 10mg", "desc": "缓解胃酸过多、胃灼热、反酸。", "use": "16岁以上：每次1片，每日最多可服用2片。" },
+    "en": { "name": "Famidine Tablet", "mfr": "Chong Kun Dang", "ing": "Famotidine 10mg", "desc": "Relieves excess stomach acid, heartburn, and acid belching.", "use": "Ages 16+: 1 tablet per dose, up to 2 tablets daily." }
+  },
+  {
+    "img": "e-019.jpg",
+    "emoji": "💊",
+    "cat": [0, 7],
+    "ko": { "name": "스파메드정", "mfr": "고려제약", "ing": "디시클로민염산염 5mg, 파파베린염산염 15mg", "desc": "위통, 복통, 산통, 위산과다, 속쓰림을 가라앉히는 진경진통제", "use": "만 15세 이상 : 1회 2정, 만 8세~15세 미만 : 1회 1정. 1일 2~3회 식후/식간 복용 (1일 2회 이상 시 4시간 이상 간격 유지)." },
+    "zh": { "name": "Spamed 片", "mfr": "高丽制药", "ing": "盐酸双环胺 5mg、盐酸罂粟碱 15mg", "desc": "缓解胃痛、腹痛、绞痛、胃酸过多、胃灼热的解痉镇痛药。", "use": "15岁以上每次2片，8~14岁每次1片。每日2~3次饭后或饭间服用（间隔4小时以上）。" },
+    "en": { "name": "Spamed Tablet", "mfr": "Koryo Pharm", "ing": "Dicyclomine HCl 5mg, Papaverine HCl 15mg", "desc": "Antispasmodic and analgesic for stomach pain, abdominal pain, colic, excess acid, and heartburn.", "use": "Adults 15+: 2 tablets. Kids 8-14: 1 tablet. Take 2-3 times daily before/between meals (maintain 4-hour interval)." }
   }
 ]
