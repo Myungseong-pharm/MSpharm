@@ -1855,5 +1855,77 @@
     "ko": { "name": "스파메드정", "mfr": "고려제약", "ing": "디시클로민염산염 5mg, 파파베린염산염 15mg", "desc": "위통, 복통, 산통, 위산과다, 속쓰림을 가라앉히는 진경진통제", "use": "만 15세 이상 : 1회 2정, 만 8세~15세 미만 : 1회 1정. 1일 2~3회 식후/식간 복용 (1일 2회 이상 시 4시간 이상 간격 유지)." },
     "zh": { "name": "Spamed 片", "mfr": "高丽制药", "ing": "盐酸双环胺 5mg、盐酸罂粟碱 15mg", "desc": "缓解胃痛、腹痛、绞痛、胃酸过多、胃灼热的解痉镇痛药。", "use": "15岁以上每次2片，8~14岁每次1片。每日2~3次饭后或饭间服用（间隔4小时以上）。" },
     "en": { "name": "Spamed Tablet", "mfr": "Koryo Pharm", "ing": "Dicyclomine HCl 5mg, Papaverine HCl 15mg", "desc": "Antispasmodic and analgesic for stomach pain, abdominal pain, colic, excess acid, and heartburn.", "use": "Adults 15+: 2 tablets. Kids 8-14: 1 tablet. Take 2-3 times daily before/between meals (maintain 4-hour interval)." }
+  },
+  {
+    "img": "q-001.jpg",
+    "emoji": "🌿",
+    "cat": [0, 18],
+    "ko": { "name": "장통환", "mfr": "경방신약", "ing": "당귀, 작약, 천궁, 백출, 인삼, 복령, 육계 등", "desc": "급·만성장염, 설사, 궤양성 대장염 완화", "use": "보통 성인 1회 1포, 11~14세 2/3포, 8~10세 1/2포를 1일 3회 식전 또는 식간 복용. 7세 이하 금기." },
+    "zh": { "name": "肠通丸", "mfr": "京方新药", "ing": "当归、芍药、川芎、白术、人参等韩方成分", "desc": "急/慢性肠炎、腹泻、溃疡性结肠炎。", "use": "成人每次1包，11~14岁每次2/3包，8~10岁每次1/2包。每日3次饭前或饭间服用。7岁以下禁用。" },
+    "en": { "name": "Jangtonghwan", "mfr": "Kyungbang Pharm", "ing": "Angelica, Peony, Cnidium, Atractylodes, Ginseng, etc.", "desc": "Relief of acute/chronic enteritis, diarrhea, and ulcerative colitis.", "use": "Adults: 1 pack. Kids 11-14: 2/3 pack. Kids 8-10: 1/2 pack. Take 3 times daily before or between meals. Under 7 contraindicated." }
+  },
+  {
+    "img": "q-002.jpg",
+    "emoji": "💧",
+    "cat": [0, 18],
+    "ko": { "name": "포타겔 현탁액", "mfr": "대원제약", "ing": "디옥타헤드랄스멕타이트 15.0g (100mL 중)", "desc": "성인의 식도, 위·십이지장 통증 완화, 성인 급·만성 설사, 24개월 이상 소아의 급성 설사", "use": "성인: 1회 3g, 1일 3회 식간 복용(식도염은 식후). 소아(24개월 이상): 초기 3일간 1일 6~9g을 3회 분할 복용, 이후 4일간 1일 6g을 3회 분할 복용." },
+    "zh": { "name": "Potagel 混悬液", "mfr": "大元制药", "ing": "双八面体蒙脱石", "desc": "缓解成人食道、胃、十二指肠疼痛，成人急慢性腹泻，24个月以上儿童的急性腹泻。", "use": "成人每次3g，每日3次饭间服用（食道炎饭后服用）。24个月以上儿童按规定剂量分次服用。" },
+    "en": { "name": "Potagel Suspension", "mfr": "Daewon Pharm", "ing": "Dioctahedral smectite", "desc": "Relief of esophageal/gastric/duodenal pain in adults, acute/chronic diarrhea in adults, and acute diarrhea in kids over 24 months.", "use": "Adults: 3g, 3 times daily between meals (after meals for esophagitis). Kids 24mo+: Follow age-specific divided dosing." }
+  },
+  {
+    "img": "q-003.jpg",
+    "emoji": "💊",
+    "cat": [0, 18],
+    "ko": { "name": "락토큐정", "mfr": "에스케이케미칼", "ing": "비스무트차질산염, 스코폴리아엑스, 아크리놀수화물, 베르베린염화물수화물, 락토바실루스스포로게네스균", "desc": "설사, 복통(배아픔)을 수반하는 설사, 체함, 묽은 변, 토사 완화", "use": "만 15세 이상 및 성인 : 1일 3회, 1회 2정을 식후 복용. 복용간격 4시간 이상." },
+    "zh": { "name": "乐多Q片", "mfr": "SK化工", "ing": "次硝酸铋、东莨菪提取物、盐酸小檗碱、乳酸菌等", "desc": "缓解腹泻、伴有腹痛的腹泻、食积、稀便、呕吐腹泻。", "use": "15岁以上及成人：每日3次，每次2片饭后服用。间隔4小时以上。" },
+    "en": { "name": "Lacto-Q Tablet", "mfr": "SK Chemicals", "ing": "Bismuth subnitrate, Scopolia extract, Berberine, Lactobacillus, etc.", "desc": "Relieves diarrhea, diarrhea with abdominal pain, indigestion, loose stools, and vomiting/diarrhea.", "use": "Adults 15+: 2 tablets, 3 times daily after meals. Maintain 4-hour interval." }
+  },
+  {
+    "img": "q-004.jpg",
+    "emoji": "💊",
+    "cat": [0, 18],
+    "ko": { "name": "로파인캡슐", "mfr": "태극제약", "ing": "로페라미드염산염 2mg", "desc": "급성설사, 만성설사 증상 완화", "use": "성인: 초회량 4mg 경구투여, 유지량으로 묽은 변이 있을 때마다 2mg씩 투여. 1일 최대 16mg." },
+    "zh": { "name": "洛哌丁胺胶囊 (Lopine)", "mfr": "太极制药", "ing": "盐酸洛哌丁胺 2mg", "desc": "急性腹泻、慢性腹泻。", "use": "成人：首次剂量4mg，之后每次稀便后服用2mg。每日最大剂量16mg。" },
+    "en": { "name": "Lopine Capsule", "mfr": "Taeguk Pharm", "ing": "Loperamide HCl 2mg", "desc": "Treatment for acute and chronic diarrhea.", "use": "Adults: Initial dose 4mg, then 2mg after each unformed stool. Max 16mg/day." }
+  },
+  {
+    "img": "q-005.jpg",
+    "emoji": "💊",
+    "cat": [0, 18],
+    "ko": { "name": "로페시콘츄정", "mfr": "한미약품", "ing": "시메티콘 125mg, 로페라미드염산염 2.0mg", "desc": "장내 가스에 기인한 복부팽만감, 경련을 수반하는 설사 증상 조절", "use": "성인 및 12세 이상: 초회량 2정을 물과 함께 씹어서 복용, 계속 묽은 변이 있으면 1정을 물과 함께 씹어서 복용. 1일 최대 4정." },
+    "zh": { "name": "洛哌西甲硅油咀嚼片", "mfr": "韩美药品", "ing": "西甲硅油 125mg、盐酸洛哌丁胺 2.0mg", "desc": "调节由肠道气体引起的腹部胀满及伴有痉挛的腹泻症状。", "use": "12岁以上及成人：首次咀嚼服用2片，若继续有稀便则再咀嚼服用1片。每日最大4片。" },
+    "en": { "name": "Lopesicon Chewable Tab.", "mfr": "Hanmi Pharm", "ing": "Simethicone 125mg, Loperamide HCl 2.0mg", "desc": "Control of bloating due to intestinal gas and diarrhea with cramps.", "use": "Adults & kids 12+: Chew 2 tabs initially, then 1 tab after each unformed stool. Max 4 tabs/day." }
+  },
+  {
+    "img": "q-006.jpg",
+    "emoji": "💊",
+    "cat": [0, 18],
+    "ko": { "name": "센코딜에프정", "mfr": "광동제약", "ing": "비사코딜 6.0mg, 도큐세이트나트륨 20.0mg, 센노시드 5.0mg, 벤포티아민 5.0mg, 천궁건조엑스 70.0mg", "desc": "변비 및 변비에 따른 식욕부진, 복부팽만, 장내이상발효, 치질 증상 완화", "use": "만 15세 이상 : 1회 1 ~ 2정씩 1일 1회 취침시(공복시)에 복용한다." },
+    "zh": { "name": "Sencodyl-F 片", "mfr": "广东制药", "ing": "比沙可啶、多库酯钠、番泻苷等", "desc": "缓解便秘，以及便秘引起的食欲不振、腹部胀满、肠道异常发酵、痔疮等症状。", "use": "15岁以上：每日1次，每次1~2片，睡前（空腹）服用。" },
+    "en": { "name": "Sencodyl-F Tablet", "mfr": "Kwangdong Pharm", "ing": "Bisacodyl, Docusate sodium, Sennosides, etc.", "desc": "Relief of constipation and associated symptoms (appetite loss, bloating, abnormal fermentation, hemorrhoids).", "use": "Adults 15+: 1-2 tablets once daily at bedtime (empty stomach)." }
+  },
+  {
+    "img": "q-007.jpg",
+    "emoji": "💧",
+    "cat": [0, 18],
+    "ko": { "name": "장쾌락시럽", "mfr": "한미약품", "ing": "락툴로오스농축액 134.00g", "desc": "만성변비, 영·유아 및 소아의 변비, 분만 후의 변비 치료", "use": "성인: 처음 2~3일간 1일 15~30mL 아침식전 경구투여, 그 후 1일 10~15mL 투여. 심할 경우 45mL까지 증량 가능." },
+    "zh": { "name": "肠快爽糖浆", "mfr": "韩美药品", "ing": "乳果糖浓缩液", "desc": "治疗慢性便秘、婴幼儿及儿童便秘、产后便秘。", "use": "成人：最初2~3天每日早饭前服用15~30mL，之后每日维持10~15mL。严重时最多可服用45mL。" },
+    "en": { "name": "Jangkwaerak Syrup", "mfr": "Hanmi Pharm", "ing": "Lactulose concentrate", "desc": "Treatment for chronic constipation, constipation in infants/children, and postpartum constipation.", "use": "Adults: 15-30mL daily before breakfast for the first 2-3 days, then maintain at 10-15mL daily. Max 45mL if severe." }
+  },
+  {
+    "img": "q-008.jpg",
+    "emoji": "🌿",
+    "cat": [0, 18],
+    "ko": { "name": "위드원엘과립", "mfr": "시믹씨엠오코리아", "ing": "센노사이드칼슘, 차전자피 1000mg, 유포자성유산균, 니코틴산아미드", "desc": "변비 및 변비에 따른 식욕부진, 복부팽만, 장내이상발효, 치질 완화", "use": "성인: 1회 3/4~1포를 1일 1~3회 식후 복용" },
+    "zh": { "name": "WithOne L 颗粒", "mfr": "CMIC CMO Korea", "ing": "番泻苷钙、车前子壳、有孢子性乳酸菌等", "desc": "缓解便秘，以及便秘引起的食欲不振、腹部胀满、肠道异常发酵、痔疮等症状。", "use": "成人：每次3/4～1包，每日1～3次饭后服用。" },
+    "en": { "name": "WithOne L Granules", "mfr": "CMIC CMO Korea", "ing": "Sennoside calcium, Psyllium husk, Spore-forming lactobacillus, etc.", "desc": "Relief of constipation and associated symptoms (appetite loss, bloating, abnormal fermentation, hemorrhoids).", "use": "Adults: 3/4 to 1 pack, 1-3 times daily after meals." }
+  },
+  {
+    "img": "q-009.jpg",
+    "emoji": "🌿",
+    "cat": [0, 18],
+    "ko": { "name": "굿모닝에스과립", "mfr": "한풍제약", "ing": "대황 1000mg, 센나열매 500mg, 차전자피 2000mg, 감초, 작약, 육계 등", "desc": "변비 및 변비에 따른 식욕부진, 복부팽만, 장내이상발효, 치질 증상 완화", "use": "만 15세 이상: 1회 1포, 11~15세 미만: 1회 2/3포, 7~11세 미만: 1회 1/2포 복용." },
+    "zh": { "name": "早安S颗粒", "mfr": "汉风制药", "ing": "大黄、番泻果、车前子壳、甘草等韩方提取物", "desc": "缓解便秘，以及便秘引起的食欲不振、腹部胀满、肠道异常发酵、痔疮等症状。", "use": "15岁以上每次1包，11~14岁每次2/3包，7~10岁每次1/2包。" },
+    "en": { "name": "Good Morning S Granules", "mfr": "Hanpoong Pharm", "ing": "Rhubarb, Senna, Psyllium husk, Licorice, etc. (Herbal)", "desc": "Relief of constipation and associated symptoms (appetite loss, bloating, abnormal fermentation, hemorrhoids).", "use": "Adults 15+: 1 pack. Kids 11-14: 2/3 pack. Kids 7-10: 1/2 pack." }
   }
 ]
