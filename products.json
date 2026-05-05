@@ -819,9 +819,9 @@
     "img": "a-006.jpg",
     "emoji": "🧴",
     "cat": [0, 1],
-    "ko": { "name": "리쥬닉 크림", "mfr": "일동제약", "ing": "PDRN나트륨 0.8mg (1g 중)", "desc": "피부 장벽 강화 및 미세 조직 재생에 도움을 주는 고품격 재생 크림", "use": "1일 수회 적당량 도포" },
-    "zh": { "name": "Rejunic 面霜", "mfr": "日东制药", "ing": "PDRN钠 0.8mg", "desc": "有助于强化皮肤屏障及微小组织再生的的高级再生霜。", "use": "每日数次。" },
-    "en": { "name": "Rejunic Cream", "mfr": "Ildong Pharm", "ing": "PDRN sodium 0.8mg", "desc": "High-quality regenerative cream for barrier strengthening and tissue repair.", "use": "Apply an appropriate amount several times daily." }
+    "ko": { "name": "리쥬닉 크림", "mfr": "일동제약", "ing": "PDRN나트륨 15000ppm", "desc": "피부 장벽 강화 및 미세 조직 재생에 도움을 주는 고품격 재생 크림", "use": "1일 수회 적당량 도포" },
+    "zh": { "name": "Rejunic 面霜", "mfr": "日东制药", "ing": "PDRN钠 15000ppm", "desc": "有助于强化皮肤屏障及微小组织再生的的高级再生霜。", "use": "每日数次。" },
+    "en": { "name": "Rejunic Cream", "mfr": "Ildong Pharm", "ing": "PDRN sodium 15000ppm", "desc": "High-quality regenerative cream for barrier strengthening and tissue repair.", "use": "Apply an appropriate amount several times daily." }
   },
   {
     "img": "a-010.jpg",
