@@ -17,17 +17,10 @@
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        .product-card {
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .product-card:active {
-            transform: scale(0.96);
-        }
+        .product-card { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .product-card:active { transform: scale(0.96); }
 
-        .modal-animate {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        .modal-animate { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
         .category-btn.active {
             background-color: #10b981;
@@ -53,7 +46,6 @@
                 <h1 id="h-name" class="text-lg font-bold text-emerald-600 leading-tight">명성약국</h1>
                 <p id="h-sub" class="text-[10px] text-gray-400 font-medium tracking-tighter">Myung_Seong Pharmacy</p>
             </div>
-            <!-- 버튼 순서를 중국어(CN) - 영어(EN) - 한국어(KR)로 유지 -->
             <div class="flex gap-1">
                 <button onclick="setLang('zh')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="zh">CN</button>
                 <button onclick="setLang('en')" class="lang-btn px-2 py-1 text-[10px] rounded-md border border-gray-200 transition-colors" data-lang="en">EN</button>
@@ -73,21 +65,18 @@
 
         <!-- Product Grid -->
         <main class="flex-1 p-3">
-            <!-- 로딩 상태 표시 -->
             <div id="loading-state" class="py-20 text-center">
                 <i class="fa-solid fa-circle-notch fa-spin text-emerald-500 text-3xl mb-3"></i>
-                <p class="text-gray-400 text-sm mt-3">데이터를 불러오는 중...</p>
+                <p class="text-gray-400 text-sm mt-3">Loading...</p>
             </div>
             
-            <!-- 제품 리스트 -->
             <div id="products-container" class="grid grid-cols-2 gap-3 hidden">
                 <!-- Products will be injected here -->
             </div>
             
-            <!-- 검색 결과 없음 표시 -->
             <div id="empty-state" class="hidden py-20 text-center">
                 <i class="fa-solid fa-box-open text-gray-200 text-4xl mb-3"></i>
-                <p class="text-gray-400 text-sm">제품이 없습니다.</p>
+                <p class="text-gray-400 text-sm">No products found.</p>
             </div>
         </main>
     </div>
@@ -110,72 +99,71 @@
             </div>
             
             <div class="mb-6">
-                <span id="m-cat" class="inline-block px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded text-[10px] font-bold mb-2 tracking-wide uppercase">카테고리</span>
-                <h2 id="m-name" class="text-2xl font-bold text-gray-900 leading-tight mb-1">제품명</h2>
-                <p id="m-mfr" class="text-sm text-gray-400">제조사</p>
+                <span id="m-cat" class="inline-block px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded text-[10px] font-bold mb-2 tracking-wide uppercase"></span>
+                <h2 id="m-name" class="text-2xl font-bold text-gray-900 leading-tight mb-1"></h2>
+                <p id="m-mfr" class="text-sm text-gray-400"></p>
             </div>
 
             <div class="space-y-6">
                 <section>
-                    <h3 id="m-label-ing" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">주요 성분</h3>
+                    <h3 id="m-label-ing" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2"></h3>
                     <div id="m-ing" class="bg-emerald-50/50 border border-emerald-100/50 rounded-xl p-3 text-sm text-emerald-800 leading-relaxed font-medium"></div>
                 </section>
 
                 <section>
-                    <h3 id="m-label-desc" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">효능·효과</h3>
+                    <h3 id="m-label-desc" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2"></h3>
                     <p id="m-desc" class="text-gray-700 text-sm leading-relaxed whitespace-pre-line"></p>
                 </section>
 
                 <section>
-                    <h3 id="m-label-use" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">용법용량 및 주의사항</h3>
+                    <h3 id="m-label-use" class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2"></h3>
                     <div id="m-use" class="bg-amber-50 border border-amber-100 rounded-xl p-3 text-sm text-amber-800 leading-relaxed italic whitespace-pre-line"></div>
                 </section>
             </div>
-            
             <div class="h-10"></div>
         </div>
     </div>
 </div>
 
 <script>
-// 번역 및 기본 텍스트 설정 (무좀·항진균제 추가)
-const T = {
-  ko: {
-    name: '명성약국', sub: 'Myung_Seong Pharmacy',
-    emptyState: '제품이 없습니다.',
-    cats: ['전체', '피부케어', '약국 영양제', '건강기능식품', '해열·진통·소염', '감기·기침·목', '알러지·코감기', '소화·위장', '눈·코 외용', '피부·구강 외용', '파스류', '어린이 해열·감기', '어린이영양제', '근육이완제', '벌레·모기', '드링크', '기타', '무좀·항진균제'],
-    labelIng: '주요 성분', labelDesc: '효능·효과', labelUse: '용법용량 및 주의사항'
-  },
-  zh: {
-    name: '明星药局', sub: 'Myung_Seong Pharmacy',
-    emptyState: '没有产品。',
-    cats: ['全部', '皮肤护理', '药店营养剂', '健康功能食品', '退烧·镇痛·消炎', '感冒·咳嗽·喉咙', '过敏·鼻感冒', '消化·肠胃', '眼·鼻外用', '皮肤·口腔外用', '贴剂', '儿童退烧·感冒', '儿童营养剂', '肌肉松弛剂', '防蚊·驱虫', '饮品', '其他', '脚气·抗真菌药'],
-    labelIng: '主要成分', labelDesc: '功效与效果', labelUse: '用法用量及注意事项'
-  },
-  en: {
-    name: 'Myung_Seong Pharmacy', sub: 'Pharmacy',
-    emptyState: 'No products available.',
-    cats: ['All', 'Skin Care', 'Pharmacy Supplements', 'Health Functional Foods', 'Fever/Pain', 'Cold/Cough', 'Allergy/Nasal', 'Digestion', 'Eye/Nose', 'Skin/Oral', 'Patches', 'Kids Cold', 'Kids Vitamins', 'Muscle Relaxants', 'Bug/Mosquito', 'Drinks', 'Other', 'Antifungals'],
-    labelIng: 'Key Ingredients', labelDesc: 'Efficacy & Effect', labelUse: 'Dosage & Warnings'
-  }
+const TRANSLATIONS = {
+    ko: {
+        name: '명성약국', sub: 'Myung_Seong Pharmacy',
+        emptyState: '제품이 없습니다.',
+        cats: ['전체', '피부케어', '약국 영양제', '건강기능식품', '해열·진통·소염', '감기·기침·목', '알러지·코감기', '소화·위장', '눈·코 외용', '피부·구강 외용', '파스류', '어린이 해열·감기', '어린이영양제', '근육이완제', '벌레·모기', '드링크', '기타', '무좀·항진균제'],
+        labelIng: '주요 성분', labelDesc: '효능·효과', labelUse: '용법용량 및 주의사항'
+    },
+    zh: {
+        name: '明星药局', sub: 'Myung_Seong Pharmacy',
+        emptyState: '没有产品。',
+        cats: ['全部', '皮肤护理', '药店营养剂', '健康功能食品', '退烧·镇痛·消炎', '感冒·咳嗽·喉咙', '过敏·鼻感冒', '消化·肠胃', '眼·鼻外用', '皮肤·口腔外用', '贴剂', '儿童退烧·感冒', '儿童营养剂', '肌肉松弛剂', '防蚊·驱虫', '饮品', '其他', '脚气·抗真菌药'],
+        labelIng: '主要成分', labelDesc: '功效与效果', labelUse: '用法用量及注意事项'
+    },
+    en: {
+        name: 'Myung_Seong Pharmacy', sub: 'Pharmacy',
+        emptyState: 'No products available.',
+        cats: ['All', 'Skin Care', 'Pharmacy Supplements', 'Health Functional Foods', 'Fever/Pain', 'Cold/Cough', 'Allergy/Nasal', 'Digestion', 'Eye/Nose', 'Skin/Oral', 'Patches', 'Kids Cold', 'Kids Vitamins', 'Muscle Relaxants', 'Bug/Mosquito', 'Drinks', 'Other', 'Antifungals'],
+        labelIng: 'Key Ingredients', labelDesc: 'Efficacy & Effect', labelUse: 'Dosage & Warnings'
+    }
 };
 
 const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/Myungseong-pharm/MSpharm-imeges/main/';
+const DISPLAY_ORDER = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 10, 11, 12, 13, 14, 15, 16];
 
 let products = [];
-// 접속 시 기본 언어를 'zh'(중국어)로 변경했습니다.
 let state = { lang: 'zh', activeCat: 0 };
-const DOM = {}; // 자주 사용하는 DOM 요소 캐싱용 객체
+const DOM = {};
 
-// DOM 요소들을 초기에 한 번만 찾아서 저장합니다 (성능 최적화)
-function initDOMCache() {
+function initDOM() {
     DOM.hName = document.getElementById('h-name');
     DOM.hSub = document.getElementById('h-sub');
+    DOM.langBtns = document.querySelectorAll('.lang-btn');
     DOM.catsContainer = document.getElementById('cats-container');
     DOM.productsContainer = document.getElementById('products-container');
     DOM.emptyState = document.getElementById('empty-state');
     DOM.loadingState = document.getElementById('loading-state');
     
+    // Modal
     DOM.mImgContainer = document.getElementById('m-img-container');
     DOM.mCat = document.getElementById('m-cat');
     DOM.mName = document.getElementById('m-name');
@@ -192,52 +180,42 @@ function initDOMCache() {
 
 async function loadProducts() {
     try {
+        const autoVersion = Math.floor(Date.now() / 600000); // 10분 캐시 갱신
         let response;
-        
-        // 10분(600,000ms)마다 숫자가 1씩 자동으로 올라가는 자동 버전 생성
-        // 수정 후 최대 10분 이내에 모든 사용자에게 최신 데이터가 자동으로 반영됩니다.
-        const autoVersion = Math.floor(Date.now() / (1000 * 60 * 10));
-
         try {
-            // 배포 환경(웹 서버, GitHub Pages 등)에서는 상대 경로로 호출합니다.
             response = await fetch(`./products.json?v=${autoVersion}`);
-        } catch (err) {
-            // 미리보기(blob:)나 로컬 파일(file://) 환경에서 파싱 에러가 발생하면 
-            // 원본 GitHub의 절대 경로 주소로 대체하여 호출합니다.
+        } catch {
             response = await fetch(`https://raw.githubusercontent.com/Myungseong-pharm/MSpharm/main/products.json?v=${autoVersion}`);
         }
 
-        if (!response || !response.ok) throw new Error('네트워크 응답 오류');
+        if (!response || !response.ok) throw new Error('Network error');
         
         products = await response.json();
-        
-        // 데이터 바인딩을 가볍게 하기 위해, 객체에 고유 식별자(인덱스)를 부여합니다.
-        products.forEach((p, index) => {
-            p.id = index;
-        });
+        products.forEach((p, i) => p.id = i);
         
         DOM.loadingState.classList.add('hidden');
         DOM.productsContainer.classList.remove('hidden');
         render(); 
     } catch (error) {
-        console.error("데이터 로드 실패:", error);
+        console.error("Failed to load products:", error);
         DOM.loadingState.innerHTML = '<p class="text-red-500 text-sm mt-4">데이터를 불러오지 못했습니다.<br>새로고침 해주세요.</p>';
     }
 }
 
-function setLang(l) {
-    state.lang = l;
+function setLang(lang) {
+    state.lang = lang;
     updateLanguageUI();
     render();
 }
 
 function updateLanguageUI() {
-    const t = T[state.lang];
+    const t = TRANSLATIONS[state.lang];
     DOM.hName.textContent = t.name;
     DOM.hSub.textContent = t.sub;
+    DOM.emptyState.querySelector('p').textContent = t.emptyState;
     
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        const isSelected = btn.getAttribute('onclick').includes(state.lang);
+    DOM.langBtns.forEach(btn => {
+        const isSelected = btn.dataset.lang === state.lang;
         btn.classList.toggle('bg-emerald-600', isSelected);
         btn.classList.toggle('text-white', isSelected);
         btn.classList.toggle('border-emerald-600', isSelected);
@@ -247,51 +225,54 @@ function updateLanguageUI() {
 function setActiveCat(index) {
     state.activeCat = index;
     render();
-    window.scrollTo(0, 0); // 카테고리 변경 시 화면 상단으로 이동
+    window.scrollTo(0, 0);
 }
 
-function getProductHTML(p, t) {
-    const d = p[state.lang];
+function createProductCard(product, t) {
+    const data = product[state.lang];
+    const catIndex = product.cat[1] || product.cat[0];
+    const catName = t.cats[catIndex];
     
-    // loading="lazy" 추가로 화면에 보일 때 이미지를 로드하여 네트워크 비용을 절약합니다.
-    const imgContent = p.img 
-        ? `<img src="${IMAGE_BASE_URL}${p.img}" loading="lazy" alt="${d.name}" class="w-full h-full object-contain p-2 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-3xl\\'>${p.emoji}</div>';">` 
-        : `<div class="text-3xl">${p.emoji}</div>`;
+    const imgContent = product.img 
+        ? `<img src="${IMAGE_BASE_URL}${product.img}" loading="lazy" alt="${data.name}" class="w-full h-full object-contain p-2 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-3xl\\'>${product.emoji}</div>';">` 
+        : `<div class="text-3xl">${product.emoji}</div>`;
 
-    // onclick 시 전체 객체 문자열이 아닌 id 숫자 하나만 넘기도록 최적화
     return `
-        <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 cursor-pointer" onclick="openModal(${p.id})">
+        <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 cursor-pointer" onclick="openModal(${product.id})">
             <div class="aspect-square bg-gray-50/50 flex items-center justify-center relative border-b border-gray-100">
                 ${imgContent}
             </div>
             <div class="p-3">
-                <p class="text-[9px] font-bold text-emerald-500 uppercase tracking-tighter mb-1">${t.cats[p.cat[1]||p.cat[0]]}</p>
-                <h3 class="text-[12px] font-bold text-gray-800 leading-tight line-clamp-2 h-8 mb-1">${d.name}</h3>
-                <p class="text-[10px] text-gray-400 truncate">${d.mfr}</p>
+                <p class="text-[9px] font-bold text-emerald-500 uppercase tracking-tighter mb-1">${catName}</p>
+                <h3 class="text-[12px] font-bold text-gray-800 leading-tight line-clamp-2 h-8 mb-1">${data.name}</h3>
+                <p class="text-[10px] text-gray-400 truncate">${data.mfr}</p>
             </div>
         </div>
     `;
 }
 
 function render() {
-    if (products.length === 0) return;
+    if (!products.length) return;
 
-    const t = T[state.lang];
-    const catCounts = t.cats.map((_, i) => {
-        if (i === 0) return products.length;
-        return products.filter(p => p.cat.includes(i)).length;
-    });
+    const t = TRANSLATIONS[state.lang];
+    
+    // 카테고리 메뉴 렌더링
+    DOM.catsContainer.innerHTML = DISPLAY_ORDER.map(catIndex => {
+        const count = catIndex === 0 
+            ? products.length 
+            : products.filter(p => p.cat.includes(catIndex)).length;
+            
+        const isActive = state.activeCat === catIndex ? 'active' : '';
+        
+        return `
+            <button onclick="setActiveCat(${catIndex})" class="category-btn w-full px-1 py-2.5 rounded-lg text-xs font-bold transition-all text-gray-700 hover:bg-gray-200 flex flex-col items-center justify-center gap-1 ${isActive}">
+                <span class="text-center break-keep leading-tight">${t.cats[catIndex]}</span>
+                <span class="text-[10px] opacity-70 font-semibold">(${count})</span>
+            </button>
+        `;
+    }).join('');
 
-    // 카테고리 표시 순서: '피부·구강 외용'(9) 바로 뒤에 '무좀·항진균제'(17)를 배치
-    const displayOrder = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 10, 11, 12, 13, 14, 15, 16];
-
-    DOM.catsContainer.innerHTML = displayOrder.map(i => `
-        <button onclick="setActiveCat(${i})" class="category-btn w-full px-1 py-2.5 rounded-lg text-xs font-bold transition-all text-gray-700 hover:bg-gray-200 flex flex-col items-center justify-center gap-1 ${state.activeCat === i ? 'active' : ''}">
-            <span class="text-center break-keep leading-tight">${t.cats[i]}</span>
-            <span class="text-[10px] opacity-70 font-semibold">(${catCounts[i]})</span>
-        </button>
-    `).join('');
-
+    // 제품 목록 렌더링
     const filtered = products.filter(p => state.activeCat === 0 || p.cat.includes(state.activeCat));
     
     if (filtered.length === 0) {
@@ -299,54 +280,53 @@ function render() {
         DOM.emptyState.classList.remove('hidden');
     } else {
         DOM.emptyState.classList.add('hidden');
-        DOM.productsContainer.innerHTML = filtered.map(p => getProductHTML(p, t)).join('');
+        DOM.productsContainer.innerHTML = filtered.map(p => createProductCard(p, t)).join('');
     }
 }
 
-// 전달받은 id 값으로 products 배열에서 데이터를 찾아옵니다.
 function openModal(id) {
-    const p = products[id];
-    if (!p) return;
+    const product = products[id];
+    if (!product) return;
     
-    const d = p[state.lang];
-    const t = T[state.lang];
+    const data = product[state.lang];
+    const t = TRANSLATIONS[state.lang];
+    const catIndex = product.cat[1] || product.cat[0];
     
-    // 모달 내부 이미지도 지연 로딩 적용
-    DOM.mImgContainer.innerHTML = p.img 
-        ? `<img src="${IMAGE_BASE_URL}${p.img}" loading="lazy" alt="${d.name}" class="w-full h-full object-contain p-6 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-6xl\\'>${p.emoji}</div>';">` 
-        : `<div class="text-6xl">${p.emoji}</div>`;
+    DOM.mImgContainer.innerHTML = product.img 
+        ? `<img src="${IMAGE_BASE_URL}${product.img}" loading="lazy" alt="${data.name}" class="w-full h-full object-contain p-6 mix-blend-multiply" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-6xl\\'>${product.emoji}</div>';">` 
+        : `<div class="text-6xl">${product.emoji}</div>`;
 
-    DOM.mCat.textContent = t.cats[p.cat[1]||p.cat[0]];
-    DOM.mName.textContent = d.name;
-    DOM.mMfr.textContent = d.mfr;
+    DOM.mCat.textContent = t.cats[catIndex];
+    DOM.mName.textContent = data.name;
+    DOM.mMfr.textContent = data.mfr;
     DOM.mLabelIng.textContent = t.labelIng;
-    DOM.mIng.textContent = d.ing;
+    DOM.mIng.textContent = data.ing;
     DOM.mLabelDesc.textContent = t.labelDesc;
-    DOM.mDesc.textContent = d.desc;
+    DOM.mDesc.textContent = data.desc;
     DOM.mLabelUse.textContent = t.labelUse;
-    DOM.mUse.textContent = d.use;
+    DOM.mUse.textContent = data.use;
 
     DOM.backdrop.classList.remove('hidden');
-    setTimeout(() => {
+    
+    // UI 애니메이션 부드럽게 처리
+    requestAnimationFrame(() => {
         DOM.backdrop.classList.add('opacity-100');
         DOM.modal.classList.remove('translate-y-full');
-    }, 10);
+    });
 }
 
 function closeModal(e) {
-    if (e.target.id === 'modal-backdrop') closeModalBtn();
+    if (e.target === DOM.backdrop) closeModalBtn();
 }
 
 function closeModalBtn() {
     DOM.backdrop.classList.remove('opacity-100');
     DOM.modal.classList.add('translate-y-full');
-    setTimeout(() => {
-        DOM.backdrop.classList.add('hidden');
-    }, 300);
+    setTimeout(() => DOM.backdrop.classList.add('hidden'), 300);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    initDOMCache(); // 초기 DOM 요소 캐싱
+    initDOM();
     updateLanguageUI();
     loadProducts(); 
 });
