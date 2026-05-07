@@ -1975,5 +1975,37 @@
     "ko": { "name": "복합써스펜좌약", "mfr": "한미약품", "ing": "아세트아미노펜 125mg, DL-메티오닌 12.5mg", "desc": "감기로 인한 발열 및 통증 완화", "use": "1일 2~3회 직장내 깊이 삽입. 3~6세: 1회 2개, 1~2세: 1회 1~2개, 3~12개월: 1회 1개." },
     "zh": { "name": "复合Suspen栓剂", "mfr": "韩美药品", "ing": "对乙酰氨基酚 125mg, DL-蛋氨酸 12.5mg", "desc": "缓解感冒引起的发热及疼痛。", "use": "每日2~3次插入直肠深处。3~6岁：每次2个；1~2岁：每次1~2个；3~12个月：每次1个。" },
     "en": { "name": "Complex Suspen Suppository", "mfr": "Hanmi Pharm", "ing": "Acetaminophen 125mg, DL-Methionine 12.5mg", "desc": "Relief of fever and pain from colds.", "use": "Insert deep into rectum 2-3 times daily. 3-6yr: 2 supp., 1-2yr: 1-2 supp., 3-12mo: 1 supp." }
+  },
+  {
+    "img": "k-003.jpg",
+    "emoji": "👶",
+    "cat": [0, 12],
+    "ko": { "name": "텐텐츄정", "mfr": "한미약품", "ing": "합성비타민A, 코엔자임Q10, 비타민B군, 비타민C, D, E, 칼슘, 마그네슘 등", "desc": "발육기, 병중·병후 체력저하, 육체피로 시 영양 보급 및 눈의 건조함 완화, 야맹증, 뼈/이의 발육불량, 구루병 예방", "use": "만 8세 이상: 1일 2회, 1회 2정. 만 36개월 이상~만 8세 미만: 1일 2회, 1회 1정. 입안에서 녹이거나 씹어서 복용." },
+    "zh": { "name": "TenTen咀嚼片", "mfr": "韩美药品", "ing": "维生素A、辅酶Q10、维生素B群、C、D、E、钙、镁等", "desc": "发育期、病中病后体力下降、肉体疲劳时的营养补充，缓解眼干、夜盲症，预防骨骼牙齿发育不良及佝偻病。", "use": "8岁以上：每日2次，每次2片。36个月至8岁以下：每日2次，每次1片。含化或咀嚼服用。" },
+    "en": { "name": "TenTen Chewable Tablet", "mfr": "Hanmi Pharm", "ing": "Vitamin A, Coenzyme Q10, Vitamin B complex, C, D, E, Calcium, Magnesium, etc.", "desc": "Nutritional supplement for growth, fatigue, and recovery. Relieves dry eyes, prevents poor bone/teeth development and rickets.", "use": "Kids 8+ & Adults: 2 tablets, twice daily. Kids 36mo-8yr: 1 tablet, twice daily. Melt or chew in the mouth." }
+  },
+  {
+    "img": "k-004.jpg",
+    "emoji": "👶",
+    "cat": [0, 12],
+    "ko": { "name": "레모나키즈", "mfr": "경남제약", "ing": "비타민C, 비타민B2, 비타민B6", "desc": "어린이 영양제", "use": "1일 3회, 1회 1정을 입안에서 녹이거나 씹어서 섭취하십시오." },
+    "zh": { "name": "Lemona Kids", "mfr": "庆南制药", "ing": "维生素C、B2、B6", "desc": "儿童营养剂。", "use": "每日3次，每次1片，含化或咀嚼服用。" },
+    "en": { "name": "Lemona Kids", "mfr": "Gyeongnam Pharm", "ing": "Vitamin C, B2, B6", "desc": "Children's nutritional supplement.", "use": "1 tablet, 3 times daily. Melt or chew in the mouth." }
+  },
+  {
+    "img": "k-005.jpg",
+    "emoji": "👶",
+    "cat": [0, 12],
+    "ko": { "name": "백초시럽플러스", "mfr": "녹십자", "ing": "감초, 아선약, 황련, 황백, 인삼, 육계, 황금, 용담 등", "desc": "식욕감퇴(식욕부진), 위부팽만감, 소화불량, 과식, 체함, 구역, 구토, 정장, 변비, 묽은 변 완화", "use": "1일 3회 식후 복용. 성인 및 15세 이상: 10mL. 소아: 11~14세 6.5mL, 8~10세 5.0mL, 5~7세 3.5mL, 3~4세 2.5mL, 1~2세 2.0mL. (4시간 간격 유지)" },
+    "zh": { "name": "百草糖浆 Plus", "mfr": "绿十字", "ing": "甘草、黄连、黄柏、人参等韩方成分", "desc": "缓解食欲减退、胃部胀满、消化不良、过食、食积、恶心、呕吐、便秘、腹泻及整肠。", "use": "每日3次饭后服用。成人及15岁以上10mL，11~14岁6.5mL，8~10岁5.0mL，5~7岁3.5mL，3~4岁2.5mL，1~2岁2.0mL。（间隔4小时以上）" },
+    "en": { "name": "Baekcho Syrup Plus", "mfr": "Green Cross", "ing": "Licorice, Coptis, Phellodendron, Ginseng, etc. (Herbal)", "desc": "Relief of loss of appetite, bloating, indigestion, overeating, nausea, vomiting, constipation, and diarrhea.", "use": "Take 3 times daily after meals. Adults 15+: 10mL. Kids 11-14yr: 6.5mL, 8-10yr: 5.0mL, 5-7yr: 3.5mL, 3-4yr: 2.5mL, 1-2yr: 2.0mL. (4-hour intervals)" }
+  },
+  {
+    "img": "k-006.jpg",
+    "emoji": "👶",
+    "cat": [0, 12],
+    "ko": { "name": "베나치오키즈액", "mfr": "동아제약", "ing": "감초, 진피, 건강, 육계, 창출, 회향, 현호색, 아선약, 오매", "desc": "식욕감퇴(식욕부진), 위부팽만감, 소화불량, 과식, 체함, 구역, 구토, 정장, 변비, 묽은 변 완화", "use": "1일 3회 복용 (4시간 이상 간격). 만 15세 이상: 30mL, 만 11세~15세 미만: 20mL, 만 8세~11세 미만: 15mL, 만 5세~8세 미만: 10mL, 만 3세~5세 미만: 7.5mL, 만 1세~3세 미만: 6mL." },
+    "zh": { "name": "Venatio Kids 液", "mfr": "东亚制药", "ing": "甘草、陈皮、干姜、肉桂等韩方成分", "desc": "缓解食欲减退、胃部胀满、消化不良、过食、食积、恶心、呕吐、便秘、腹泻及整肠。", "use": "每日3次（间隔4小时以上）。15岁以上30mL，11~15岁20mL，8~11岁15mL，5~8岁10mL，3~5岁7.5mL，1~3岁6mL。" },
+    "en": { "name": "Venatio Kids Liquid", "mfr": "Dong-A Pharm", "ing": "Licorice, Citrus peel, Ginger, Cinnamon, etc. (Herbal)", "desc": "Relief of loss of appetite, bloating, indigestion, overeating, nausea, vomiting, constipation, and diarrhea.", "use": "Take 3 times daily (4-hour intervals). 15yr+: 30mL, 11-15yr: 20mL, 8-11yr: 15mL, 5-8yr: 10mL, 3-5yr: 7.5mL, 1-3yr: 6mL." }
   }
 ]
