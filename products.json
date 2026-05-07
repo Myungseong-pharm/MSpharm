@@ -576,7 +576,7 @@
     "en": { "name": "Genol Pro Top Plaster", "mfr": "Green Cross", "ing": "Flurbiprofen 40mg", "desc": "Anti-inflammatory analgesic for osteoarthritis, shoulder pain, tendonitis, tennis elbow, and muscle pain.", "use": "Apply twice daily to the affected area." }
   },
   {
-    "img": "i-004.jpg",
+    "img": "j-004.jpg",
     "emoji": "👃",
     "cat": [0, 11],
     "ko": { "name": "챔프노즈시럽", "mfr": "동아제약", "ing": "슈도에페드린염산염 15mg, 클로르페니라민말레산염 1mg (100mL 중)", "desc": "어린이의 콧물, 코막힘, 재채기를 완화해주는 딸기맛 시럽 (무색소)", "use": "연령 및 체중에 따른 권장 용량 복용 (1회 약 2~10mL)" },
@@ -864,7 +864,7 @@
     "en": { "name": "Champ Cold Pen High", "mfr": "Dong-A Pharm", "ing": "Acetaminophen, Chlorpheniramine, etc.", "desc": "Grape-flavored multi-symptom cold syrup for kids.", "use": "Refer to dosage table based on age/weight. Adults: 2 packs." }
   },
   {
-    "img": "i-001.jpg",
+    "img": "j-001.jpg",
     "emoji": "👶",
     "cat": [0, 11],
     "ko": { "name": "챔프 시럽", "mfr": "동아제약", "ing": "아세트아미노펜 32mg (1mL 중)", "desc": "어린이의 갑작스러운 발열 및 통증 완화 (체리맛 시럽, 무색소)", "use": "연령 및 체중에 따른 권장 용량 복용. 4~6시간 간격 준수." },
@@ -878,7 +878,7 @@
     "zh":{"name":"Champ 布洛芬糖浆","mfr":"东亚制药","ing":"布洛芬","desc":"缓解儿童高热及身体酸痛（橙子味糖浆，无色素）。","use":"按体重服用。"},
     "en":{"name":"Champ Ibuprofen Syrup","mfr":"Dong-A Pharm","ing":"Ibuprofen 2%","desc":"Dye-free orange-flavored fever reliever for kids with high fever.","use":"Refer to dosage table; maintain 4-6 hour intervals."}
   },
-  { "img":"i-005.jpg",
+  { "img":"j-005.jpg",
     "emoji":"👶",
     "cat":[0,11],
     "ko":{"name":"챔프 코프액","mfr":"동아제약","ing":"티페피딘히벤즈산염, 메틸에페드린, 구아이페네신 복합제","desc":"어린이의 기침, 가래 완화에 도움 (청포도맛 시럽, 무색소)","use":"연령 및 체중에 따른 권장 용량 복용"},
