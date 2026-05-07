@@ -1927,5 +1927,53 @@
     "ko": { "name": "굿모닝에스과립", "mfr": "한풍제약", "ing": "대황 1000mg, 센나열매 500mg, 차전자피 2000mg, 감초, 작약, 육계 등", "desc": "변비 및 변비에 따른 식욕부진, 복부팽만, 장내이상발효, 치질 증상 완화", "use": "만 15세 이상: 1회 1포, 11~15세 미만: 1회 2/3포, 7~11세 미만: 1회 1/2포 복용." },
     "zh": { "name": "早安S颗粒", "mfr": "汉风制药", "ing": "大黄、番泻果、车前子壳、甘草等韩方提取物", "desc": "缓解便秘，以及便秘引起的食欲不振、腹部胀满、肠道异常发酵、痔疮等症状。", "use": "15岁以上每次1包，11~14岁每次2/3包，7~10岁每次1/2包。" },
     "en": { "name": "Good Morning S Granules", "mfr": "Hanpoong Pharm", "ing": "Rhubarb, Senna, Psyllium husk, Licorice, etc. (Herbal)", "desc": "Relief of constipation and associated symptoms (appetite loss, bloating, abnormal fermentation, hemorrhoids).", "use": "Adults 15+: 1 pack. Kids 11-14: 2/3 pack. Kids 7-10: 1/2 pack." }
+  },
+  {
+    "img": "k-002.jpg",
+    "emoji": "👶",
+    "cat": [0, 12],
+    "ko": { "name": "티라노골드플러스츄어블정", "mfr": "녹십자", "ing": "아연, 홍삼, 철, 비타민D, 칼슘 등", "desc": "비타민A, B1, B2, B6, C, D, E의 보급", "use": "만 8세 이상 어린이 및 성인: 1일 2회, 1회 2정. 만 36개월 이상~만 8세 미만 어린이: 1일 2회, 1회 1정." },
+    "zh": { "name": "提拉诺金普乐咀嚼片", "mfr": "绿十字", "ing": "锌、红参、铁、维生素D、钙等", "desc": "补充维生素A、B1、B2、B6、C、D、E。", "use": "8岁以上儿童及成人：每日2次，每次2片。36个月至8岁儿童：每日2次，每次1片。" },
+    "en": { "name": "Tyranno Gold Plus Chewable Tab.", "mfr": "Green Cross", "ing": "Zinc, Red ginseng, Iron, Vitamin D, Calcium, etc.", "desc": "Supplementation of Vitamins A, B1, B2, B6, C, D, and E.", "use": "Kids 8+ & Adults: 2 tablets, twice a day. Kids 36mo-8yr: 1 tablet, twice a day." }
+  },
+  {
+    "img": "j-008.jpg",
+    "emoji": "👶",
+    "cat": [0, 11],
+    "ko": { "name": "맥시부키즈", "mfr": "한미약품", "ing": "덱시부프로펜 1.2g (100mL 중)", "desc": "급성 상기도 감염으로 인한 발열시 해열", "use": "생후 6개월 이상 소아: 1회 0.4~0.6mL/kg, 4~6시간 간격 필요시 복용 (1일 최대 4회). 체중 30kg 이하 1일 최대 25mL 초과 금지." },
+    "zh": { "name": "Maxibu Kids", "mfr": "韩美药品", "ing": "右旋布洛芬", "desc": "用于急性上呼吸道感染引起的发热退烧。", "use": "6个月以上小儿：每次0.4~0.6mL/kg，间隔4~6小时按需服用（每日最多4次）。体重30kg以下每日最多不超过25mL。" },
+    "en": { "name": "Maxibu Kids", "mfr": "Hanmi Pharm", "ing": "Dexibuprofen 1.2g/100mL", "desc": "Fever reduction for acute upper respiratory tract infections.", "use": "Kids 6mo+: 0.4-0.6mL/kg per dose every 4-6 hours as needed (max 4 times/day). Under 30kg: max 25mL/day." }
+  },
+  {
+    "img": "j-009.jpg",
+    "emoji": "👶",
+    "cat": [0, 11],
+    "ko": { "name": "세노마액", "mfr": "일동제약", "ing": "세티리진염산염 100.0mg (100mL 중)", "desc": "알레르기성 비염, 알레르기성 결막염, 만성 특발성 두드러기, 피부소양증 완화", "use": "성인 및 12세 이상: 1일 1회 10mg. 2~12세 미만: 체중 30kg 이상 1일 10mg, 30kg 미만 1일 5mg 투여." },
+    "zh": { "name": "Senoma 液", "mfr": "日东制药", "ing": "盐酸西替利嗪", "desc": "缓解过敏性鼻炎、过敏性结膜炎、慢性特发性荨麻疹、皮肤瘙痒。", "use": "成人及12岁以上：每日1次10mg。2~12岁儿童：体重30kg以上每日10mg，30kg以下每日5mg。" },
+    "en": { "name": "Senoma Liquid", "mfr": "Ildong Pharm", "ing": "Cetirizine HCl 100.0mg/100mL", "desc": "Relief for allergic rhinitis, allergic conjunctivitis, chronic idiopathic hives, and skin itching.", "use": "Adults & kids 12+: 10mg once daily. Kids 2-12: 10mg/day (over 30kg) or 5mg/day (under 30kg)." }
+  },
+  {
+    "img": "j-010.jpg",
+    "emoji": "👶",
+    "cat": [0, 11],
+    "ko": { "name": "어린이부루펜시럽", "mfr": "삼일제약", "ing": "이부프로펜 2g (100mL 중)", "desc": "감기로 인한 발열 및 동통, 골관절염 등 통증 완화", "use": "성인 1회 200~400mg 1일 3~4회. 어린이 1회 용량: 11~14세 10~13mL, 7~10세 8~10mL, 3~6세 5~8mL, 1~2세 3~5mL. 체중 30kg 미만 1일 25mL 초과 금지." },
+    "zh": { "name": "儿童布洛芬糖浆", "mfr": "三一制药", "ing": "布洛芬 2g/100mL", "desc": "缓解感冒引起的发热及疼痛、骨关节炎等疼痛。", "use": "成人每次200~400mg，每日3~4次。儿童单次：11~14岁10~13mL，7~10岁8~10mL，3~6岁5~8mL，1~2岁3~5mL。体重30kg以下每日不超过25mL。" },
+    "en": { "name": "Children's Brufen Syrup", "mfr": "Samil Pharm", "ing": "Ibuprofen 2g/100mL", "desc": "Relief of fever and pain from colds, osteoarthritis, etc.", "use": "Adults: 200-400mg, 3-4 times daily. Kids single dose: 11-14yr (10-13mL), 7-10yr (8-10mL), 3-6yr (5-8mL), 1-2yr (3-5mL). Max 25mL/day for kids under 30kg." }
+  },
+  {
+    "img": "j-011.jpg",
+    "emoji": "👶",
+    "cat": [0, 11],
+    "ko": { "name": "어린이타이레놀현탁액", "mfr": "한국존슨앤드존슨", "ing": "아세트아미노펜(미분화) 3.2g (100mL 중)", "desc": "감기로 인한 발열 및 동통, 두통, 신경통, 근육통, 월경통, 염좌통 완화", "use": "만 12세 이하 소아: 1회 권장용량을 4~6시간마다 필요시 복용. 1일 최대 5회(75mg/kg) 초과 금지." },
+    "zh": { "name": "儿童泰诺混悬液", "mfr": "韩国强生", "ing": "对乙酰氨基酚 3.2g/100mL", "desc": "缓解感冒引起的发热、疼痛、头痛、神经痛、肌肉痛等。", "use": "12岁以下小儿：每次推荐剂量，间隔4~6小时按需服用。每日最多不超过5次(75mg/kg)。" },
+    "en": { "name": "Children's Tylenol Suspension", "mfr": "J&J Korea", "ing": "Acetaminophen 3.2g/100mL", "desc": "Relief of fever, pain, headache, neuralgia, and muscle pain from colds or sprains.", "use": "Kids under 12: Take recommended dose every 4-6 hrs as needed. Max 5 times/day (75mg/kg)." }
+  },
+  {
+    "img": "j-012.jpg",
+    "emoji": "👶",
+    "cat": [0, 11],
+    "ko": { "name": "복합써스펜좌약", "mfr": "한미약품", "ing": "아세트아미노펜 125mg, DL-메티오닌 12.5mg", "desc": "감기로 인한 발열 및 통증 완화", "use": "1일 2~3회 직장내 깊이 삽입. 3~6세: 1회 2개, 1~2세: 1회 1~2개, 3~12개월: 1회 1개." },
+    "zh": { "name": "复合Suspen栓剂", "mfr": "韩美药品", "ing": "对乙酰氨基酚 125mg, DL-蛋氨酸 12.5mg", "desc": "缓解感冒引起的发热及疼痛。", "use": "每日2~3次插入直肠深处。3~6岁：每次2个；1~2岁：每次1~2个；3~12个月：每次1个。" },
+    "en": { "name": "Complex Suspen Suppository", "mfr": "Hanmi Pharm", "ing": "Acetaminophen 125mg, DL-Methionine 12.5mg", "desc": "Relief of fever and pain from colds.", "use": "Insert deep into rectum 2-3 times daily. 3-6yr: 2 supp., 1-2yr: 1-2 supp., 3-12mo: 1 supp." }
   }
 ]
