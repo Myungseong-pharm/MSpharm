@@ -2007,5 +2007,53 @@
     "ko": { "name": "베나치오키즈액", "mfr": "동아제약", "ing": "감초, 진피, 건강, 육계, 창출, 회향, 현호색, 아선약, 오매", "desc": "식욕감퇴(식욕부진), 위부팽만감, 소화불량, 과식, 체함, 구역, 구토, 정장, 변비, 묽은 변 완화", "use": "1일 3회 복용 (4시간 이상 간격). 만 15세 이상: 30mL, 만 11세~15세 미만: 20mL, 만 8세~11세 미만: 15mL, 만 5세~8세 미만: 10mL, 만 3세~5세 미만: 7.5mL, 만 1세~3세 미만: 6mL." },
     "zh": { "name": "Venatio Kids 液", "mfr": "东亚制药", "ing": "甘草、陈皮、干姜、肉桂等韩方成分", "desc": "缓解食欲减退、胃部胀满、消化不良、过食、食积、恶心、呕吐、便秘、腹泻及整肠。", "use": "每日3次（间隔4小时以上）。15岁以上30mL，11~15岁20mL，8~11岁15mL，5~8岁10mL，3~5岁7.5mL，1~3岁6mL。" },
     "en": { "name": "Venatio Kids Liquid", "mfr": "Dong-A Pharm", "ing": "Licorice, Citrus peel, Ginger, Cinnamon, etc. (Herbal)", "desc": "Relief of loss of appetite, bloating, indigestion, overeating, nausea, vomiting, constipation, and diarrhea.", "use": "Take 3 times daily (4-hour intervals). 15yr+: 30mL, 11-15yr: 20mL, 8-11yr: 15mL, 5-8yr: 10mL, 3-5yr: 7.5mL, 1-3yr: 6mL." }
+  },
+  {
+    "img": "n-003.jpg",
+    "emoji": "🩹",
+    "cat": [0, 14],
+    "ko": { "name": "서버쿨 플라스타", "mfr": "녹십자", "ing": "디펜히드라민 0.493mg, 이소프로필메틸페놀 0.493mg, L-멘톨 1.478mg", "desc": "벌레물린데, 가려움, 동창(언 상처)", "use": "1일 1~ 수회(여러 차례), 1회 1매씩 환부(질환부위)에 붙인다." },
+    "zh": { "name": "Sercool 贴片", "mfr": "绿十字", "ing": "苯海拉明 0.493mg、异丙基甲基酚 0.493mg、l-薄荷醇 1.478mg", "desc": "用于蚊虫叮咬、瘙痒、冻疮。", "use": "每日1至数次，每次1片，贴于患处。" },
+    "en": { "name": "Surcool Plaster", "mfr": "Green Cross", "ing": "Diphenhydramine 0.493mg, Isopropylmethylphenol 0.493mg, l-Menthol 1.478mg", "desc": "Relief for bug bites, itching, and chilblains.", "use": "Apply 1 patch to the affected area 1 to several times a day." }
+  },
+  {
+    "img": "n-004.jpg",
+    "emoji": "🩹",
+    "cat": [0, 14],
+    "ko": { "name": "써버쿨에스액", "mfr": "녹십자", "ing": "L-멘톨 30mg, DL-캄파 30mg, 디펜히드라민염산염 20mg, 리도카인 10mg, 에녹솔론 1mg, 덱스판테놀 10mg", "desc": "습진, 피부염, 땀띠, 옻 등에 의한 피부염, 가려움, 벌레물림, 두드러기, 동창", "use": "1일 수회 (여러차례) 환부 (질환부위)에 적당량을 바른다." },
+    "zh": { "name": "Sercool-S 液", "mfr": "绿十字", "ing": "l-薄荷醇 30mg、樟脑 30mg、盐酸苯海拉明 20mg、利多卡因 10mg、泛醇 10mg等", "desc": "用于湿疹、皮炎、痱子、漆树过敏、瘙痒、蚊虫叮咬、荨麻疹、冻疮。", "use": "每日数次，取适量涂抹于患处。" },
+    "en": { "name": "Surcool-S Liquid", "mfr": "Green Cross", "ing": "l-Menthol 30mg, Camphor 30mg, Diphenhydramine HCl 20mg, Lidocaine 10mg, Dexpanthenol 10mg, etc.", "desc": "Relief for eczema, dermatitis, heat rash, poison ivy, itching, bug bites, hives, and chilblains.", "use": "Apply an appropriate amount to the affected area several times a day." }
+  },
+  {
+    "img": "n-005.jpg",
+    "emoji": "🦟",
+    "cat": [0, 14],
+    "ko": { "name": "모스키토아웃도어에어로솔", "mfr": "신신제약", "ing": "디에틸톨루아미드 15g", "desc": "모기, 털진드기의 기피", "use": "12세이상 약 10~20cm 거리에서 팔 다리등 노출부위 및 의복등에 적당량 분사한다. 얼굴, 목등은 손에 덜어서 바른다." },
+    "zh": { "name": "Mosquito 户外驱蚊气雾剂", "mfr": "新新制药", "ing": "避蚊胺 (DEET) 15g", "desc": "驱避蚊子、恙螨。", "use": "12岁以上：在距离约10~20cm处适量喷洒于手臂、腿部等暴露部位及衣服上。脸部、颈部等部位请先喷在手上再涂抹。" },
+    "en": { "name": "Mosquito Outdoor Aerosol", "mfr": "Sinshin Pharm", "ing": "DEET 15g", "desc": "Repels mosquitoes and chiggers.", "use": "Ages 12+: Spray an appropriate amount from 10-20cm away onto exposed skin (arms, legs) and clothing. For face and neck, spray on hands first and apply." }
+  },
+  {
+    "img": "n-006.jpg",
+    "emoji": "🦟",
+    "cat": [0, 14],
+    "ko": { "name": "모스키토밀크에스", "mfr": "신신제약", "ing": "DEET (디에틸톨루아미드) 24%", "desc": "모기 및 해충 기피 효과 (최대 5~8시간 지속)", "use": "1. 외출 20~30분 전, 손목, 발목, 팔, 다리 등 노출 부위에 골고루 발라줍니다. 2. 얼굴에 바를 경우 손에 소량 덜어 눈, 코, 입을 피해 조심스럽게 바릅니다." },
+    "zh": { "name": "Mosquito Milk-S", "mfr": "新新制药", "ing": "避蚊胺 (DEET) 24%", "desc": "驱避蚊虫及害虫（效果最长持续5~8小时）。", "use": "1. 外出前20~30分钟，均匀涂抹于手腕、脚踝、手臂、腿部等暴露部位。2. 涂抹脸部时，取少量于手心，避开眼、鼻、口小心涂抹。" },
+    "en": { "name": "Mosquito Milk-S", "mfr": "Sinshin Pharm", "ing": "DEET 24%", "desc": "Repels mosquitoes and pests (lasts up to 5-8 hours).", "use": "1. Apply evenly to exposed areas (wrists, ankles, arms, legs) 20-30 mins before going out. 2. For the face, dispense a small amount onto hands and apply carefully, avoiding eyes, nose, and mouth." }
+  },
+  {
+    "img": "n-007.jpg",
+    "emoji": "🦟",
+    "cat": [0, 14],
+    "ko": { "name": "모스펜스 모스세이프가드액", "mfr": "경남제약", "ing": "이카리딘 15% 함유", "desc": "모기·진드기·빈대 등 다양한 해충 기피: 4~5시간의 지속 효과", "use": "6개월 이상부터 사용 가능. 눈·입 주변, 상처 부위는 피하고, 노출된 피부와 의류에만 분사" },
+    "zh": { "name": "Mosfence 防蚊液", "mfr": "庆南制药", "ing": "派卡瑞丁 15%", "desc": "驱避蚊子、蜱虫、臭虫等多种害虫：持续4~5小时。", "use": "6个月以上婴儿即可使用。避开眼口周围及伤口部位，仅喷洒于暴露的皮肤和衣服上。" },
+    "en": { "name": "Mosfence Mossafe Guard Liquid", "mfr": "Gyeongnam Pharm", "ing": "Icaridin 15%", "desc": "Repels various pests including mosquitoes, ticks, and bed bugs: lasts 4-5 hours.", "use": "Safe for ages 6 months and up. Spray only on exposed skin and clothing, avoiding eyes, mouth, and wounded areas." }
+  },
+  {
+    "img": "n-008.jpg",
+    "emoji": "🦟",
+    "cat": [0, 14],
+    "ko": { "name": "마이키파제로", "mfr": "헨켈코리아", "ing": "이카리딘 20%", "desc": "모기, 진드기(작은소참진드기)의 기피", "use": "약 10~20cm의 거리에서 얼굴(눈과입 주위 제외), 목, 팔, 다리등 노출부위 및 신발, 의복등에 적당량 분사" },
+    "zh": { "name": "MyKipa Zero", "mfr": "汉高韩国 (Henkel)", "ing": "派卡瑞丁 20%", "desc": "驱避蚊子、蜱虫（长角血蜱）。", "use": "在距离约10~20cm处，适量喷洒于脸部（避开眼口周围）、颈部、手臂、腿部等暴露部位以及鞋子、衣服上。" },
+    "en": { "name": "MyKipa Zero", "mfr": "Henkel Korea", "ing": "Icaridin 20%", "desc": "Repels mosquitoes and ticks (haemaphysalis longicornis).", "use": "Spray an appropriate amount from 10-20cm away onto exposed areas like face (excluding eyes/mouth), neck, arms, legs, as well as shoes and clothing." }
   }
 ]
