@@ -182,7 +182,7 @@ function initDOM() {
 
 async function loadProducts() {
     try {
-        const autoVersion = Math.floor(Date.now() / 600000); // 10분 캐시 갱신
+        const autoVersion = Math.floor(Date.now() / 60000); // 1분 캐시 갱신
         let response;
         try {
             response = await fetch(`./products.json?v=${autoVersion}`);
